@@ -1,0 +1,3727 @@
+{
+  "format": 1,
+  "regions": [
+    {
+      "label": "東アジア",
+      "codes": [
+        "KR",
+        "CN",
+        "HK",
+        "MO",
+        "TW"
+      ]
+    },
+    {
+      "label": "東南アジア",
+      "codes": [
+        "TH",
+        "VN",
+        "SG",
+        "MY",
+        "PH",
+        "ID"
+      ]
+    },
+    {
+      "label": "リゾート",
+      "codes": [
+        "US-HI",
+        "GU"
+      ]
+    },
+    {
+      "label": "ヨーロッパ",
+      "codes": [
+        "FR",
+        "IT",
+        "ES",
+        "DE",
+        "GB"
+      ]
+    },
+    {
+      "label": "北米・オセアニア",
+      "codes": [
+        "US",
+        "CA",
+        "AU"
+      ]
+    }
+  ],
+  "countries": {
+    "KR": {
+      "label": "韓国",
+      "currency": {
+        "code": "KRW",
+        "unit": "ウォン"
+      },
+      "emergency": {
+        "footNote": "番号は韓国国内からかける形です。",
+        "contacts": [
+          {
+            "group": "urgent",
+            "name": "警察",
+            "numbers": [
+              {
+                "local": "112"
+              }
+            ],
+            "note": "オペレーターが出たら「Japanese, please」と伝えると、通訳を交えた3者通話ができます。"
+          },
+          {
+            "group": "urgent",
+            "name": "消防・救急",
+            "numbers": [
+              {
+                "local": "119"
+              }
+            ]
+          },
+          {
+            "group": "consult",
+            "name": "観光通訳案内",
+            "sub": "韓国観光公社",
+            "numbers": [
+              {
+                "local": "1330"
+              }
+            ],
+            "note": "24時間・年中無休。日本語で対応します。\n緊急性の低い相談や通訳に使えます。"
+          },
+          {
+            "group": "consult",
+            "name": "外国人総合案内センター",
+            "numbers": [
+              {
+                "local": "1345"
+              }
+            ]
+          },
+          {
+            "group": "consult",
+            "name": "ソウル市タサンコールセンター",
+            "numbers": [
+              {
+                "local": "120"
+              },
+              {
+                "local": "02-120",
+                "label": "ソウル市外や携帯電話から"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "name": "在大韓民国日本国大使館",
+            "sub": "領事部",
+            "numbers": [
+              {
+                "local": "02-739-7400",
+                "intl": "+82-2-739-7400"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "name": "大使館代表",
+            "numbers": [
+              {
+                "local": "02-2170-5200",
+                "intl": "+82-2-2170-5200"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "address": "ソウル特別市鍾路区栗谷路6\nツインツリータワーA棟8階",
+            "addressLocal": "서울특별시 종로구 율곡로 6\n트윈트리타워 A동 8층",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          }
+        ],
+        "links": [
+          {
+            "label": "外務省 海外安全ホームページ",
+            "url": "https://www.anzen.mofa.go.jp/"
+          },
+          {
+            "label": "在大韓民国日本国大使館",
+            "url": "https://www.kr.emb-japan.go.jp/itprtop_ja/index.html"
+          }
+        ]
+      },
+      "power": {
+        "specs": [
+          {
+            "label": "電圧",
+            "value": "220V",
+            "sub": "（日本は100V）"
+          },
+          {
+            "label": "周波数",
+            "value": "60Hz"
+          },
+          {
+            "label": "プラグ形状",
+            "value": "Cタイプ / SEタイプ",
+            "sub": "（丸いピンが2本）"
+          }
+        ],
+        "warn": "充電器に「100-240V」と書かれていれば、変換プラグだけで使えます。\n「100V」専用と書かれた機器（ドライヤー、ヘアアイロンなど）は変圧器が必要です。\n電圧が2倍以上あるため、確認せずに挿すと故障や発火の危険があります。"
+      },
+      "greetings": [
+        {
+          "ja": "こんにちは",
+          "local": "안녕하세요",
+          "kana": "アンニョンハセヨ"
+        },
+        {
+          "ja": "ありがとう",
+          "local": "감사합니다",
+          "kana": "カムサハムニダ"
+        },
+        {
+          "ja": "すみません（呼びかけ）",
+          "local": "저기요",
+          "kana": "チョギヨ"
+        },
+        {
+          "ja": "これください",
+          "local": "이거 주세요",
+          "kana": "イゴ チュセヨ"
+        },
+        {
+          "ja": "いくらですか",
+          "local": "얼마예요?",
+          "kana": "オルマエヨ"
+        },
+        {
+          "ja": "大丈夫です/いりません",
+          "local": "괜찮아요",
+          "kana": "ケンチャナヨ"
+        },
+        {
+          "ja": "トイレはどこですか",
+          "local": "화장실 어디예요?",
+          "kana": "ファジャンシル オディエヨ"
+        }
+      ],
+      "greetingsSourceLinks": [],
+      "payment": {
+        "card": "ほぼどこでも使えます。少額の支払いでも問題ありません。",
+        "cash": "市場や屋台、交通カード（T-money）のチャージ。地下鉄駅の券売機やコンビニでのチャージは現金のみです。カードが使えないときの備えに、少額の現金があると安心です。",
+        "travelerCard": "WOWPASS。外国人旅行者向けのプリペイドカードで、交通カード（T-money）の機能も付いています。空港や地下鉄駅などにある専用の機械で、パスポートを使って発行します。日本円の現金をそのままチャージでき、残高はアプリで確認できます。出発前にアプリを入れておくとスムーズです。買い物用の残高とT-moneyの残高は別なので、地下鉄に乗るにはT-money側へのチャージが必要です。",
+        "tip": "不要です。"
+      },
+      "paymentSourceLinks": [
+        "https://www.konest.com/contents/traffic_info_detail.html?id=1259",
+        "https://www.arukikata.co.jp/webmagazine/364873/",
+        "https://apps.apple.com/JP/app/id1626691440"
+      ],
+      "apps": [
+        {
+          "labelTag": "配車",
+          "name": "k.ride",
+          "usage": "タクシーを呼ぶ。行き先は日本語で検索でき、運転手とは自動翻訳のチャットでやり取りできます。乗る前に料金の目安がわかります。",
+          "beforeTrip": "アプリを入れ、日本の電話番号でSMS認証をしてアカウントを作る。支払いに使うカードを登録しておくと、降りるときに自動で支払われます。",
+          "appStoreUrl": "https://apps.apple.com/jp/app/k-ride-taxi-cab-travel/id6474654222"
+        }
+      ],
+      "appsSourceLinks": [
+        "https://kride.kakaomobility.com/?lang=ja",
+        "https://apps.apple.com/jp/app/k-ride-taxi-cab-travel/id6474654222"
+      ],
+      "timezoneNote": "なし（日本と同じ時刻です）",
+      "timezoneSourceLinks": [],
+      "toiletInfo": "駅・デパート・カフェなどのトイレが無料で使えます。2018年から公衆トイレでは紙を流せるようになりましたが、小さな店やビルの共用トイレでは今も流せないところがあります。便器の横にゴミ箱があれば、そこに捨ててください。ビル内のトイレは暗証番号で鍵がかかっていることがあり、店員に尋ねるか、レジの脇に貼られた番号を確認します。紙が無いこともあるので、ポケットティッシュがあると安心です。",
+      "toiletSourceLinks": [
+        "https://www.ide.go.jp/Japanese/IDEsquare/Column/ISQ000019/ISQ000019_004.html",
+        "https://news.allabout.co.jp/articles/o/55948/"
+      ],
+      "lastConfirmedOn": "2026年9月"
+    },
+    "TW": {
+      "label": "台湾",
+      "currency": {
+        "code": "TWD",
+        "unit": "台湾ドル"
+      },
+      "emergency": {
+        "footNote": "番号は台湾国内からかける形です。",
+        "contacts": [
+          {
+            "group": "urgent",
+            "name": "警察",
+            "numbers": [
+              {
+                "local": "110"
+              }
+            ]
+          },
+          {
+            "group": "urgent",
+            "name": "消防・救急",
+            "numbers": [
+              {
+                "local": "119"
+              }
+            ]
+          },
+          {
+            "group": "consult",
+            "name": "観光案内ホットライン",
+            "sub": "交通部観光署",
+            "numbers": [
+              {
+                "local": "0800-011-765"
+              }
+            ],
+            "note": "24時間・無料。日本語で対応します。"
+          },
+          {
+            "group": "consult",
+            "name": "外国人向け生活相談ホットライン",
+            "numbers": [
+              {
+                "local": "1990"
+              }
+            ],
+            "note": "24時間。日本語で対応します。\n通訳が必要なときにも使えます。"
+          },
+          {
+            "group": "embassy",
+            "name": "日本台湾交流協会 台北事務所",
+            "numbers": [
+              {
+                "local": "02-2713-8000",
+                "intl": "+886-2-2713-8000"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "address": "台北市松山区慶城街28号\n通泰商業大楼",
+            "addressLocal": "台北市松山區慶城街28號\n通泰商業大樓",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          }
+        ],
+        "links": [
+          {
+            "label": "外務省 海外安全ホームページ",
+            "url": "https://www.anzen.mofa.go.jp/"
+          },
+          {
+            "label": "日本台湾交流協会 台北事務所",
+            "url": "https://www.koryu.or.jp/about/taipei/access/"
+          }
+        ]
+      },
+      "power": {
+        "specs": [
+          {
+            "label": "電圧",
+            "value": "110V",
+            "sub": "（日本は100V）"
+          },
+          {
+            "label": "周波数",
+            "value": "60Hz"
+          },
+          {
+            "label": "プラグ形状",
+            "value": "Aタイプ",
+            "sub": "（日本と同じ形）"
+          }
+        ],
+        "warn": "コンセントの形は日本と同じなので、変換プラグは要りません。\n電圧の差は小さく、スマホやパソコンの充電器などはそのまま使えます。"
+      },
+      "greetings": [
+        {
+          "ja": "こんにちは",
+          "local": "你好",
+          "kana": "ニーハオ"
+        },
+        {
+          "ja": "ありがとう",
+          "local": "謝謝",
+          "kana": "シエシエ"
+        },
+        {
+          "ja": "すみません（呼びかけ）",
+          "local": "不好意思",
+          "kana": "ブーハオイース"
+        },
+        {
+          "ja": "これください",
+          "local": "我要這個",
+          "kana": "ウォー ヤオ ジェガ"
+        },
+        {
+          "ja": "いくらですか",
+          "local": "多少錢？",
+          "kana": "ドゥオシャオ チエン"
+        },
+        {
+          "ja": "大丈夫です/いりません",
+          "local": "不用了",
+          "kana": "ブーヨン ラ"
+        },
+        {
+          "ja": "トイレはどこですか",
+          "local": "洗手間在哪裡？",
+          "kana": "シーショウジエン ザイ ナーリ"
+        }
+      ],
+      "greetingsSourceLinks": [],
+      "payment": {
+        "card": "ホテル、デパート、観光地の飲食店やチェーン店で使えます。\n夜市や屋台、小さな食堂では使えないことが多いです。",
+        "cash": "夜市・屋台、小さな食堂、タクシーは現金が基本です。台湾ドルの現金を多めに持っておくと安心です。",
+        "travelerCard": "悠遊カード（EasyCard）。MRT・バスに乗れる交通カードで、コンビニでの買い物にも使えます。駅やコンビニで買え、チャージは現金でします。",
+        "tip": "不要です。高級レストランやホテルでは、10%のサービス料が加算されていることがあります。"
+      },
+      "paymentSourceLinks": [
+        "https://www.smbc-card.com/nyukai/magazine/knowledge/taiwan.jsp",
+        "https://www.funliday.com/posts/1st-time-taiwan-travel-remember-3things-for-japnese/"
+      ],
+      "apps": [
+        {
+          "labelTag": "配車",
+          "name": "Uber",
+          "usage": "タクシーを呼ぶ。アプリは日本語で使え、乗る前に料金の目安がわかります。",
+          "beforeTrip": "日本で使っている Uber のアカウントがそのまま使えます。なければアプリを入れて登録し、クレジットカードを登録しておく。",
+          "appStoreUrl": "https://apps.apple.com/jp/app/id368677368"
+        }
+      ],
+      "appsSourceLinks": [
+        "https://www.uber.com/global/en/r/cities/taipei-tpe-tw/",
+        "https://apps.apple.com/JP/app/id368677368"
+      ],
+      "timezoneNote": "日本より1時間遅い（日本の正午は現地の午前11時）",
+      "timezoneSourceLinks": [],
+      "toiletInfo": "MRTの駅・デパート・ホテルなどのトイレが無料で使えます。\n紙を流せる所が増えていますが、「流さないで」と書かれていたら横のゴミ箱に捨ててください。\n公衆トイレは紙がないこともあるので、ポケットティッシュがあると安心です。",
+      "toiletSourceLinks": [
+        "https://www.mapple.net/global/article/1188/",
+        "https://www.taipeitimes.com/News/lang/archives/2017/08/23/2003676985"
+      ],
+      "lastConfirmedOn": "2026年10月"
+    },
+    "CN": {
+      "label": "中国",
+      "currency": {
+        "code": "CNY",
+        "unit": "人民元"
+      },
+      "emergency": {
+        "footNote": "番号は中国国内からかける形です。",
+        "contacts": [
+          {
+            "group": "urgent",
+            "name": "警察",
+            "numbers": [
+              {
+                "local": "110"
+              }
+            ]
+          },
+          {
+            "group": "urgent",
+            "name": "消防",
+            "numbers": [
+              {
+                "local": "119"
+              }
+            ]
+          },
+          {
+            "group": "urgent",
+            "name": "救急",
+            "numbers": [
+              {
+                "local": "120"
+              }
+            ],
+            "note": "救急車は有料です。"
+          },
+          {
+            "group": "consult",
+            "name": "出入国の相談ダイヤル",
+            "sub": "国家移民管理局",
+            "numbers": [
+              {
+                "local": "12367"
+              }
+            ],
+            "note": "日本語で対応します。"
+          },
+          {
+            "group": "embassy",
+            "name": "在中華人民共和国日本国大使館",
+            "sub": "領事部（邦人援護）",
+            "numbers": [
+              {
+                "local": "010-6532-5964",
+                "intl": "+86-10-6532-5964"
+              }
+            ],
+            "note": "夜間・休日の緊急時もこの番号です。"
+          },
+          {
+            "group": "embassy",
+            "name": "大使館代表",
+            "numbers": [
+              {
+                "local": "010-8531-9800",
+                "intl": "+86-10-8531-9800"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "address": "北京市朝陽区亮馬橋東街1号",
+            "addressLocal": "北京市朝阳区亮马桥东街1号",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          },
+          {
+            "group": "embassy",
+            "name": "在上海日本国総領事館",
+            "numbers": [
+              {
+                "local": "021-5257-4766",
+                "intl": "+86-21-5257-4766"
+              }
+            ],
+            "note": "夜間・休日は、かけたあと「0」を押すと緊急受付につながります。"
+          },
+          {
+            "group": "embassy",
+            "address": "上海市延安西路2299号\n上海世貿商城13階（領事部）",
+            "addressLocal": "上海市延安西路2299号\n上海世贸商城13楼",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          }
+        ],
+        "links": [
+          {
+            "label": "外務省 海外安全ホームページ",
+            "url": "https://www.anzen.mofa.go.jp/"
+          },
+          {
+            "label": "在中華人民共和国日本国大使館",
+            "url": "https://www.cn.emb-japan.go.jp/itprtop_ja/index.html"
+          },
+          {
+            "label": "在上海日本国総領事館",
+            "url": "https://www.shanghai.cn.emb-japan.go.jp/itprtop_ja/index.html"
+          }
+        ]
+      },
+      "power": {
+        "specs": [
+          {
+            "label": "電圧",
+            "value": "220V",
+            "sub": "（日本は100V）"
+          },
+          {
+            "label": "周波数",
+            "value": "50Hz"
+          },
+          {
+            "label": "プラグ形状",
+            "value": "Aタイプ / Iタイプ など",
+            "sub": "（Aタイプは日本と同じ形）"
+          }
+        ],
+        "warn": "充電器に「100-240V」と書かれていれば、そのまま（形が合わなければ変換プラグで）使えます。\n「100V」専用と書かれた機器（ドライヤー、ヘアアイロンなど）は変圧器が必要です。\n電圧が2倍以上あるため、確認せずに挿すと故障や発火の危険があります。"
+      },
+      "greetings": [
+        {
+          "ja": "こんにちは",
+          "local": "你好",
+          "kana": "ニーハオ"
+        },
+        {
+          "ja": "ありがとう",
+          "local": "谢谢",
+          "kana": "シエシエ"
+        },
+        {
+          "ja": "すみません（呼びかけ）",
+          "local": "不好意思",
+          "kana": "ブーハオイース"
+        },
+        {
+          "ja": "これください",
+          "local": "我要这个",
+          "kana": "ウォー ヤオ ジェイガ"
+        },
+        {
+          "ja": "いくらですか",
+          "local": "多少钱？",
+          "kana": "ドゥオシャオ チエン"
+        },
+        {
+          "ja": "大丈夫です/いりません",
+          "local": "不用了",
+          "kana": "ブーヨン ラ"
+        },
+        {
+          "ja": "トイレはどこですか",
+          "local": "洗手间在哪里？",
+          "kana": "シーショウジエン ザイ ナーリ"
+        }
+      ],
+      "greetingsSourceLinks": [],
+      "payment": {
+        "card": "支払いはスマホ決済の Alipay（アリペイ）と WeChat Pay（ウィーチャットペイ）が中心です。\nどちらも日本のクレジットカードを結び付けて使え、屋台やタクシーでも払えます。\nカードを直接使える店は、ホテルや大きな商業施設などに限られます。",
+        "cash": "使えますが、お釣りの用意がない店もあります。スマホ決済が使えないときのために、少額の現金があると安心です。",
+        "travelerCard": "",
+        "tip": "不要です。"
+      },
+      "paymentSourceLinks": [
+        "https://english.beijing.gov.cn/consuminginbeijing/howtobuy/202307/t20230725_3206931.html",
+        "https://apps.apple.com/jp/app/alipay/id333206289",
+        "https://www.trip.com/guide/payments/how-to-add-card-to-alipay.html"
+      ],
+      "apps": [
+        {
+          "labelTag": "支払い",
+          "name": "Alipay",
+          "usage": "お店やタクシーでの支払い。店のQRコードを読み取るか、自分の支払いコードを見せて払います。",
+          "beforeTrip": "アプリを入れ、日本の電話番号で登録し、クレジットカードを結び付ける。パスポートで本人確認もしておくと、使える金額の上限が上がります。",
+          "appStoreUrl": "https://apps.apple.com/jp/app/alipay/id333206289"
+        },
+        {
+          "labelTag": "配車",
+          "name": "DiDi",
+          "usage": "タクシーや配車を呼ぶ。アプリは英語で使え、乗る前に料金の目安がわかります。",
+          "beforeTrip": "アプリを入れ、日本の電話番号で登録し、クレジットカードを登録しておく。",
+          "appStoreUrl": "https://apps.apple.com/jp/app/didi-china-ride-hailing/id554499054"
+        }
+      ],
+      "appsSourceLinks": [
+        "https://apps.apple.com/jp/app/alipay/id333206289",
+        "https://apps.apple.com/jp/app/didi-china-ride-hailing/id554499054"
+      ],
+      "timezoneNote": "日本より1時間遅い（日本の正午は現地の午前11時）",
+      "timezoneSourceLinks": [],
+      "toiletInfo": "ショッピングモール・空港・大きな観光地のトイレが比較的きれいで、無料で使えます。\n紙がないことが多いので、ポケットティッシュを持ち歩くと安心です。\n使った紙は流さず、横のゴミ箱に捨てるのが基本です。しゃがむ形のトイレも多いです。",
+      "toiletSourceLinks": [
+        "https://www.chinaxiantour.com/travel-guide/how-to-use-public-toilets-in-china.html"
+      ],
+      "lastConfirmedOn": "2026年10月"
+    },
+    "HK": {
+      "label": "香港",
+      "currency": {
+        "code": "HKD",
+        "unit": "香港ドル"
+      },
+      "emergency": {
+        "footNote": "番号は香港国内からかける形です。",
+        "contacts": [
+          {
+            "group": "urgent",
+            "name": "警察・消防・救急",
+            "numbers": [
+              {
+                "local": "999"
+              }
+            ],
+            "note": "24時間。英語・広東語・中国語で対応します。"
+          },
+          {
+            "group": "consult",
+            "name": "ビジターホットライン",
+            "sub": "香港政府観光局",
+            "numbers": [
+              {
+                "local": "2508-1234"
+              }
+            ],
+            "note": "毎日9時〜18時。"
+          },
+          {
+            "group": "embassy",
+            "name": "在香港日本国総領事館",
+            "numbers": [
+              {
+                "local": "2522-1184",
+                "intl": "+852-2522-1184"
+              }
+            ],
+            "note": "夜間・休日は、自動音声で「緊急の場合」を選ぶと緊急窓口につながります。\nつながらないときは 3008-2092 へ。"
+          },
+          {
+            "group": "embassy",
+            "address": "香港中環康楽広場8号\n交易広場第一座46・47階",
+            "addressLocal": "香港中環康樂廣場8號\n交易廣場第一座46樓及47樓",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          }
+        ],
+        "links": [
+          {
+            "label": "外務省 海外安全ホームページ",
+            "url": "https://www.anzen.mofa.go.jp/"
+          },
+          {
+            "label": "在香港日本国総領事館",
+            "url": "https://www.hk.emb-japan.go.jp/itprtop_ja/index.html"
+          }
+        ]
+      },
+      "power": {
+        "specs": [
+          {
+            "label": "電圧",
+            "value": "220V",
+            "sub": "（日本は100V）"
+          },
+          {
+            "label": "周波数",
+            "value": "50Hz"
+          },
+          {
+            "label": "プラグ形状",
+            "value": "BFタイプ（Gタイプ）",
+            "sub": "（四角いピンが3本）"
+          }
+        ],
+        "warn": "充電器に「100-240V」と書かれていれば、変換プラグだけで使えます。\n「100V」専用と書かれた機器（ドライヤー、ヘアアイロンなど）は変圧器が必要です。\n電圧が2倍以上あるため、確認せずに挿すと故障や発火の危険があります。"
+      },
+      "greetings": [
+        {
+          "ja": "こんにちは",
+          "local": "你好",
+          "kana": "ネイホウ"
+        },
+        {
+          "ja": "ありがとう",
+          "local": "多謝",
+          "kana": "ドーチェ"
+        },
+        {
+          "ja": "すみません（呼びかけ）",
+          "local": "唔該",
+          "kana": "ンゴーイ"
+        },
+        {
+          "ja": "これください",
+          "local": "我要呢個",
+          "kana": "ンゴー イウ ニーゴ"
+        },
+        {
+          "ja": "いくらですか",
+          "local": "幾多錢？",
+          "kana": "ゲイドー チン"
+        },
+        {
+          "ja": "大丈夫です/いりません",
+          "local": "唔使喇",
+          "kana": "ンサイ ラ"
+        },
+        {
+          "ja": "トイレはどこですか",
+          "local": "洗手間喺邊度？",
+          "kana": "サイサウガーン ハイ ビンドウ"
+        }
+      ],
+      "greetingsSourceLinks": [],
+      "payment": {
+        "card": "デパート、レストラン、チェーン店など、ほとんどの店で使えます。",
+        "cash": "小さな食堂（茶餐廳）や市場、露店では現金のみの店もあります。少額の現金があると安心です。",
+        "travelerCard": "オクトパス（八達通）。電車・バス・フェリーのほか、コンビニや飲食店でも使えます。iPhone なら「Octopus for Tourists」アプリで作れ、日本の Visa / Mastercard でチャージできます。",
+        "tip": "不要です。レストランでは10%のサービス料が加算されていることが多いです。"
+      },
+      "paymentSourceLinks": [
+        "https://www.octopus.com.hk/en/consumer/tourist/apple-pay/index.html",
+        "https://www.cathaypacific.com/cx/en_ID/inspiration/travel/guide-tipping-hong-kong.html"
+      ],
+      "apps": [
+        {
+          "labelTag": "配車",
+          "name": "Uber",
+          "usage": "タクシーや配車を呼ぶ。アプリは日本語で使え、乗る前に料金の目安がわかります。",
+          "beforeTrip": "日本で使っている Uber のアカウントがそのまま使えます。なければアプリを入れて登録し、クレジットカードを登録しておく。",
+          "appStoreUrl": "https://apps.apple.com/jp/app/id368677368"
+        }
+      ],
+      "appsSourceLinks": [
+        "https://www.uber.com/hk/en/r/cities/taxi/central-and-western-hong-kong-hk/",
+        "https://apps.apple.com/JP/app/id368677368"
+      ],
+      "timezoneNote": "日本より1時間遅い（日本の正午は現地の午前11時）",
+      "timezoneSourceLinks": [],
+      "toiletInfo": "ショッピングモールやホテルのトイレが無料で使えます。\nMTRの駅は、トイレが改札の中にある駅や、ない駅もあります。",
+      "toiletSourceLinks": [
+        "https://www.wanderinchina.com/ja/destinations/hongkong/transport/metro/"
+      ],
+      "lastConfirmedOn": "2026年10月"
+    },
+    "MO": {
+      "label": "マカオ",
+      "currency": {
+        "code": "MOP",
+        "unit": "パタカ"
+      },
+      "emergency": {
+        "footNote": "番号はマカオ国内からかける形です。\n日本の総領事館は香港にあり、マカオからは国際電話になります。",
+        "contacts": [
+          {
+            "group": "urgent",
+            "name": "警察・消防・救急",
+            "numbers": [
+              {
+                "local": "999"
+              }
+            ]
+          },
+          {
+            "group": "consult",
+            "name": "観光ホットライン",
+            "sub": "マカオ政府観光局",
+            "numbers": [
+              {
+                "local": "2833-3000"
+              }
+            ],
+            "note": "24時間対応です。"
+          },
+          {
+            "group": "embassy",
+            "name": "在香港日本国総領事館",
+            "sub": "マカオも担当",
+            "numbers": [
+              {
+                "local": "00-852-2522-1184",
+                "intl": "+852-2522-1184"
+              }
+            ],
+            "note": "夜間・休日は、自動音声で「緊急の場合」を選ぶと緊急窓口につながります。"
+          },
+          {
+            "group": "embassy",
+            "address": "香港中環康楽広場8号\n交易広場第一座46・47階",
+            "addressLocal": "香港中環康樂廣場8號\n交易廣場第一座46樓及47樓",
+            "addressLocalNote": "香港のタクシーではこの住所を見せてください（長押しでコピー）"
+          }
+        ],
+        "links": [
+          {
+            "label": "外務省 海外安全ホームページ",
+            "url": "https://www.anzen.mofa.go.jp/"
+          },
+          {
+            "label": "在香港日本国総領事館（マカオ）",
+            "url": "https://www.hk.emb-japan.go.jp/itpr_ja/macau_info.html"
+          }
+        ]
+      },
+      "power": {
+        "specs": [
+          {
+            "label": "電圧",
+            "value": "220V",
+            "sub": "（日本は100V）"
+          },
+          {
+            "label": "周波数",
+            "value": "50Hz"
+          },
+          {
+            "label": "プラグ形状",
+            "value": "BFタイプ（Gタイプ）など",
+            "sub": "（四角いピンが3本）"
+          }
+        ],
+        "warn": "充電器に「100-240V」と書かれていれば、変換プラグだけで使えます。\n「100V」専用と書かれた機器（ドライヤー、ヘアアイロンなど）は変圧器が必要です。\n電圧が2倍以上あるため、確認せずに挿すと故障や発火の危険があります。"
+      },
+      "greetings": [
+        {
+          "ja": "こんにちは",
+          "local": "你好",
+          "kana": "ネイホウ"
+        },
+        {
+          "ja": "ありがとう",
+          "local": "多謝",
+          "kana": "ドーチェ"
+        },
+        {
+          "ja": "すみません（呼びかけ）",
+          "local": "唔該",
+          "kana": "ンゴーイ"
+        },
+        {
+          "ja": "これください",
+          "local": "我要呢個",
+          "kana": "ンゴー イウ ニーゴ"
+        },
+        {
+          "ja": "いくらですか",
+          "local": "幾多錢？",
+          "kana": "ゲイドー チン"
+        },
+        {
+          "ja": "大丈夫です/いりません",
+          "local": "唔使喇",
+          "kana": "ンサイ ラ"
+        },
+        {
+          "ja": "トイレはどこですか",
+          "local": "洗手間喺邊度？",
+          "kana": "サイサウガーン ハイ ビンドウ"
+        }
+      ],
+      "greetingsSourceLinks": [],
+      "payment": {
+        "card": "ホテル、カジノ、大きなレストランやお店で使えます。小さな店では使えないこともあります。",
+        "cash": "香港ドルもほぼそのまま使えますが、お釣りはパタカで返ってくることが多いです。\nパタカは香港では使えないので、マカオで使い切るのがおすすめです。",
+        "travelerCard": "",
+        "tip": "基本的に不要です。高級レストランではサービス料が含まれています。"
+      },
+      "paymentSourceLinks": [
+        "https://www.worldtravelguide.net/guides/asia/china/macau/money-duty-free/",
+        "https://wise.com/hk/blog/hkd-in-macau",
+        "https://www.his-j.com/kaigai/asia/macau/"
+      ],
+      "apps": [],
+      "appsSourceLinks": [],
+      "timezoneNote": "日本より1時間遅い（日本の正午は現地の午前11時）",
+      "timezoneSourceLinks": [],
+      "toiletInfo": "ホテル・カジノ・ショッピングモールのトイレがきれいで、無料で使えます。\n街なかの公衆トイレは紙がないこともあるので、ポケットティッシュがあると安心です。",
+      "toiletSourceLinks": [
+        "https://www.his-j.com/kaigai/asia/macau/"
+      ],
+      "lastConfirmedOn": "2026年10月"
+    },
+    "TH": {
+      "label": "タイ",
+      "currency": {
+        "code": "THB",
+        "unit": "バーツ"
+      },
+      "emergency": {
+        "footNote": "番号はタイ国内からかける形です。",
+        "contacts": [
+          {
+            "group": "urgent",
+            "name": "警察",
+            "numbers": [
+              {
+                "local": "191"
+              }
+            ],
+            "note": "救急車を呼んでもらうこともできます。"
+          },
+          {
+            "group": "urgent",
+            "name": "救急",
+            "numbers": [
+              {
+                "local": "1669"
+              }
+            ]
+          },
+          {
+            "group": "urgent",
+            "name": "消防",
+            "numbers": [
+              {
+                "local": "199"
+              }
+            ]
+          },
+          {
+            "group": "consult",
+            "name": "観光警察",
+            "numbers": [
+              {
+                "local": "1155"
+              }
+            ],
+            "note": "24時間対応。盗難や詐欺など、旅行中のトラブルを相談できます。\n英語・日本語で対応します。"
+          },
+          {
+            "group": "consult",
+            "name": "観光案内",
+            "sub": "タイ国政府観光庁",
+            "numbers": [
+              {
+                "local": "1672"
+              }
+            ],
+            "note": "毎日8時〜20時。観光の問い合わせに使えます。"
+          },
+          {
+            "group": "embassy",
+            "name": "在タイ日本国大使館",
+            "sub": "領事部（邦人援護）",
+            "numbers": [
+              {
+                "local": "02-207-8502",
+                "intl": "+66-2-207-8502"
+              },
+              {
+                "local": "02-696-3002",
+                "intl": "+66-2-696-3002"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "name": "大使館代表",
+            "numbers": [
+              {
+                "local": "02-207-8500",
+                "intl": "+66-2-207-8500"
+              },
+              {
+                "local": "02-696-3000",
+                "intl": "+66-2-696-3000"
+              }
+            ],
+            "note": "夜間・休館日の緊急時もこちらにかけます。"
+          },
+          {
+            "group": "embassy",
+            "address": "バンコク都パトゥムワン区ルンピニー\nウィタユ通り177",
+            "addressLocal": "สถานทูตญี่ปุ่น\n177 ถนนวิทยุ แขวงลุมพินี เขตปทุมวัน กรุงเทพฯ 10330",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          },
+          {
+            "group": "embassy",
+            "name": "在チェンマイ日本国総領事館",
+            "sub": "チェンマイなど北部9県",
+            "numbers": [
+              {
+                "local": "052-012-500",
+                "intl": "+66-52-012-500"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "外務省 海外安全ホームページ",
+            "url": "https://www.anzen.mofa.go.jp/"
+          },
+          {
+            "label": "在タイ日本国大使館",
+            "url": "https://www.th.emb-japan.go.jp/itprtop_ja/index.html"
+          }
+        ]
+      },
+      "power": {
+        "specs": [
+          {
+            "label": "電圧",
+            "value": "220V",
+            "sub": "（日本は100V）"
+          },
+          {
+            "label": "周波数",
+            "value": "50Hz"
+          },
+          {
+            "label": "プラグ形状",
+            "value": "Aタイプ / Cタイプ",
+            "sub": "（日本と同じ平たいピン2本、または丸いピン2本）"
+          }
+        ],
+        "warn": "充電器に「100-240V」と書かれていれば、そのまま使えます。\n「100V」専用と書かれた機器（ドライヤー、ヘアアイロンなど）は変圧器が必要です。\n電圧が2倍以上あるため、確認せずに挿すと故障や発火の危険があります。"
+      },
+      "greetings": [
+        {
+          "ja": "こんにちは",
+          "local": "สวัสดีครับ / ค่ะ",
+          "kana": "サワッディー クラップ／カー"
+        },
+        {
+          "ja": "ありがとう",
+          "local": "ขอบคุณครับ / ค่ะ",
+          "kana": "コップクン クラップ／カー"
+        },
+        {
+          "ja": "すみません（呼びかけ）",
+          "local": "ขอโทษครับ / ค่ะ",
+          "kana": "コートー クラップ／カー"
+        },
+        {
+          "ja": "これください",
+          "local": "เอาอันนี้ครับ / ค่ะ",
+          "kana": "アオ アンニー クラップ／カー"
+        },
+        {
+          "ja": "いくらですか",
+          "local": "เท่าไหร่ครับ / คะ",
+          "kana": "タオライ クラップ／カ"
+        },
+        {
+          "ja": "大丈夫です/いりません",
+          "local": "ไม่เป็นไรครับ / ค่ะ",
+          "kana": "マイペンライ クラップ／カー"
+        },
+        {
+          "ja": "トイレはどこですか",
+          "local": "ห้องน้ำอยู่ที่ไหนครับ / คะ",
+          "kana": "ホンナーム ユー ティーナイ クラップ／カ"
+        }
+      ],
+      "greetingsSourceLinks": [],
+      "payment": {
+        "card": "デパートやショッピングモール、ホテル、チェーン店などで使えます。",
+        "cash": "屋台や市場、ナイトマーケット、タクシーやトゥクトゥクは現金が基本です。\n屋台では大きなお札を嫌がられることがあるので、小額のお札や硬貨があると安心です。",
+        "travelerCard": "",
+        "tip": "サービス料が含まれていれば不要です。含まれていない高級レストランでは代金の1割ほど、ホテルで荷物を運んでもらったときは40バーツほどが目安です。"
+      },
+      "paymentSourceLinks": [
+        "https://www.jcb.co.jp/ordercard/special/thailand_creditcard.html",
+        "https://www.ana.co.jp/en/jp/guide/plan/int-info/area-basic-info/bkk.html"
+      ],
+      "apps": [
+        {
+          "labelTag": "配車",
+          "name": "Grab",
+          "usage": "車やタクシーを呼ぶ。行き先は地図や検索で指定でき、呼ぶ前に料金がわかります。\n乗る前に、車のナンバーがアプリの表示と同じか確かめてください。",
+          "beforeTrip": "アプリを入れ、日本の電話番号でSMS認証をしてアカウントを作る。クレジットカードを登録しておけば、降りるときに自動で支払われます。",
+          "appStoreUrl": "https://apps.apple.com/jp/app/grab-%E3%82%BF%E3%82%AF%E3%82%B7%E3%83%BC%E3%81%A8%E3%83%95%E3%83%BC%E3%83%89%E3%83%87%E3%83%AA%E3%83%90%E3%83%AA%E3%83%BC/id647268330"
+        }
+      ],
+      "appsSourceLinks": [
+        "https://apps.apple.com/JP/app/id647268330",
+        "https://www.grab.com/global/ja/rides/",
+        "https://www.trifa.co/ja/column/preparation-tips-travel/grab-how-to-use",
+        "https://www.th.emb-japan.go.jp/itpr_ja/mamechishiki_bangkok.html"
+      ],
+      "timezoneNote": "日本より2時間遅い（日本の正午は現地の午前10時）",
+      "timezoneSourceLinks": [
+        "https://www.th.emb-japan.go.jp/itpr_ja/mamechishiki_bangkok.html",
+        "https://www.ana.co.jp/en/jp/guide/plan/int-info/area-basic-info/bkk.html"
+      ],
+      "toiletInfo": "公衆トイレは少ないので、ホテル、レストラン、デパート、ショッピングモールのトイレを使ってください。\n紙は流さず、横のゴミ箱に捨てるのが基本です。",
+      "toiletSourceLinks": [
+        "https://www.jal.co.jp/tabi/info/toshi/asi/th/bkk.html",
+        "https://allabout.co.jp/gm/gc/506063/"
+      ],
+      "lastConfirmedOn": "2026年10月"
+    },
+    "VN": {
+      "label": "ベトナム",
+      "currency": {
+        "code": "VND",
+        "unit": "ドン"
+      },
+      "emergency": {
+        "footNote": "番号はベトナム国内からかける形です。",
+        "contacts": [
+          {
+            "group": "urgent",
+            "name": "警察",
+            "numbers": [
+              {
+                "local": "113"
+              }
+            ]
+          },
+          {
+            "group": "urgent",
+            "name": "消防",
+            "numbers": [
+              {
+                "local": "114"
+              }
+            ]
+          },
+          {
+            "group": "urgent",
+            "name": "救急",
+            "numbers": [
+              {
+                "local": "115"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "name": "在ベトナム日本国大使館",
+            "sub": "ハノイ・北部",
+            "numbers": [
+              {
+                "local": "024-3846-3000",
+                "intl": "+84-24-3846-3000"
+              }
+            ],
+            "note": "夜間・休日は留守番電話になります。\n命に関わる緊急時は、音声の案内に従って番号を押してください。"
+          },
+          {
+            "group": "embassy",
+            "address": "ハノイ市ゴックハー坊\nリエウザイ通り27",
+            "addressLocal": "27 Liễu Giai, Phường Ngọc Hà, Hà Nội",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          },
+          {
+            "group": "embassy",
+            "name": "在ホーチミン日本国総領事館",
+            "sub": "ホーチミン・南部",
+            "numbers": [
+              {
+                "local": "028-3933-3510",
+                "intl": "+84-28-3933-3510"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "address": "ホーチミン市スアンホア坊\nディエンビエンフー通り261",
+            "addressLocal": "261 Điện Biên Phủ, Phường Xuân Hòa, TP. Hồ Chí Minh",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          },
+          {
+            "group": "embassy",
+            "name": "在ダナン日本国総領事館",
+            "sub": "ダナン・中部",
+            "numbers": [
+              {
+                "local": "0236-3555-535",
+                "intl": "+84-236-3555-535"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "外務省 海外安全ホームページ",
+            "url": "https://www.anzen.mofa.go.jp/"
+          },
+          {
+            "label": "在ベトナム日本国大使館",
+            "url": "https://www.vn.emb-japan.go.jp/itprtop_ja/index.html"
+          },
+          {
+            "label": "在ホーチミン日本国総領事館",
+            "url": "https://www.hcmcgj.vn.emb-japan.go.jp/itprtop_ja/index.html"
+          }
+        ]
+      },
+      "power": {
+        "specs": [
+          {
+            "label": "電圧",
+            "value": "220V",
+            "sub": "（日本は100V）"
+          },
+          {
+            "label": "周波数",
+            "value": "50Hz"
+          },
+          {
+            "label": "プラグ形状",
+            "value": "Aタイプ / Cタイプ",
+            "sub": "（日本と同じ平たいピン2本、または丸いピン2本）"
+          }
+        ],
+        "warn": "充電器に「100-240V」と書かれていれば、そのまま使えます。\n「100V」専用と書かれた機器（ドライヤー、ヘアアイロンなど）は変圧器が必要です。\n電圧が2倍以上あるため、確認せずに挿すと故障や発火の危険があります。"
+      },
+      "greetings": [
+        {
+          "ja": "こんにちは",
+          "local": "Xin chào",
+          "kana": "シン チャオ"
+        },
+        {
+          "ja": "ありがとう",
+          "local": "Cảm ơn",
+          "kana": "カム オン"
+        },
+        {
+          "ja": "すみません（呼びかけ）",
+          "local": "Em ơi!",
+          "kana": "エム オーイ"
+        },
+        {
+          "ja": "これください",
+          "local": "Cho tôi cái này",
+          "kana": "チョー トイ カイ ナイ"
+        },
+        {
+          "ja": "いくらですか",
+          "local": "Bao nhiêu tiền?",
+          "kana": "バオ ニェウ ティエン"
+        },
+        {
+          "ja": "大丈夫です/いりません",
+          "local": "Không, cảm ơn",
+          "kana": "ホン、カム オン"
+        },
+        {
+          "ja": "トイレはどこですか",
+          "local": "Nhà vệ sinh ở đâu?",
+          "kana": "ニャー ヴェー シン オー ダウ"
+        }
+      ],
+      "greetingsSourceLinks": [],
+      "payment": {
+        "card": "ホテルやレストラン、ショッピングモール、スーパーなどで使えます。タッチ決済に対応する店も増えています。",
+        "cash": "屋台や市場、小さな店では現金が基本です。\n市場では値段の交渉もよく行われます。少額のお札を多めに持っておくと安心です。",
+        "travelerCard": "",
+        "tip": "基本的に不要です。スパや個人で頼んだガイドには、渡すこともあります。"
+      },
+      "paymentSourceLinks": [
+        "https://vietnam.travel/things-to-do/currency-and-payments-vietnam",
+        "https://www.ana.co.jp/en/jp/guide/plan/int-info/area-basic-info/sgn.html"
+      ],
+      "apps": [
+        {
+          "labelTag": "配車",
+          "name": "Grab",
+          "usage": "車やバイクタクシーを呼ぶ。行き先は地図や検索で指定でき、呼ぶ前に料金がわかります。\n乗る前に、車のナンバーがアプリの表示と同じか確かめてください。",
+          "beforeTrip": "アプリを入れ、日本の電話番号でSMS認証をしてアカウントを作る。クレジットカードを登録しておけば、降りるときに自動で支払われます。",
+          "appStoreUrl": "https://apps.apple.com/jp/app/grab-%E3%82%BF%E3%82%AF%E3%82%B7%E3%83%BC%E3%81%A8%E3%83%95%E3%83%BC%E3%83%89%E3%83%87%E3%83%AA%E3%83%90%E3%83%AA%E3%83%BC/id647268330"
+        }
+      ],
+      "appsSourceLinks": [
+        "https://apps.apple.com/JP/app/id647268330",
+        "https://www.grab.com/global/ja/rides/",
+        "https://www.trifa.co/ja/column/preparation-tips-travel/grab-how-to-use"
+      ],
+      "timezoneNote": "日本より2時間遅い（日本の正午は現地の午前10時）",
+      "timezoneSourceLinks": [
+        "https://www.ana.co.jp/en/jp/guide/plan/int-info/area-basic-info/sgn.html",
+        "https://www.ana.co.jp/en/jp/guide/plan/int-info/area-basic-info/han.html"
+      ],
+      "toiletInfo": "公衆トイレは少ないので、ホテルやレストランのトイレを使ってください。\n紙は流さず、横のゴミ箱に捨てるのが基本です。",
+      "toiletSourceLinks": [
+        "https://www.jal.co.jp/jp/ja/tabi/info/toshi/asi/vn/sgn.html",
+        "https://allabout.co.jp/gm/gc/506063/"
+      ],
+      "lastConfirmedOn": "2026年10月"
+    },
+    "SG": {
+      "label": "シンガポール",
+      "currency": {
+        "code": "SGD",
+        "unit": "シンガポールドル"
+      },
+      "emergency": {
+        "footNote": "番号はシンガポール国内からかける形です。",
+        "contacts": [
+          {
+            "group": "urgent",
+            "name": "警察",
+            "numbers": [
+              {
+                "local": "999"
+              }
+            ]
+          },
+          {
+            "group": "urgent",
+            "name": "消防・救急",
+            "numbers": [
+              {
+                "local": "995"
+              }
+            ]
+          },
+          {
+            "group": "consult",
+            "name": "警察ホットライン",
+            "numbers": [
+              {
+                "local": "1800-255-0000"
+              }
+            ],
+            "note": "急ぎではない届け出や、情報提供の窓口です。"
+          },
+          {
+            "group": "embassy",
+            "name": "在シンガポール日本国大使館",
+            "sub": "代表・領事部",
+            "numbers": [
+              {
+                "local": "6235-8855",
+                "intl": "+65-6235-8855"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "address": "ナッシム・ロード16",
+            "addressLocal": "Embassy of Japan\n16 Nassim Road, Singapore 258390",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          }
+        ],
+        "links": [
+          {
+            "label": "外務省 海外安全ホームページ",
+            "url": "https://www.anzen.mofa.go.jp/"
+          },
+          {
+            "label": "在シンガポール日本国大使館",
+            "url": "https://www.sg.emb-japan.go.jp/itprtop_ja/index.html"
+          }
+        ]
+      },
+      "power": {
+        "specs": [
+          {
+            "label": "電圧",
+            "value": "230V",
+            "sub": "（日本は100V）"
+          },
+          {
+            "label": "周波数",
+            "value": "50Hz"
+          },
+          {
+            "label": "プラグ形状",
+            "value": "BFタイプ",
+            "sub": "（四角いピンが3本）"
+          }
+        ],
+        "warn": "充電器に「100-240V」と書かれていれば、変換プラグだけで使えます。\n「100V」専用と書かれた機器（ドライヤー、ヘアアイロンなど）は変圧器が必要です。\n電圧が2倍以上あるため、確認せずに挿すと故障や発火の危険があります。"
+      },
+      "greetings": [
+        {
+          "ja": "こんにちは",
+          "local": "Hello",
+          "kana": "ハロー"
+        },
+        {
+          "ja": "ありがとう",
+          "local": "Thank you",
+          "kana": "サンキュー"
+        },
+        {
+          "ja": "すみません（呼びかけ）",
+          "local": "Excuse me",
+          "kana": "エクスキューズ ミー"
+        },
+        {
+          "ja": "これください",
+          "local": "This one, please",
+          "kana": "ディス ワン プリーズ"
+        },
+        {
+          "ja": "いくらですか",
+          "local": "How much is this?",
+          "kana": "ハウ マッチ イズ ディス"
+        },
+        {
+          "ja": "大丈夫です/いりません",
+          "local": "No, thank you",
+          "kana": "ノー サンキュー"
+        },
+        {
+          "ja": "トイレはどこですか",
+          "local": "Where is the toilet?",
+          "kana": "ウェア イズ ザ トイレット"
+        }
+      ],
+      "greetingsSourceLinks": [],
+      "payment": {
+        "card": "ほとんどの店で使えます。タッチ決済にも広く対応しています。",
+        "cash": "ホーカー（屋台街）や小さな店では、カードが使えないこともあります。少額の現金があると安心です。",
+        "travelerCard": "",
+        "tip": "不要です。レストランやホテルでは、10%のサービス料が会計に含まれていることがほとんどです。"
+      },
+      "paymentSourceLinks": [
+        "https://www.visitsingapore.com/content/dam/MICE/Global/downloads/BT_Post_Arrival_Brochure.pdf",
+        "https://www.ana.co.jp/en/jp/guide/plan/int-info/area-basic-info/sin.html"
+      ],
+      "apps": [
+        {
+          "labelTag": "配車",
+          "name": "Grab",
+          "usage": "車やタクシーを呼ぶ。行き先は地図や検索で指定でき、呼ぶ前に料金がわかります。\n乗る前に、車のナンバーがアプリの表示と同じか確かめてください。",
+          "beforeTrip": "アプリを入れ、日本の電話番号でSMS認証をしてアカウントを作る。クレジットカードを登録しておけば、降りるときに自動で支払われます。",
+          "appStoreUrl": "https://apps.apple.com/jp/app/grab-%E3%82%BF%E3%82%AF%E3%82%B7%E3%83%BC%E3%81%A8%E3%83%95%E3%83%BC%E3%83%89%E3%83%87%E3%83%AA%E3%83%90%E3%83%AA%E3%83%BC/id647268330"
+        }
+      ],
+      "appsSourceLinks": [
+        "https://apps.apple.com/JP/app/id647268330",
+        "https://www.grab.com/global/ja/rides/",
+        "https://www.trifa.co/ja/column/preparation-tips-travel/grab-how-to-use"
+      ],
+      "timezoneNote": "日本より1時間遅い（日本の正午は現地の午前11時）",
+      "timezoneSourceLinks": [
+        "https://www.ana.co.jp/en/jp/guide/plan/int-info/area-basic-info/sin.html"
+      ],
+      "toiletInfo": "ホテルやショッピングセンター、MRTの駅にトイレがあり、街なかで困ることはほとんどありません。有料のトイレもあります。\n使ったあとは必ず水を流してください（流さないと罰金の対象になります）。",
+      "toiletSourceLinks": [
+        "https://www.jal.co.jp/tabi/info/toshi/asi/sg/sin.html"
+      ],
+      "lastConfirmedOn": "2026年10月"
+    },
+    "MY": {
+      "label": "マレーシア",
+      "currency": {
+        "code": "MYR",
+        "unit": "リンギット"
+      },
+      "emergency": {
+        "footNote": "番号はマレーシア国内からかける形です。",
+        "contacts": [
+          {
+            "group": "urgent",
+            "name": "警察・消防・救急",
+            "numbers": [
+              {
+                "local": "999"
+              }
+            ],
+            "note": "携帯電話からは112でもかけられます。"
+          },
+          {
+            "group": "embassy",
+            "name": "在マレーシア日本国大使館",
+            "sub": "領事部",
+            "numbers": [
+              {
+                "local": "03-2177-2751",
+                "intl": "+60-3-2177-2751"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "name": "大使館代表",
+            "numbers": [
+              {
+                "local": "03-2177-2600",
+                "intl": "+60-3-2177-2600"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "address": "クアラルンプール\nペルシアラン・ストナー11",
+            "addressLocal": "Embassy of Japan\nNo.11, Persiaran Stonor, Off Jalan Tun Razak\n50450 Kuala Lumpur",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          },
+          {
+            "group": "embassy",
+            "name": "在ペナン日本国総領事館",
+            "sub": "ペナンなど北部",
+            "numbers": [
+              {
+                "local": "04-226-3030",
+                "intl": "+60-4-226-3030"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "name": "在コタキナバル領事事務所",
+            "sub": "サバ州",
+            "numbers": [
+              {
+                "local": "088-254-169",
+                "intl": "+60-88-254-169"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "label": "外務省 海外安全ホームページ",
+            "url": "https://www.anzen.mofa.go.jp/"
+          },
+          {
+            "label": "在マレーシア日本国大使館",
+            "url": "https://www.my.emb-japan.go.jp/itprtop_ja/index.html"
+          }
+        ]
+      },
+      "power": {
+        "specs": [
+          {
+            "label": "電圧",
+            "value": "240V",
+            "sub": "（日本は100V）"
+          },
+          {
+            "label": "周波数",
+            "value": "50Hz"
+          },
+          {
+            "label": "プラグ形状",
+            "value": "BFタイプ",
+            "sub": "（四角いピンが3本）"
+          }
+        ],
+        "warn": "充電器に「100-240V」と書かれていれば、変換プラグだけで使えます。\n「100V」専用と書かれた機器（ドライヤー、ヘアアイロンなど）は変圧器が必要です。\n電圧が2倍以上あるため、確認せずに挿すと故障や発火の危険があります。"
+      },
+      "greetings": [
+        {
+          "ja": "こんにちは",
+          "local": "Apa khabar?",
+          "kana": "アパ カバール"
+        },
+        {
+          "ja": "ありがとう",
+          "local": "Terima kasih",
+          "kana": "トゥリマ カシ"
+        },
+        {
+          "ja": "すみません（呼びかけ）",
+          "local": "Tumpang tanya",
+          "kana": "トゥンパン タニャ"
+        },
+        {
+          "ja": "これください",
+          "local": "Saya mahu yang ini",
+          "kana": "サヤ マウ ヤン イニ"
+        },
+        {
+          "ja": "いくらですか",
+          "local": "Berapa harga?",
+          "kana": "ブラパ ハルガ"
+        },
+        {
+          "ja": "大丈夫です/いりません",
+          "local": "Tidak, terima kasih",
+          "kana": "ティダッ、トゥリマ カシ"
+        },
+        {
+          "ja": "トイレはどこですか",
+          "local": "Tandas di mana?",
+          "kana": "タンダス ディ マナ"
+        }
+      ],
+      "greetingsSourceLinks": [],
+      "payment": {
+        "card": "都市部のショッピングモールやホテル、大きな店では使えます。",
+        "cash": "屋台や市場、小さな食堂は、現金か現地のQR決済だけのことがよくあります。少額のリンギットがあると安心です。",
+        "travelerCard": "",
+        "tip": "基本的に不要です。会計にサービス料が含まれていることもあります。"
+      },
+      "paymentSourceLinks": [
+        "https://www.bento.travel/blog/how-to-pay-in-malaysia",
+        "https://www.swissbankers.ch/en/services/information/country-information/MYS",
+        "https://www.ana.co.jp/en/jp/guide/plan/int-info/area-basic-info/kul.html"
+      ],
+      "apps": [
+        {
+          "labelTag": "配車",
+          "name": "Grab",
+          "usage": "車やタクシーを呼ぶ。行き先は地図や検索で指定でき、呼ぶ前に料金がわかります。\n乗る前に、車のナンバーがアプリの表示と同じか確かめてください。",
+          "beforeTrip": "アプリを入れ、日本の電話番号でSMS認証をしてアカウントを作る。クレジットカードを登録しておけば、降りるときに自動で支払われます。",
+          "appStoreUrl": "https://apps.apple.com/jp/app/grab-%E3%82%BF%E3%82%AF%E3%82%B7%E3%83%BC%E3%81%A8%E3%83%95%E3%83%BC%E3%83%89%E3%83%87%E3%83%AA%E3%83%90%E3%83%AA%E3%83%BC/id647268330"
+        }
+      ],
+      "appsSourceLinks": [
+        "https://apps.apple.com/JP/app/id647268330",
+        "https://www.grab.com/global/ja/rides/",
+        "https://www.trifa.co/ja/column/preparation-tips-travel/grab-how-to-use"
+      ],
+      "timezoneNote": "日本より1時間遅い（日本の正午は現地の午前11時）",
+      "timezoneSourceLinks": [
+        "https://www.ana.co.jp/en/jp/guide/plan/int-info/area-basic-info/kul.html"
+      ],
+      "toiletInfo": "有料のトイレもあります。\n個室に紙がないことが多いので、ポケットティッシュがあると安心です。\n壁のホースは体を洗うためのもので、床がぬれていることがあります。",
+      "toiletSourceLinks": [
+        "https://www.jal.co.jp/jp/ja/tabi/info/toshi/asi/my/kul.html",
+        "https://allabout.co.jp/gm/gc/464652/"
+      ],
+      "lastConfirmedOn": "2026年10月"
+    },
+    "PH": {
+      "label": "フィリピン",
+      "currency": {
+        "code": "PHP",
+        "unit": "フィリピン・ペソ"
+      },
+      "emergency": {
+        "footNote": "番号はフィリピン国内からかける形です。",
+        "contacts": [
+          {
+            "group": "urgent",
+            "name": "警察・消防・救急",
+            "numbers": [
+              {
+                "local": "911"
+              }
+            ],
+            "note": "全国共通の緊急番号です。"
+          },
+          {
+            "group": "consult",
+            "name": "ツーリスト・インフォメーション・センター",
+            "sub": "フィリピン観光省（マニラ）",
+            "numbers": [
+              {
+                "local": "02-8459-5200"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "name": "在フィリピン日本国大使館",
+            "sub": "領事班（日本語）",
+            "numbers": [
+              {
+                "local": "02-8834-7508",
+                "intl": "+63-2-8834-7508"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "name": "邦人援護ホットライン",
+            "sub": "24時間",
+            "numbers": [
+              {
+                "local": "02-8551-5786",
+                "intl": "+63-2-8551-5786"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "name": "大使館代表",
+            "numbers": [
+              {
+                "local": "02-8551-5710",
+                "intl": "+63-2-8551-5710"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "address": "マニラ首都圏パサイ市\nロハス通り2627",
+            "addressLocal": "2627 Roxas Blvd., Pasay City,\nMetro Manila 1300",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          },
+          {
+            "group": "embassy",
+            "name": "在セブ日本国総領事館",
+            "numbers": [
+              {
+                "local": "032-231-7321",
+                "intl": "+63-32-231-7321"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "address": "セブ市セブ・ビジネスパーク\n2Quadビル8階",
+            "addressLocal": "8th Floor, 2Quad Building, Cardinal Rosales Avenue,\nCebu Business Park, Cebu City",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          }
+        ],
+        "links": [
+          {
+            "label": "外務省 海外安全ホームページ",
+            "url": "https://www.anzen.mofa.go.jp/"
+          },
+          {
+            "label": "在フィリピン日本国大使館",
+            "url": "https://www.ph.emb-japan.go.jp/itpr_ja/00_000139.html"
+          },
+          {
+            "label": "在セブ日本国総領事館",
+            "url": "https://www.cebu.ph.emb-japan.go.jp/itprtop_ja/index.html"
+          }
+        ]
+      },
+      "power": {
+        "specs": [
+          {
+            "label": "電圧",
+            "value": "220V",
+            "sub": "（日本は100V）"
+          },
+          {
+            "label": "周波数",
+            "value": "60Hz"
+          },
+          {
+            "label": "プラグ形状",
+            "value": "Aタイプ / B3タイプ / Cタイプ",
+            "sub": "（Aタイプは日本と同じ形）"
+          }
+        ],
+        "warn": "プラグの形が日本と同じでも、電圧は2倍以上あります。\n充電器に「100-240V」と書かれていれば、そのまま使えます。\n「100V」専用と書かれた機器（ドライヤー、ヘアアイロンなど）は変圧器が必要です。確認せずに挿すと故障や発火の危険があります。"
+      },
+      "greetings": [
+        {
+          "ja": "こんにちは",
+          "local": "Kumusta po",
+          "kana": "クムスタ ポ"
+        },
+        {
+          "ja": "ありがとう",
+          "local": "Salamat po",
+          "kana": "サラマッ ポ"
+        },
+        {
+          "ja": "すみません（呼びかけ）",
+          "local": "Excuse me po",
+          "kana": "エクスキューズ ミー ポ"
+        },
+        {
+          "ja": "これください",
+          "local": "Ito po",
+          "kana": "イト ポ"
+        },
+        {
+          "ja": "いくらですか",
+          "local": "Magkano po?",
+          "kana": "マグカーノ ポ"
+        },
+        {
+          "ja": "大丈夫です/いりません",
+          "local": "Hindi na po, salamat",
+          "kana": "ヒンディ ナ ポ サラマッ"
+        },
+        {
+          "ja": "トイレはどこですか",
+          "local": "Saan po ang CR?",
+          "kana": "サアン ポ アン シーアール"
+        }
+      ],
+      "greetingsSourceLinks": [],
+      "payment": {
+        "card": "ホテル、ショッピングモール、観光客向けのレストランで使えます。\n使えない店や、通信の具合で決済できないこともあり、カード手数料を求められる場合もあります。",
+        "cash": "小さな店や屋台、タクシー、チップ。おつりがもらえないことがあるので、細かいお札や硬貨があると便利です。",
+        "travelerCard": "",
+        "tip": "大都市やリゾートでは習慣があります。\nレストラン（サービス料が含まれていない場合）とタクシーは料金の10%ほど。ホテルのポーターは荷物1個につき20〜50ペソほどです。\n地方ではチップの習慣はありません。"
+      },
+      "paymentSourceLinks": [
+        "https://www.ana.co.jp/ja/jp/guide/plan/int-info/area-basic-info/mnl.html",
+        "https://www.tour.ne.jp/w_guide/PH/MNL/info/"
+      ],
+      "apps": [
+        {
+          "labelTag": "配車",
+          "name": "Grab",
+          "usage": "タクシーや車を呼ぶ。乗る前に料金の目安がわかり、運転手に行き先を説明しなくて済みます。",
+          "beforeTrip": "日本にいるうちにアプリを入れ、電話番号のSMS認証でアカウントを作る。クレジットカードを登録しておくと、降りるときに自動で支払われます。",
+          "appStoreUrl": "https://apps.apple.com/jp/app/grab-%E3%82%BF%E3%82%AF%E3%82%B7%E3%83%BC%E3%81%A8%E3%83%95%E3%83%BC%E3%83%89%E3%83%87%E3%83%AA%E3%83%90%E3%83%AA%E3%83%BC/id647268330"
+        }
+      ],
+      "appsSourceLinks": [
+        "https://apps.apple.com/JP/app/id647268330"
+      ],
+      "timezoneNote": "日本より1時間遅い（日本の正午は現地の午前11時）",
+      "timezoneSourceLinks": [
+        "https://www.ana.co.jp/ja/jp/guide/plan/int-info/area-basic-info/mnl.html",
+        "https://www.jal.co.jp/jp/ja/tabi/info/toshi/asi/ph/mnl.html"
+      ],
+      "toiletInfo": "公衆トイレは少ないので、ホテル、ショッピングモール、レストランのトイレを使ってください。\nポケットティッシュがあると安心です。",
+      "toiletSourceLinks": [
+        "https://www.jal.co.jp/jp/ja/tabi/info/toshi/asi/ph/mnl.html"
+      ],
+      "lastConfirmedOn": "2026年10月"
+    },
+    "ID": {
+      "label": "インドネシア",
+      "currency": {
+        "code": "IDR",
+        "unit": "ルピア"
+      },
+      "emergency": {
+        "footNote": "番号はインドネシア国内からかける形です。",
+        "contacts": [
+          {
+            "group": "urgent",
+            "name": "警察",
+            "numbers": [
+              {
+                "local": "110"
+              }
+            ]
+          },
+          {
+            "group": "urgent",
+            "name": "救急",
+            "numbers": [
+              {
+                "local": "119"
+              }
+            ]
+          },
+          {
+            "group": "urgent",
+            "name": "消防",
+            "numbers": [
+              {
+                "local": "113"
+              }
+            ]
+          },
+          {
+            "group": "urgent",
+            "name": "クライシスセンター",
+            "sub": "バリ島",
+            "numbers": [
+              {
+                "local": "0361-251177"
+              }
+            ],
+            "note": "24時間・英語可。\n災害、交通事故、救急、消防、警察への通報をまとめて受け付けます。"
+          },
+          {
+            "group": "embassy",
+            "name": "在インドネシア日本国大使館",
+            "sub": "ジャカルタ",
+            "numbers": [
+              {
+                "local": "021-3192-4308",
+                "intl": "+62-21-3192-4308"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "address": "ジャカルタ市\nタムリン通り24",
+            "addressLocal": "Jl. M.H. Thamrin No.24,\nJakarta Pusat 10350",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          },
+          {
+            "group": "embassy",
+            "name": "在デンパサール日本国総領事館",
+            "sub": "バリ島",
+            "numbers": [
+              {
+                "local": "0361-227628",
+                "intl": "+62-361-227628"
+              }
+            ],
+            "note": "24時間つながります（閉館時間は委託のオペレーターが対応）。"
+          },
+          {
+            "group": "embassy",
+            "address": "バリ州デンパサール市レノン\nププタン通り170",
+            "addressLocal": "Jl. Raya Puputan No.170, Renon,\nDenpasar, Bali",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          }
+        ],
+        "links": [
+          {
+            "label": "外務省 海外安全ホームページ",
+            "url": "https://www.anzen.mofa.go.jp/"
+          },
+          {
+            "label": "在インドネシア日本国大使館",
+            "url": "https://www.id.emb-japan.go.jp/itpr_ja/about_jp.html"
+          },
+          {
+            "label": "在デンパサール日本国総領事館",
+            "url": "https://www.denpasar.id.emb-japan.go.jp/itprtop_ja/index.html"
+          }
+        ]
+      },
+      "power": {
+        "specs": [
+          {
+            "label": "電圧",
+            "value": "220V",
+            "sub": "（日本は100V）"
+          },
+          {
+            "label": "周波数",
+            "value": "50Hz"
+          },
+          {
+            "label": "プラグ形状",
+            "value": "Cタイプ",
+            "sub": "（丸いピンが2本）"
+          }
+        ],
+        "warn": "充電器に「100-240V」と書かれていれば、変換プラグだけで使えます。\n「100V」専用と書かれた機器（ドライヤー、ヘアアイロンなど）は変圧器が必要です。\n電圧が2倍以上あるため、確認せずに挿すと故障や発火の危険があります。"
+      },
+      "greetings": [
+        {
+          "ja": "こんにちは",
+          "local": "Selamat siang",
+          "kana": "スラマッ シアン"
+        },
+        {
+          "ja": "ありがとう",
+          "local": "Terima kasih",
+          "kana": "トゥリマ カシ"
+        },
+        {
+          "ja": "すみません（呼びかけ）",
+          "local": "Permisi",
+          "kana": "プルミシ"
+        },
+        {
+          "ja": "これください",
+          "local": "Saya mau ini",
+          "kana": "サヤ マウ イニ"
+        },
+        {
+          "ja": "いくらですか",
+          "local": "Berapa harganya?",
+          "kana": "ブラパ ハルガニャ"
+        },
+        {
+          "ja": "大丈夫です/いりません",
+          "local": "Tidak, terima kasih",
+          "kana": "ティダッ トゥリマ カシ"
+        },
+        {
+          "ja": "トイレはどこですか",
+          "local": "Toilet di mana?",
+          "kana": "トイレッ ディ マナ"
+        }
+      ],
+      "greetingsSourceLinks": [],
+      "payment": {
+        "card": "大きなホテルやレストランでは使えますが、使える店は限られます。",
+        "cash": "市場、小さな店、屋台、タクシー、チップ。両替はホテル内や大手の両替所を使い、その場で金額を確かめると安心です。",
+        "travelerCard": "",
+        "tip": "基本的には不要です。料金にサービス料が含まれていれば渡さなくて構いません。\n良いサービスを受けたときは、レストランで会計の5〜10%ほど、ホテルのポーターやスパの担当者には2万ルピアほどが目安です。"
+      },
+      "paymentSourceLinks": [
+        "https://www.ana.co.jp/ja/jp/guide/plan/int-info/area-basic-info/cgk.html",
+        "https://www.tour.ne.jp/w_guide/ID/DPS/info/"
+      ],
+      "apps": [
+        {
+          "labelTag": "配車",
+          "name": "Grab",
+          "usage": "タクシーや車、バイクを呼ぶ。乗る前に料金の目安がわかり、運転手に行き先を説明しなくて済みます。",
+          "beforeTrip": "日本にいるうちにアプリを入れ、電話番号のSMS認証でアカウントを作る。クレジットカードを登録しておくと、降りるときに自動で支払われます。",
+          "appStoreUrl": "https://apps.apple.com/jp/app/grab-%E3%82%BF%E3%82%AF%E3%82%B7%E3%83%BC%E3%81%A8%E3%83%95%E3%83%BC%E3%83%89%E3%83%87%E3%83%AA%E3%83%90%E3%83%AA%E3%83%BC/id647268330"
+        },
+        {
+          "labelTag": "配車",
+          "name": "Gojek",
+          "usage": "Grabと同じように車やバイクを呼べます。地域や時間帯によってつかまりやすさが違うので、両方あると安心です。",
+          "beforeTrip": "日本にいるうちにアプリを入れ、電話番号のSMS認証でアカウントを作る。",
+          "appStoreUrl": "https://apps.apple.com/jp/app/gojek/id944875099"
+        }
+      ],
+      "appsSourceLinks": [
+        "https://apps.apple.com/JP/app/id647268330",
+        "https://apps.apple.com/jp/app/gojek/id944875099?uo=4"
+      ],
+      "timezoneNote": "ジャカルタは日本より2時間遅い（日本の正午は現地の午前10時）\nバリ島は日本より1時間遅い（日本の正午は現地の午前11時）",
+      "timezoneSourceLinks": [
+        "https://www.ana.co.jp/ja/jp/guide/plan/int-info/area-basic-info/cgk.html",
+        "https://www.jal.co.jp/jp/ja/tabi/info/toshi/asi/id/dps.html"
+      ],
+      "toiletInfo": "町なかに公衆トイレはほとんどないので、ホテル、レストラン、ショッピングモールのトイレを使ってください。\nポケットティッシュがあると安心です。",
+      "toiletSourceLinks": [
+        "https://www.ana.co.jp/ja/jp/guide/plan/int-info/area-basic-info/cgk.html",
+        "https://www.jal.co.jp/jp/ja/tabi/info/toshi/asi/id/dps.html"
+      ],
+      "lastConfirmedOn": "2026年10月"
+    },
+    "US-HI": {
+      "label": "ハワイ",
+      "currency": {
+        "code": "USD",
+        "unit": "米ドル"
+      },
+      "emergency": {
+        "footNote": "番号はハワイ（アメリカ国内）からかける形です。",
+        "contacts": [
+          {
+            "group": "urgent",
+            "name": "警察・消防・救急",
+            "numbers": [
+              {
+                "local": "911"
+              }
+            ],
+            "note": "公衆電話からはお金を入れずにかけられます。"
+          },
+          {
+            "group": "embassy",
+            "name": "在ホノルル日本国総領事館",
+            "numbers": [
+              {
+                "local": "808-543-3111",
+                "intl": "+1-808-543-3111"
+              }
+            ],
+            "note": "24時間対応。夜間・休日も同じ番号です。"
+          },
+          {
+            "group": "embassy",
+            "address": "ホノルル市\nヌウアヌ通り1742",
+            "addressLocal": "1742 Nuuanu Avenue,\nHonolulu, HI 96817",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          }
+        ],
+        "links": [
+          {
+            "label": "外務省 海外安全ホームページ",
+            "url": "https://www.anzen.mofa.go.jp/"
+          },
+          {
+            "label": "在ホノルル日本国総領事館",
+            "url": "https://www.honolulu.us.emb-japan.go.jp/itpr_ja/ryoujikan_annai.html"
+          }
+        ]
+      },
+      "power": {
+        "specs": [
+          {
+            "label": "電圧",
+            "value": "110〜120V",
+            "sub": "（日本は100V）"
+          },
+          {
+            "label": "周波数",
+            "value": "60Hz"
+          },
+          {
+            "label": "プラグ形状",
+            "value": "Aタイプ",
+            "sub": "（日本と同じ形）"
+          }
+        ],
+        "warn": "日本のプラグがそのまま挿せます。\n充電器に「100-240V」と書かれていれば問題ありません。\n「100V」専用と書かれた機器（ドライヤー、ヘアアイロンなど）は、長く使うと故障の原因になることがあります。"
+      },
+      "greetings": [
+        {
+          "ja": "こんにちは",
+          "local": "Hello",
+          "kana": "ハロー"
+        },
+        {
+          "ja": "ありがとう",
+          "local": "Thank you",
+          "kana": "サンキュー"
+        },
+        {
+          "ja": "すみません（呼びかけ）",
+          "local": "Excuse me",
+          "kana": "エクスキューズ ミー"
+        },
+        {
+          "ja": "これください",
+          "local": "This one, please",
+          "kana": "ディス ワン プリーズ"
+        },
+        {
+          "ja": "いくらですか",
+          "local": "How much is it?",
+          "kana": "ハウ マッチ イズ イット"
+        },
+        {
+          "ja": "大丈夫です/いりません",
+          "local": "No, thank you",
+          "kana": "ノー サンキュー"
+        },
+        {
+          "ja": "トイレはどこですか",
+          "local": "Where is the restroom?",
+          "kana": "ウェア イズ ザ レストルーム"
+        }
+      ],
+      "greetingsSourceLinks": [],
+      "payment": {
+        "card": "ほぼどこでも使えます。少額の支払いでも問題ありません。\nブランドによっては使えない店もあります。",
+        "cash": "チップ用の1ドル札と5ドル札。小さな支払いに高額のお札は避けたほうが無難です。",
+        "travelerCard": "",
+        "tip": "必要です。\nレストランは会計の15〜20%（サービス料が含まれていない場合）。伝票に「Service Charge」や「Gratuity」とあれば不要です。\nタクシーは料金の15〜20%。ホテルのポーターは荷物1個につき1ドル、部屋の清掃は1日1〜2ドルが目安です。\n硬貨ではなくお札で渡します。"
+      },
+      "paymentSourceLinks": [
+        "https://www.ana.co.jp/ja/jp/guide/plan/int-info/area-basic-info/hnl.html",
+        "https://www.tour.ne.jp/w_guide/HI/HNL/info/",
+        "https://www.jal.co.jp/tabi/info/toshi/hwi/um/index.html"
+      ],
+      "apps": [
+        {
+          "labelTag": "配車",
+          "name": "Uber",
+          "usage": "車を呼ぶ。乗る前に料金がわかり、運転手に行き先を説明しなくて済みます。チップもアプリから払えます。",
+          "beforeTrip": "日本にいるうちにアプリを入れ、電話番号のSMS認証でアカウントを作る。クレジットカードを登録しておくと、降りるときに自動で支払われます。",
+          "appStoreUrl": "https://apps.apple.com/jp/app/%E3%82%A6%E3%83%BC%E3%83%90%E3%83%BC-uber-taxi-%E3%82%BF%E3%82%AF%E3%82%B7%E3%83%BC%E9%85%8D%E8%BB%8A%E3%82%A2%E3%83%97%E3%83%AA/id368677368"
+        }
+      ],
+      "appsSourceLinks": [
+        "https://apps.apple.com/JP/app/id368677368"
+      ],
+      "timezoneNote": "日本より19時間遅い（日本の正午は現地の前日の午後5時）\nサマータイムはありません。",
+      "timezoneSourceLinks": [
+        "https://www.ana.co.jp/ja/jp/guide/plan/int-info/area-basic-info/hnl.html",
+        "https://www.tour.ne.jp/w_guide/HI/HNL/info/"
+      ],
+      "toiletInfo": "ショッピングセンター、ホテル、空港のトイレが比較的きれいで使いやすいです。\nビーチや公園の公衆トイレは清潔でないことが多く、人けのない場所は避けると安心です。\n個室では荷物を床に置かないようにしましょう。",
+      "toiletSourceLinks": [
+        "https://allabout.co.jp/gm/gc/464356/"
+      ],
+      "lastConfirmedOn": "2026年10月"
+    },
+    "GU": {
+      "label": "グアム",
+      "currency": {
+        "code": "USD",
+        "unit": "米ドル"
+      },
+      "emergency": {
+        "footNote": "番号はグアム島内からかける形です。",
+        "contacts": [
+          {
+            "group": "urgent",
+            "name": "警察・消防・救急",
+            "numbers": [
+              {
+                "local": "911"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "name": "在ハガッニャ日本国総領事館",
+            "numbers": [
+              {
+                "local": "671-646-1290",
+                "intl": "+1-671-646-1290"
+              },
+              {
+                "local": "671-646-5220",
+                "intl": "+1-671-646-5220"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "address": "タムニング\nITCビル604号室",
+            "addressLocal": "Suite 604, ITC Building,\n590 South Marine Corps Drive, Tamuning, Guam 96913",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          }
+        ],
+        "links": [
+          {
+            "label": "外務省 海外安全ホームページ",
+            "url": "https://www.anzen.mofa.go.jp/"
+          },
+          {
+            "label": "在ハガッニャ日本国総領事館",
+            "url": "https://www.hagatna.us.emb-japan.go.jp/itpr_ja/about-us.html"
+          }
+        ]
+      },
+      "power": {
+        "specs": [
+          {
+            "label": "電圧",
+            "value": "110〜120V",
+            "sub": "（日本は100V）"
+          },
+          {
+            "label": "周波数",
+            "value": "60Hz"
+          },
+          {
+            "label": "プラグ形状",
+            "value": "Aタイプ",
+            "sub": "（日本と同じ形）"
+          }
+        ],
+        "warn": "コンセントは3つ穴ですが、日本のプラグがそのまま挿せます。\n充電器に「100-240V」と書かれていれば問題ありません。\n「100V」専用と書かれた機器（ドライヤー、ヘアアイロンなど）は、長く使うと故障の原因になることがあります。"
+      },
+      "greetings": [
+        {
+          "ja": "こんにちは",
+          "local": "Hello",
+          "kana": "ハロー"
+        },
+        {
+          "ja": "ありがとう",
+          "local": "Thank you",
+          "kana": "サンキュー"
+        },
+        {
+          "ja": "すみません（呼びかけ）",
+          "local": "Excuse me",
+          "kana": "エクスキューズ ミー"
+        },
+        {
+          "ja": "これください",
+          "local": "This one, please",
+          "kana": "ディス ワン プリーズ"
+        },
+        {
+          "ja": "いくらですか",
+          "local": "How much is it?",
+          "kana": "ハウ マッチ イズ イット"
+        },
+        {
+          "ja": "大丈夫です/いりません",
+          "local": "No, thank you",
+          "kana": "ノー サンキュー"
+        },
+        {
+          "ja": "トイレはどこですか",
+          "local": "Where is the restroom?",
+          "kana": "ウェア イズ ザ レストルーム"
+        }
+      ],
+      "greetingsSourceLinks": [],
+      "payment": {
+        "card": "ほとんどの店で使えます。ブランドによっては使えない店もあります。",
+        "cash": "ナイトマーケット、タクシー、チップ。少額の現金があると安心です。",
+        "travelerCard": "",
+        "tip": "必要です。\nレストラン、タクシー、スパ、アクティビティは料金の10〜15%ほど（サービス料が含まれていれば不要）。\nホテルのポーターは荷物1個につき1ドル、部屋の清掃は1人1泊1ドルが目安です。"
+      },
+      "paymentSourceLinks": [
+        "https://rurubu.jp/andmore/article/17955?page=2",
+        "https://www.tour.ne.jp/w_guide/GU/GUM/info/"
+      ],
+      "apps": [
+        {
+          "labelTag": "配車",
+          "name": "STROLL",
+          "usage": "グアムの配車アプリで、車を呼べます。日本語表示に対応し、料金は呼ぶときに決まります。",
+          "beforeTrip": "日本にいるうちにアプリを入れ、電話番号のSMS認証でアカウントを作る。日本のクレジットカードを登録しておくと、降りるときに自動で支払われます。",
+          "appStoreUrl": "https://apps.apple.com/jp/app/stroll-%EC%8A%A4%ED%8A%B8%EB%A1%A4-%E3%82%B9%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB/id1571713681"
+        }
+      ],
+      "appsSourceLinks": [
+        "https://apps.apple.com/jp/app/stroll-%EC%8A%A4%ED%8A%B8%EB%A1%A4-%E3%82%B9%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB/id1571713681",
+        "https://www.postguam.com/business/local/stroll-marks-first-anniversary-with-quadrupled-fleet-30-000-monthly-rides/article_6d88b804-cb47-4951-a658-89ed472cb158.html",
+        "https://www.visitguam.com/listing/stroll-international/5967/"
+      ],
+      "timezoneNote": "日本より1時間早い（日本の正午は現地の午後1時）",
+      "timezoneSourceLinks": [
+        "https://rurubu.jp/andmore/article/17955?page=2",
+        "https://www.tour.ne.jp/w_guide/GU/GUM/info/"
+      ],
+      "toiletInfo": "公衆トイレはほとんどないので、ショッピングモールやホテルのトイレを使ってください。\nビーチでは売店やマリンハウスのトイレが使えます。",
+      "toiletSourceLinks": [
+        "https://rurubu.jp/andmore/article/17955?page=2"
+      ],
+      "lastConfirmedOn": "2026年10月"
+    },
+    "FR": {
+      "label": "フランス",
+      "currency": {
+        "code": "EUR",
+        "unit": "ユーロ"
+      },
+      "emergency": {
+        "footNote": "番号はフランス国内からかける形です。",
+        "contacts": [
+          {
+            "group": "urgent",
+            "name": "緊急通報（EU共通）",
+            "numbers": [
+              {
+                "local": "112"
+              }
+            ],
+            "note": "警察・消防・救急のどれにもつながります。\nEUのどの国でも無料でかけられます。"
+          },
+          {
+            "group": "urgent",
+            "name": "警察",
+            "numbers": [
+              {
+                "local": "17"
+              }
+            ]
+          },
+          {
+            "group": "urgent",
+            "name": "救急（SAMU）",
+            "numbers": [
+              {
+                "local": "15"
+              }
+            ]
+          },
+          {
+            "group": "urgent",
+            "name": "消防",
+            "numbers": [
+              {
+                "local": "18"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "name": "在フランス日本国大使館",
+            "sub": "代表・領事部",
+            "numbers": [
+              {
+                "local": "01-4888-6200",
+                "intl": "+33-1-4888-6200"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "address": "パリ8区 オッシュ通り7番地",
+            "addressLocal": "7, avenue Hoche\n75008 Paris",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          }
+        ],
+        "links": [
+          {
+            "label": "外務省 海外安全ホームページ",
+            "url": "https://www.anzen.mofa.go.jp/"
+          },
+          {
+            "label": "在フランス日本国大使館",
+            "url": "https://www.fr.emb-japan.go.jp/itprtop_ja/index.html"
+          }
+        ]
+      },
+      "power": {
+        "specs": [
+          {
+            "label": "電圧",
+            "value": "230V",
+            "sub": "（日本は100V）"
+          },
+          {
+            "label": "周波数",
+            "value": "50Hz"
+          },
+          {
+            "label": "プラグ形状",
+            "value": "Cタイプ / Eタイプ",
+            "sub": "（丸いピンが2本）"
+          }
+        ],
+        "warn": "充電器に「100-240V」と書かれていれば、変換プラグだけで使えます。\n「100V」専用と書かれた機器（ドライヤー、ヘアアイロンなど）は変圧器が必要です。\n電圧が2倍以上あるため、確認せずに挿すと故障や発火の危険があります。"
+      },
+      "greetings": [
+        {
+          "ja": "こんにちは",
+          "local": "Bonjour",
+          "kana": "ボンジュール"
+        },
+        {
+          "ja": "ありがとう",
+          "local": "Merci",
+          "kana": "メルシー"
+        },
+        {
+          "ja": "すみません（呼びかけ）",
+          "local": "Excusez-moi",
+          "kana": "エクスキュゼ モワ"
+        },
+        {
+          "ja": "これください",
+          "local": "Ça, s'il vous plaît",
+          "kana": "サ シル ヴ プレ"
+        },
+        {
+          "ja": "いくらですか",
+          "local": "C'est combien ?",
+          "kana": "セ コンビアン"
+        },
+        {
+          "ja": "大丈夫です/いりません",
+          "local": "Non, merci",
+          "kana": "ノン メルシー"
+        },
+        {
+          "ja": "トイレはどこですか",
+          "local": "Où sont les toilettes ?",
+          "kana": "ウ ソン レ トワレット"
+        }
+      ],
+      "greetingsSourceLinks": [],
+      "payment": {
+        "card": "ほとんどの店で使えます。タッチ決済も広く使えます。\n暗証番号（PIN）を求められることが多いので、出発前に確認しておくと安心です。",
+        "cash": "市場や小さな店では「8ユーロ以上でカード可」のように、少額だとカードが使えないことがあります。有料トイレ用の小銭も含め、少額の現金があると安心です。\n人の多い場所や地下鉄では、財布やスマホから目を離さないようにしましょう。",
+        "travelerCard": "",
+        "tip": "必須ではありません（料金にサービス料が含まれています）。\n渡す場合は、カフェはおつりの小銭、レストランは1人1〜2ユーロ、高級店で5〜10%が目安です。タクシーは端数を切り上げる程度です。"
+      },
+      "paymentSourceLinks": [
+        "https://www.europe-consommateurs.eu/en/living-in-france/means-of-payment-in-france.html",
+        "https://www.afar.com/magazine/when-and-how-much-to-tip-in-france"
+      ],
+      "apps": [
+        {
+          "labelTag": "配車",
+          "name": "Uber",
+          "usage": "タクシーや配車を呼ぶ。日本語で使え、乗る前に料金の目安がわかります。",
+          "beforeTrip": "アプリを入れ、日本の電話番号でSMS認証をしてアカウントを作る。クレジットカードを登録しておくと、降りるときに自動で支払われます。",
+          "appStoreUrl": "https://apps.apple.com/jp/app/%E3%82%A6%E3%83%BC%E3%83%90%E3%83%BC-uber-taxi-%E3%82%BF%E3%82%AF%E3%82%B7%E3%83%BC%E9%85%8D%E8%BB%8A%E3%82%A2%E3%83%97%E3%83%AA/id368677368"
+        },
+        {
+          "labelTag": "配車",
+          "name": "G7 TAXI",
+          "usage": "パリの大手タクシー会社のアプリ。英語で使え、英語を話す運転手を指定することもできます。",
+          "beforeTrip": "アプリを入れてアカウントを作り、クレジットカードを登録しておくと、降りるときにアプリで支払えます。",
+          "appStoreUrl": "https://apps.apple.com/jp/app/g7-taxi-commande-de-taxi/id402196027"
+        }
+      ],
+      "appsSourceLinks": [
+        "https://apps.apple.com/jp/app/%E3%82%A6%E3%83%BC%E3%83%90%E3%83%BC-uber-taxi-%E3%82%BF%E3%82%AF%E3%82%B7%E3%83%BC%E9%85%8D%E8%BB%8A%E3%82%A2%E3%83%97%E3%83%AA/id368677368",
+        "https://apps.apple.com/jp/app/g7-taxi-commande-de-taxi/id402196027"
+      ],
+      "timezoneNote": "日本より8時間遅い（日本の正午は現地の午前4時）。\nサマータイム（3月最終日曜〜10月最終日曜）は7時間遅い",
+      "timezoneSourceLinks": [
+        "https://www.sortiraparis.com/en/news/in-paris/articles/353276-end-of-daylight-saving-time-what-s-the-status-of-its-abolition-in-2026"
+      ],
+      "toiletInfo": "パリの街なかにある公衆トイレ（サニゼット）は無料で使えます。\nカフェのトイレは基本的に客用なので、飲み物を頼んでから使うのがふつうです。\n駅などには有料（0.5〜1ユーロほど）のトイレもあるので、小銭があると安心です。",
+      "toiletSourceLinks": [
+        "https://www.paris.fr/pages/les-toilettes-publiques-a-paris-27216",
+        "https://www.sortiraparis.com/en/news/in-paris/articles/313849-navigo-free-toilets-for-subscribers-at-eight-paris-stations"
+      ],
+      "lastConfirmedOn": "2026年10月"
+    },
+    "IT": {
+      "label": "イタリア",
+      "currency": {
+        "code": "EUR",
+        "unit": "ユーロ"
+      },
+      "emergency": {
+        "footNote": "番号はイタリア国内からかける形です。",
+        "contacts": [
+          {
+            "group": "urgent",
+            "name": "緊急通報（EU共通）",
+            "numbers": [
+              {
+                "local": "112"
+              }
+            ],
+            "note": "ローマ・ミラノなどでは、警察・消防・救急の共通窓口につながります。\nEUのどの国でも無料でかけられます。"
+          },
+          {
+            "group": "urgent",
+            "name": "警察",
+            "numbers": [
+              {
+                "local": "113"
+              }
+            ]
+          },
+          {
+            "group": "urgent",
+            "name": "救急",
+            "numbers": [
+              {
+                "local": "118"
+              }
+            ]
+          },
+          {
+            "group": "urgent",
+            "name": "消防",
+            "numbers": [
+              {
+                "local": "115"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "name": "在イタリア日本国大使館",
+            "sub": "ローマ",
+            "numbers": [
+              {
+                "local": "06-487-991",
+                "intl": "+39-06-487-991"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "address": "ローマ クインティーノ・セッラ通り60番地",
+            "addressLocal": "Via Quintino Sella, 60\n00187 Roma",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          },
+          {
+            "group": "embassy",
+            "name": "在ミラノ日本国総領事館",
+            "sub": "ミラノ",
+            "numbers": [
+              {
+                "local": "02-624-1141",
+                "intl": "+39-02-624-1141"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "address": "ミラノ チェーザレ・マンジリ通り2/4番地",
+            "addressLocal": "Via Privata Cesare Mangili, 2/4\n20121 Milano",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          }
+        ],
+        "links": [
+          {
+            "label": "外務省 海外安全ホームページ",
+            "url": "https://www.anzen.mofa.go.jp/"
+          },
+          {
+            "label": "在イタリア日本国大使館",
+            "url": "https://www.it.emb-japan.go.jp/itprtop_ja/index.html"
+          }
+        ]
+      },
+      "power": {
+        "specs": [
+          {
+            "label": "電圧",
+            "value": "230V",
+            "sub": "（日本は100V）"
+          },
+          {
+            "label": "周波数",
+            "value": "50Hz"
+          },
+          {
+            "label": "プラグ形状",
+            "value": "Cタイプ / Fタイプ / Lタイプ",
+            "sub": "（丸いピンが2本または3本）"
+          }
+        ],
+        "warn": "充電器に「100-240V」と書かれていれば、変換プラグだけで使えます。\n「100V」専用と書かれた機器（ドライヤー、ヘアアイロンなど）は変圧器が必要です。\n電圧が2倍以上あるため、確認せずに挿すと故障や発火の危険があります。"
+      },
+      "greetings": [
+        {
+          "ja": "こんにちは",
+          "local": "Buongiorno",
+          "kana": "ボンジョルノ"
+        },
+        {
+          "ja": "ありがとう",
+          "local": "Grazie",
+          "kana": "グラツィエ"
+        },
+        {
+          "ja": "すみません（呼びかけ）",
+          "local": "Scusi",
+          "kana": "スクーズィ"
+        },
+        {
+          "ja": "これください",
+          "local": "Questo, per favore",
+          "kana": "クエスト ペル ファヴォーレ"
+        },
+        {
+          "ja": "いくらですか",
+          "local": "Quanto costa?",
+          "kana": "クアント コスタ"
+        },
+        {
+          "ja": "大丈夫です/いりません",
+          "local": "No, grazie",
+          "kana": "ノ グラツィエ"
+        },
+        {
+          "ja": "トイレはどこですか",
+          "local": "Dov'è il bagno?",
+          "kana": "ドヴェ イル バーニョ"
+        }
+      ],
+      "greetingsSourceLinks": [],
+      "payment": {
+        "card": "ほとんどの店で使えます。法律でカード払いの受け付けが義務になっていて、少額でも使えるのが基本です。\n暗証番号（PIN）を求められることがあるので、出発前に確認しておくと安心です。",
+        "cash": "バールでのコーヒー1杯など少額だと、現金のみと言われることもあります。有料トイレ用の小銭も含め、少額の現金があると安心です。\n人の多い観光地や地下鉄では、財布やスマホから目を離さないようにしましょう。",
+        "travelerCard": "",
+        "tip": "必須ではありません。会計に席料（コペルト・1人1〜3ユーロほど）やサービス料が入っていれば不要です。\n入っていない店で良いサービスを受けたら5〜10%、バールでは端数を切り上げる程度で十分です。"
+      },
+      "paymentSourceLinks": [
+        "https://www.thelocal.it/20240509/can-businesses-in-italy-legally-refuse-card-payments",
+        "https://www.tastingtable.com/1941050/tipping-rule-italy-restaurants"
+      ],
+      "apps": [
+        {
+          "labelTag": "配車",
+          "name": "Freenow by Lyft",
+          "usage": "正規のタクシーを呼ぶ。英語で使え、ローマ・ミラノなどの主要都市で使えます。",
+          "beforeTrip": "アプリを入れてアカウントを作り、クレジットカードを登録しておくと、降りるときにアプリで支払えます。",
+          "appStoreUrl": "https://apps.apple.com/jp/app/freenow-by-lyft-taxi-more/id357852748"
+        }
+      ],
+      "appsSourceLinks": [
+        "https://apps.apple.com/jp/app/freenow-by-lyft-taxi-more/id357852748",
+        "https://www.thelocal.it/20220729/uber-expands-into-italys-taxi-market-with-new-partnership/"
+      ],
+      "timezoneNote": "日本より8時間遅い（日本の正午は現地の午前4時）。\nサマータイム（3月最終日曜〜10月最終日曜）は7時間遅い",
+      "timezoneSourceLinks": [
+        "https://www.sortiraparis.com/en/news/in-paris/articles/353276-end-of-daylight-saving-time-what-s-the-status-of-its-abolition-in-2026"
+      ],
+      "toiletInfo": "公衆トイレは少なめで、駅などは有料です（ローマのテルミニ駅は1ユーロ）。\nバール（カフェ）のトイレを使うときは、コーヒーなどを1杯頼むのがふつうです。\n美術館や百貨店のトイレは、入館者なら無料で使えます。",
+      "toiletSourceLinks": [
+        "https://www.tourist-in-rom.com/en/public-toilets-in-rome/",
+        "https://www.finestresullarte.info/en/tourism/where-to-go-to-the-bathroom-in-art-cities-answers-to-the-most-frequently-asked-questions-of-tourists"
+      ],
+      "lastConfirmedOn": "2026年10月"
+    },
+    "ES": {
+      "label": "スペイン",
+      "currency": {
+        "code": "EUR",
+        "unit": "ユーロ"
+      },
+      "emergency": {
+        "footNote": "番号はスペイン国内からかける形です。",
+        "contacts": [
+          {
+            "group": "urgent",
+            "name": "緊急通報（EU共通）",
+            "numbers": [
+              {
+                "local": "112"
+              }
+            ],
+            "note": "警察・消防・救急のどれにもつながります。\nEUのどの国でも無料でかけられます。"
+          },
+          {
+            "group": "urgent",
+            "name": "警察（国家警察）",
+            "numbers": [
+              {
+                "local": "091"
+              }
+            ]
+          },
+          {
+            "group": "consult",
+            "name": "外国人旅行者向け 被害届の電話窓口",
+            "sub": "国家警察",
+            "numbers": [
+              {
+                "local": "902-102-112"
+              }
+            ],
+            "note": "盗難などの被害届を英語で出せます。\n電話のあと、48時間以内に警察署で署名が必要です。"
+          },
+          {
+            "group": "embassy",
+            "name": "在スペイン日本国大使館",
+            "sub": "領事部",
+            "numbers": [
+              {
+                "local": "91-590-7614",
+                "intl": "+34-91-590-7614"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "name": "大使館代表",
+            "numbers": [
+              {
+                "local": "91-590-7600",
+                "intl": "+34-91-590-7600"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "address": "マドリード セラーノ通り109番地",
+            "addressLocal": "Calle Serrano, 109\n28006 Madrid",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          },
+          {
+            "group": "embassy",
+            "name": "在バルセロナ日本国総領事館",
+            "sub": "バルセロナ",
+            "numbers": [
+              {
+                "local": "93-280-3433",
+                "intl": "+34-93-280-3433"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "address": "バルセロナ ディアゴナル通り640番地 2階D",
+            "addressLocal": "Av. Diagonal, 640, 2-D\n08017 Barcelona",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          }
+        ],
+        "links": [
+          {
+            "label": "外務省 海外安全ホームページ",
+            "url": "https://www.anzen.mofa.go.jp/"
+          },
+          {
+            "label": "在スペイン日本国大使館",
+            "url": "https://www.es.emb-japan.go.jp/itprtop_ja/index.html"
+          }
+        ]
+      },
+      "power": {
+        "specs": [
+          {
+            "label": "電圧",
+            "value": "230V",
+            "sub": "（日本は100V）"
+          },
+          {
+            "label": "周波数",
+            "value": "50Hz"
+          },
+          {
+            "label": "プラグ形状",
+            "value": "Cタイプ / Fタイプ",
+            "sub": "（丸いピンが2本）"
+          }
+        ],
+        "warn": "充電器に「100-240V」と書かれていれば、変換プラグだけで使えます。\n「100V」専用と書かれた機器（ドライヤー、ヘアアイロンなど）は変圧器が必要です。\n電圧が2倍以上あるため、確認せずに挿すと故障や発火の危険があります。"
+      },
+      "greetings": [
+        {
+          "ja": "こんにちは",
+          "local": "Hola",
+          "kana": "オラ"
+        },
+        {
+          "ja": "ありがとう",
+          "local": "Gracias",
+          "kana": "グラシアス"
+        },
+        {
+          "ja": "すみません（呼びかけ）",
+          "local": "Perdone",
+          "kana": "ペルドネ"
+        },
+        {
+          "ja": "これください",
+          "local": "Esto, por favor",
+          "kana": "エスト ポル ファボール"
+        },
+        {
+          "ja": "いくらですか",
+          "local": "¿Cuánto cuesta?",
+          "kana": "クアント クエスタ"
+        },
+        {
+          "ja": "大丈夫です/いりません",
+          "local": "No, gracias",
+          "kana": "ノ グラシアス"
+        },
+        {
+          "ja": "トイレはどこですか",
+          "local": "¿Dónde está el baño?",
+          "kana": "ドンデ エスタ エル バニョ"
+        }
+      ],
+      "greetingsSourceLinks": [],
+      "payment": {
+        "card": "ほとんどの店で使えます（VisaとMastercardが一般的）。\n暗証番号（PIN）を求められることがあるので、出発前に確認しておくと安心です。",
+        "cash": "少額だとカードが使えない店もあります。小さなバルや市場用に、少額の現金があると安心です。\n人の多い観光地や地下鉄では、財布やスマホから目を離さないようにしましょう。",
+        "travelerCard": "",
+        "tip": "必須ではありません（料金にサービス料が含まれています）。\n渡す場合は、レストランやタクシーで5〜10%、バルではおつりの小銭を置く程度が目安です。"
+      },
+      "paymentSourceLinks": [
+        "https://www.spain.info/ja/ryokou-adobaisu/tsuuka-shihei/"
+      ],
+      "apps": [
+        {
+          "labelTag": "配車",
+          "name": "Uber",
+          "usage": "タクシーや配車を呼ぶ。日本語で使え、乗る前に料金の目安がわかります。",
+          "beforeTrip": "アプリを入れ、日本の電話番号でSMS認証をしてアカウントを作る。クレジットカードを登録しておくと、降りるときに自動で支払われます。",
+          "appStoreUrl": "https://apps.apple.com/jp/app/%E3%82%A6%E3%83%BC%E3%83%90%E3%83%BC-uber-taxi-%E3%82%BF%E3%82%AF%E3%82%B7%E3%83%BC%E9%85%8D%E8%BB%8A%E3%82%A2%E3%83%97%E3%83%AA/id368677368"
+        },
+        {
+          "labelTag": "配車",
+          "name": "Freenow by Lyft",
+          "usage": "正規のタクシーを呼ぶ。英語で使え、マドリード・バルセロナなどで使えます。",
+          "beforeTrip": "アプリを入れてアカウントを作り、クレジットカードを登録しておくと、降りるときにアプリで支払えます。",
+          "appStoreUrl": "https://apps.apple.com/jp/app/freenow-by-lyft-taxi-more/id357852748"
+        }
+      ],
+      "appsSourceLinks": [
+        "https://apps.apple.com/jp/app/%E3%82%A6%E3%83%BC%E3%83%90%E3%83%BC-uber-taxi-%E3%82%BF%E3%82%AF%E3%82%B7%E3%83%BC%E9%85%8D%E8%BB%8A%E3%82%A2%E3%83%97%E3%83%AA/id368677368",
+        "https://www.uber.com/global/en/r/cities/barcelona-es-ct-es/",
+        "https://apps.apple.com/jp/app/freenow-by-lyft-taxi-more/id357852748"
+      ],
+      "timezoneNote": "日本より8時間遅い（日本の正午は現地の午前4時）。\nサマータイム（3月最終日曜〜10月最終日曜）は7時間遅い",
+      "timezoneSourceLinks": [
+        "https://www.sortiraparis.com/en/news/in-paris/articles/353276-end-of-daylight-saving-time-what-s-the-status-of-its-abolition-in-2026"
+      ],
+      "toiletInfo": "公衆トイレはあまり多くありません。\nバルやカフェのトイレは、飲み物を1杯頼んでから使うのがふつうです。\nデパート（エル・コルテ・イングレス）やショッピングモール、観光案内所のトイレは無料で使えます。駅には有料のトイレもあります。",
+      "toiletSourceLinks": [
+        "https://www.thelocal.es/20251128/can-you-use-a-bar-or-restaurants-toilet-in-spain-if-youre-not-a-customer",
+        "https://www.thelocal.es/20130924/madrids-atocha-station-to-charge-for-toilet-use"
+      ],
+      "lastConfirmedOn": "2026年10月"
+    },
+    "DE": {
+      "label": "ドイツ",
+      "currency": {
+        "code": "EUR",
+        "unit": "ユーロ"
+      },
+      "emergency": {
+        "footNote": "番号はドイツ国内からかける形です。",
+        "contacts": [
+          {
+            "group": "urgent",
+            "name": "警察",
+            "numbers": [
+              {
+                "local": "110"
+              }
+            ]
+          },
+          {
+            "group": "urgent",
+            "name": "消防・救急",
+            "numbers": [
+              {
+                "local": "112"
+              }
+            ],
+            "note": "EU共通の緊急番号です。EUのどの国でも無料でかけられます。"
+          },
+          {
+            "group": "embassy",
+            "name": "在ドイツ日本国大使館",
+            "sub": "ベルリン",
+            "numbers": [
+              {
+                "local": "030-210940",
+                "intl": "+49-30-210940"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "address": "ベルリン ヒロシマ通り6番地",
+            "addressLocal": "Hiroshimastraße 6\n10785 Berlin",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          },
+          {
+            "group": "embassy",
+            "name": "在ミュンヘン日本国総領事館",
+            "sub": "ミュンヘン",
+            "numbers": [
+              {
+                "local": "089-4176040",
+                "intl": "+49-89-4176040"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "address": "ミュンヘン フリーデン通り6番地",
+            "addressLocal": "Friedenstraße 6\n81671 München",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          }
+        ],
+        "links": [
+          {
+            "label": "外務省 海外安全ホームページ",
+            "url": "https://www.anzen.mofa.go.jp/"
+          },
+          {
+            "label": "在ドイツ日本国大使館",
+            "url": "https://www.de.emb-japan.go.jp/itprtop_ja/index.html"
+          }
+        ]
+      },
+      "power": {
+        "specs": [
+          {
+            "label": "電圧",
+            "value": "230V",
+            "sub": "（日本は100V）"
+          },
+          {
+            "label": "周波数",
+            "value": "50Hz"
+          },
+          {
+            "label": "プラグ形状",
+            "value": "Cタイプ / Fタイプ",
+            "sub": "（丸いピンが2本）"
+          }
+        ],
+        "warn": "充電器に「100-240V」と書かれていれば、変換プラグだけで使えます。\n「100V」専用と書かれた機器（ドライヤー、ヘアアイロンなど）は変圧器が必要です。\n電圧が2倍以上あるため、確認せずに挿すと故障や発火の危険があります。"
+      },
+      "greetings": [
+        {
+          "ja": "こんにちは",
+          "local": "Guten Tag",
+          "kana": "グーテン ターク"
+        },
+        {
+          "ja": "ありがとう",
+          "local": "Danke",
+          "kana": "ダンケ"
+        },
+        {
+          "ja": "すみません（呼びかけ）",
+          "local": "Entschuldigung",
+          "kana": "エントシュルディグング"
+        },
+        {
+          "ja": "これください",
+          "local": "Das, bitte",
+          "kana": "ダス ビッテ"
+        },
+        {
+          "ja": "いくらですか",
+          "local": "Was kostet das?",
+          "kana": "ヴァス コステット ダス"
+        },
+        {
+          "ja": "大丈夫です/いりません",
+          "local": "Nein, danke",
+          "kana": "ナイン ダンケ"
+        },
+        {
+          "ja": "トイレはどこですか",
+          "local": "Wo ist die Toilette?",
+          "kana": "ヴォー イスト ディ トアレッテ"
+        }
+      ],
+      "greetingsSourceLinks": [],
+      "payment": {
+        "card": "スーパー・デパート・ホテル・駅の券売機などで使えます。\n小さな店では使えないことや、5〜10ユーロ以上からのこともあります。暗証番号（PIN）も出発前に確認しておくと安心です。",
+        "cash": "パン屋・市場・屋台・クリスマスマーケットなどは現金のみのことが多いです。\n有料トイレ用の小銭（50セント・1ユーロ硬貨）も含め、現金を持っておくと安心です。",
+        "travelerCard": "",
+        "tip": "必須ではありませんが、渡すのが一般的です。レストランやカフェは5〜10%、タクシーは1ユーロ単位で切り上げる程度が目安です。\nテーブルに置かず、会計のときにチップ込みの金額を伝えて払います（15.90ユーロなら「18ユーロで」など）。"
+      },
+      "paymentSourceLinks": [
+        "https://www.bankdaten.de/en/guide/where-cant-i-pay-by-card-germany.html",
+        "https://www.berlin.de/en/tourism/travel-information/1758234-2862820-tipping.en.html"
+      ],
+      "apps": [
+        {
+          "labelTag": "配車",
+          "name": "Freenow by Lyft",
+          "usage": "正規のタクシーを呼ぶ。英語で使え、ベルリン・ミュンヘン・フランクフルトなどで使えます。",
+          "beforeTrip": "アプリを入れてアカウントを作り、クレジットカードを登録しておくと、降りるときにアプリで支払えます。",
+          "appStoreUrl": "https://apps.apple.com/jp/app/freenow-by-lyft-taxi-more/id357852748"
+        },
+        {
+          "labelTag": "配車",
+          "name": "Uber",
+          "usage": "タクシーや配車を呼ぶ。日本語で使え、乗る前に料金の目安がわかります。",
+          "beforeTrip": "アプリを入れ、日本の電話番号でSMS認証をしてアカウントを作る。クレジットカードを登録しておくと、降りるときに自動で支払われます。",
+          "appStoreUrl": "https://apps.apple.com/jp/app/%E3%82%A6%E3%83%BC%E3%83%90%E3%83%BC-uber-taxi-%E3%82%BF%E3%82%AF%E3%82%B7%E3%83%BC%E9%85%8D%E8%BB%8A%E3%82%A2%E3%83%97%E3%83%AA/id368677368"
+        }
+      ],
+      "appsSourceLinks": [
+        "https://apps.apple.com/jp/app/freenow-by-lyft-taxi-more/id357852748",
+        "https://apps.apple.com/jp/app/%E3%82%A6%E3%83%BC%E3%83%90%E3%83%BC-uber-taxi-%E3%82%BF%E3%82%AF%E3%82%B7%E3%83%BC%E9%85%8D%E8%BB%8A%E3%82%A2%E3%83%97%E3%83%AA/id368677368",
+        "https://www.uber.com/global/en/r/germany/cities/"
+      ],
+      "timezoneNote": "日本より8時間遅い（日本の正午は現地の午前4時）。\nサマータイム（3月最終日曜〜10月最終日曜）は7時間遅い",
+      "timezoneSourceLinks": [
+        "https://www.sortiraparis.com/en/news/in-paris/articles/353276-end-of-daylight-saving-time-what-s-the-status-of-its-abolition-in-2026"
+      ],
+      "toiletInfo": "公衆トイレや駅のトイレは有料のことが多く、0.5〜1ユーロほどです。\n主要駅の「SANIFAIR」は1.5ユーロで、0.5ユーロ分の買い物券が出ます。\n町によっては「Nette Toilette」のシールがある店のトイレを、買い物をしなくても無料で使えます。",
+      "toiletSourceLinks": [
+        "https://www.bankdaten.de/en/guide/where-cant-i-pay-by-card-germany.html",
+        "https://www.t-online.de/finanzen/aktuelles/wirtschaft/id_100547004/toilettenbetreiber-an-bahnhoefen-erhoeht-die-preise.html",
+        "https://www.stadt-muenster.de/ordnungsamt/allgemeines-ordnungswesen/oeffentliche-toiletten"
+      ],
+      "lastConfirmedOn": "2026年10月"
+    },
+    "GB": {
+      "label": "イギリス",
+      "currency": {
+        "code": "GBP",
+        "unit": "ポンド"
+      },
+      "emergency": {
+        "footNote": "番号はイギリス国内からかける形です。",
+        "contacts": [
+          {
+            "group": "urgent",
+            "name": "警察・消防・救急",
+            "numbers": [
+              {
+                "local": "999"
+              }
+            ],
+            "note": "つながったら「Police」「Ambulance」「Fire」のどれが必要かを伝えます。\n英語が難しいときは「Japanese」と伝えると、通訳を手配してもらえます。"
+          },
+          {
+            "group": "consult",
+            "name": "警察（緊急でない相談）",
+            "numbers": [
+              {
+                "local": "101"
+              }
+            ],
+            "note": "盗難の届け出など、急がない用件に使えます。"
+          },
+          {
+            "group": "consult",
+            "name": "医療相談",
+            "sub": "NHS 111",
+            "numbers": [
+              {
+                "local": "111"
+              }
+            ],
+            "note": "命に関わらない体調の相談に使えます。"
+          },
+          {
+            "group": "embassy",
+            "name": "在英国日本国大使館",
+            "sub": "領事班",
+            "numbers": [
+              {
+                "local": "020-7465-6565",
+                "intl": "+44-20-7465-6565"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "name": "大使館代表",
+            "numbers": [
+              {
+                "local": "020-7465-6500",
+                "intl": "+44-20-7465-6500"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "address": "ロンドン ピカデリー101-104",
+            "addressLocal": "101-104 Piccadilly,\nLondon W1J 7JT",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          }
+        ],
+        "links": [
+          {
+            "label": "外務省 海外安全ホームページ",
+            "url": "https://www.anzen.mofa.go.jp/"
+          },
+          {
+            "label": "在英国日本国大使館",
+            "url": "https://www.uk.emb-japan.go.jp/itprtop_ja/index.html"
+          }
+        ]
+      },
+      "power": {
+        "specs": [
+          {
+            "label": "電圧",
+            "value": "230V",
+            "sub": "（日本は100V）"
+          },
+          {
+            "label": "周波数",
+            "value": "50Hz"
+          },
+          {
+            "label": "プラグ形状",
+            "value": "BFタイプ",
+            "sub": "（四角いピンが3本）"
+          }
+        ],
+        "warn": "充電器に「100-240V」と書かれていれば、変換プラグだけで使えます。\n「100V」専用と書かれた機器（ドライヤー、ヘアアイロンなど）は変圧器が必要です。\n電圧が2倍以上あるため、確認せずに挿すと故障や発火の危険があります。"
+      },
+      "greetings": [
+        {
+          "ja": "こんにちは",
+          "local": "Hello",
+          "kana": "ハロー"
+        },
+        {
+          "ja": "ありがとう",
+          "local": "Thank you",
+          "kana": "サンキュー"
+        },
+        {
+          "ja": "すみません（呼びかけ）",
+          "local": "Excuse me",
+          "kana": "エクスキューズ ミー"
+        },
+        {
+          "ja": "これください",
+          "local": "This one, please",
+          "kana": "ディス ワン プリーズ"
+        },
+        {
+          "ja": "いくらですか",
+          "local": "How much is it?",
+          "kana": "ハウ マッチ イズ イット"
+        },
+        {
+          "ja": "大丈夫です/いりません",
+          "local": "No, thank you",
+          "kana": "ノー サンキュー"
+        },
+        {
+          "ja": "トイレはどこですか",
+          "local": "Where is the toilet?",
+          "kana": "ウェア イズ ザ トイレット"
+        }
+      ],
+      "greetingsSourceLinks": [],
+      "payment": {
+        "card": "ほぼどこでも使えます。タッチ決済（コンタクトレス）が一般的で、少額でも問題ありません。\nアメリカン・エキスプレスは使えない店もあります。",
+        "cash": "小さな店や市場では、カードが使えないことがあります。\n少額の現金があると安心です。",
+        "travelerCard": "",
+        "tip": "レストランでは、会計に「サービス料（12.5%が多い）」が入っていれば不要です。入っていなければ10〜15%が目安です。\nパブのカウンターでは不要です。タクシーは端数を切り上げる程度で十分です。"
+      },
+      "paymentSourceLinks": [
+        "https://www.visitbritain.com/en/plan-your-trip/useful-information",
+        "https://www.visitlondon.com/traveller-information/essential-information/money/tipping"
+      ],
+      "apps": [
+        {
+          "labelTag": "配車",
+          "name": "Uber",
+          "usage": "車を呼ぶ。行き先を入れると乗る前に料金がわかり、支払いは登録したカードで自動です。",
+          "beforeTrip": "日本でアプリを入れ、アカウントを作ってクレジットカードを登録しておく。\n日本で使っているアカウントがそのまま使えます。",
+          "appStoreUrl": "https://apps.apple.com/jp/app/uber/id368677368"
+        }
+      ],
+      "appsSourceLinks": [
+        "https://www.uber.com/global/en/cities/",
+        "https://www.uber.com/en-NL/blog/travel-safe-uber-abroad/",
+        "https://apps.apple.com/jp/app/uber/id368677368"
+      ],
+      "timezoneNote": "日本より9時間遅い（日本の正午は現地の午前3時）。\nサマータイム（3月最終日曜〜10月最終日曜）は8時間遅い",
+      "timezoneSourceLinks": [
+        "https://www.gov.uk/when-do-the-clocks-change"
+      ],
+      "toiletInfo": "駅や美術館・博物館のトイレが無料で使えます。\nパブやカフェのトイレは、基本的に利用客向けです。",
+      "toiletSourceLinks": [
+        "https://www.visitlondon.com/traveller-information/essential-information/toilets-in-london"
+      ],
+      "lastConfirmedOn": "2026年10月"
+    },
+    "US": {
+      "label": "アメリカ",
+      "currency": {
+        "code": "USD",
+        "unit": "米ドル"
+      },
+      "emergency": {
+        "footNote": "番号はアメリカ国内からかける形です。\nほかの地域を担当する総領事館は、外務省のページで探せます。",
+        "contacts": [
+          {
+            "group": "urgent",
+            "name": "警察・消防・救急",
+            "numbers": [
+              {
+                "local": "911"
+              }
+            ],
+            "note": "英語が難しいときは「Japanese」と伝えると、通訳につないでもらえます。"
+          },
+          {
+            "group": "embassy",
+            "name": "在アメリカ合衆国日本国大使館",
+            "sub": "ワシントンD.C.",
+            "numbers": [
+              {
+                "local": "202-238-6700",
+                "intl": "+1-202-238-6700"
+              }
+            ],
+            "note": "緊急時は24時間対応です。"
+          },
+          {
+            "group": "embassy",
+            "address": "ワシントンD.C.\nマサチューセッツ・アベニュー北西2520",
+            "addressLocal": "2520 Massachusetts Avenue NW,\nWashington, DC 20008",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          },
+          {
+            "group": "embassy",
+            "name": "在ニューヨーク日本国総領事館",
+            "numbers": [
+              {
+                "local": "212-371-8222",
+                "intl": "+1-212-371-8222"
+              }
+            ],
+            "note": "ニューヨーク州・ニュージャージー州・ペンシルベニア州などを担当しています。"
+          },
+          {
+            "group": "embassy",
+            "address": "ニューヨーク パーク・アベニュー299\n18階",
+            "addressLocal": "299 Park Avenue, 18th Floor,\nNew York, NY 10171",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          },
+          {
+            "group": "embassy",
+            "name": "在ロサンゼルス日本国総領事館",
+            "numbers": [
+              {
+                "local": "213-617-6700",
+                "intl": "+1-213-617-6700"
+              }
+            ],
+            "note": "南カリフォルニアとアリゾナ州を担当しています。"
+          },
+          {
+            "group": "embassy",
+            "address": "ロサンゼルス サウス・グランド・アベニュー350\n17階（スイート1700）",
+            "addressLocal": "350 South Grand Avenue, Suite 1700,\nLos Angeles, CA 90071",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          }
+        ],
+        "links": [
+          {
+            "label": "外務省 海外安全ホームページ",
+            "url": "https://www.anzen.mofa.go.jp/"
+          },
+          {
+            "label": "在外公館の一覧（アメリカ）",
+            "url": "https://www.mofa.go.jp/mofaj/annai/zaigai/list/n_ame/usa.html"
+          },
+          {
+            "label": "在アメリカ合衆国日本国大使館",
+            "url": "https://www.us.emb-japan.go.jp/itprtop_ja/index.html"
+          },
+          {
+            "label": "在ニューヨーク日本国総領事館",
+            "url": "https://www.ny.us.emb-japan.go.jp/jp/a/index.html"
+          },
+          {
+            "label": "在ロサンゼルス日本国総領事館",
+            "url": "https://www.la.us.emb-japan.go.jp/itprtop_ja/index.html"
+          }
+        ]
+      },
+      "power": {
+        "specs": [
+          {
+            "label": "電圧",
+            "value": "120V",
+            "sub": "（日本は100V）"
+          },
+          {
+            "label": "周波数",
+            "value": "60Hz"
+          },
+          {
+            "label": "プラグ形状",
+            "value": "Aタイプ",
+            "sub": "（日本と同じ形）"
+          }
+        ],
+        "warn": "プラグは日本と同じ形なので、そのまま挿せます。\n充電器に「100-240V」と書かれていれば問題ありません。\n「100V」専用のドライヤーやヘアアイロンなど熱を出す機器は、電圧が少し高いため、使わないか変圧器を使ってください。"
+      },
+      "greetings": [
+        {
+          "ja": "こんにちは",
+          "local": "Hello",
+          "kana": "ハロー"
+        },
+        {
+          "ja": "ありがとう",
+          "local": "Thank you",
+          "kana": "サンキュー"
+        },
+        {
+          "ja": "すみません（呼びかけ）",
+          "local": "Excuse me",
+          "kana": "エクスキューズ ミー"
+        },
+        {
+          "ja": "これください",
+          "local": "This one, please",
+          "kana": "ディス ワン プリーズ"
+        },
+        {
+          "ja": "いくらですか",
+          "local": "How much is it?",
+          "kana": "ハウ マッチ イズ イット"
+        },
+        {
+          "ja": "大丈夫です/いりません",
+          "local": "No, thank you",
+          "kana": "ノー サンキュー"
+        },
+        {
+          "ja": "トイレはどこですか",
+          "local": "Where is the restroom?",
+          "kana": "ウェア イズ ザ レストルーム"
+        }
+      ],
+      "greetingsSourceLinks": [],
+      "payment": {
+        "card": "ほぼどこでも使えます。タッチ決済も広く使えます。\n表示価格に消費税（州や市で異なる）は含まれず、会計時に加わります。",
+        "cash": "ホテルの客室清掃へのチップなど、少額の現金があると安心です。",
+        "travelerCard": "",
+        "tip": "必要です。目安は次のとおりです。\n・レストラン（席で注文）：税抜き金額の15〜20%\n・バー：1杯につき1〜2ドル\n・タクシー：料金の15〜20%（配車アプリはアプリ内で）\n・ホテルの客室清掃：1泊2〜5ドル、荷物を運んでもらったら1個1〜2ドル\nカウンターで注文する店では不要です。"
+      },
+      "paymentSourceLinks": [
+        "https://emilypost.com/advice/general-tipping-guide",
+        "https://www.visittheusa.com/info/taxes"
+      ],
+      "apps": [
+        {
+          "labelTag": "配車",
+          "name": "Uber",
+          "usage": "車を呼ぶ。行き先を入れると乗る前に料金がわかり、支払いは登録したカードで自動です。\nチップは降りたあとアプリで払えます。",
+          "beforeTrip": "日本でアプリを入れ、アカウントを作ってクレジットカードを登録しておく。\n日本で使っているアカウントがそのまま使えます。",
+          "appStoreUrl": "https://apps.apple.com/jp/app/uber/id368677368"
+        }
+      ],
+      "appsSourceLinks": [
+        "https://www.uber.com/global/en/cities/",
+        "https://www.uber.com/en-NL/blog/travel-safe-uber-abroad/",
+        "https://apps.apple.com/jp/app/uber/id368677368"
+      ],
+      "timezoneNote": "ニューヨーク・ワシントンは日本より14時間遅い（日本の正午は前日の午後10時）。\nロサンゼルスは17時間遅い（前日の午後7時）。\nサマータイム（3月第2日曜〜11月第1日曜）はそれぞれ1時間縮まります",
+      "timezoneSourceLinks": [
+        "https://fox56.com/news/local/heres-when-daylight-saving-time-ends-in-2026-and-why-clocks-are-still-changing"
+      ],
+      "toiletInfo": "公衆トイレは少なめです。デパートやショッピングモール、ホテルのロビーなどのトイレを使います。\nカフェやファストフード店は、利用客向けのことが多いです。",
+      "toiletSourceLinks": [
+        "https://www.fastcompany.com/91265564/starbucks-new-bathroom-policy-debate-public-restroom-access"
+      ],
+      "lastConfirmedOn": "2026年10月"
+    },
+    "CA": {
+      "label": "カナダ",
+      "currency": {
+        "code": "CAD",
+        "unit": "カナダドル"
+      },
+      "emergency": {
+        "footNote": "番号はカナダ国内からかける形です。",
+        "contacts": [
+          {
+            "group": "urgent",
+            "name": "警察・消防・救急",
+            "numbers": [
+              {
+                "local": "911"
+              }
+            ],
+            "note": "英語が難しいときは「Japanese」と伝えると、通訳につないでもらえます。"
+          },
+          {
+            "group": "consult",
+            "name": "医療相談",
+            "sub": "州の電話相談",
+            "numbers": [
+              {
+                "local": "811"
+              }
+            ],
+            "note": "急がない体調の相談に使えます。\nオンタリオ州・BC州など多くの州で使えます。"
+          },
+          {
+            "group": "embassy",
+            "name": "在カナダ日本国大使館",
+            "sub": "オタワ",
+            "numbers": [
+              {
+                "local": "613-241-8541",
+                "intl": "+1-613-241-8541"
+              }
+            ],
+            "note": "緊急時は24時間対応です。"
+          },
+          {
+            "group": "embassy",
+            "address": "オタワ サセックス・ドライブ255",
+            "addressLocal": "255 Sussex Drive,\nOttawa, ON K1N 9E6",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          },
+          {
+            "group": "embassy",
+            "name": "在バンクーバー日本国総領事館",
+            "numbers": [
+              {
+                "local": "604-684-5868",
+                "intl": "+1-604-684-5868"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "address": "バンクーバー ウェスト・ヘイスティングス・ストリート1177\n9階",
+            "addressLocal": "900-1177 West Hastings Street,\nVancouver, BC V6E 2K9",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          }
+        ],
+        "links": [
+          {
+            "label": "外務省 海外安全ホームページ",
+            "url": "https://www.anzen.mofa.go.jp/"
+          },
+          {
+            "label": "在カナダ日本国大使館",
+            "url": "https://www.ca.emb-japan.go.jp/itprtop_ja/index.html"
+          },
+          {
+            "label": "在バンクーバー日本国総領事館",
+            "url": "https://www.vancouver.ca.emb-japan.go.jp/itprtop_ja/index.html"
+          }
+        ]
+      },
+      "power": {
+        "specs": [
+          {
+            "label": "電圧",
+            "value": "120V",
+            "sub": "（日本は100V）"
+          },
+          {
+            "label": "周波数",
+            "value": "60Hz"
+          },
+          {
+            "label": "プラグ形状",
+            "value": "Aタイプ",
+            "sub": "（日本と同じ形）"
+          }
+        ],
+        "warn": "プラグは日本と同じ形なので、そのまま挿せます。\n充電器に「100-240V」と書かれていれば問題ありません。\n「100V」専用のドライヤーやヘアアイロンなど熱を出す機器は、電圧が少し高いため、使わないか変圧器を使ってください。"
+      },
+      "greetings": [
+        {
+          "ja": "こんにちは",
+          "local": "Hello",
+          "kana": "ハロー"
+        },
+        {
+          "ja": "ありがとう",
+          "local": "Thank you",
+          "kana": "サンキュー"
+        },
+        {
+          "ja": "すみません（呼びかけ）",
+          "local": "Excuse me",
+          "kana": "エクスキューズ ミー"
+        },
+        {
+          "ja": "これください",
+          "local": "This one, please",
+          "kana": "ディス ワン プリーズ"
+        },
+        {
+          "ja": "いくらですか",
+          "local": "How much is it?",
+          "kana": "ハウ マッチ イズ イット"
+        },
+        {
+          "ja": "大丈夫です/いりません",
+          "local": "No, thank you",
+          "kana": "ノー サンキュー"
+        },
+        {
+          "ja": "トイレはどこですか",
+          "local": "Where is the washroom?",
+          "kana": "ウェア イズ ザ ウォッシュルーム"
+        }
+      ],
+      "greetingsSourceLinks": [],
+      "payment": {
+        "card": "ほぼどこでも使えます。タッチ決済も広く使えます。\n表示価格に税（州で異なり、5〜15%）は含まれず、会計時に加わります。",
+        "cash": "ホテルの客室清掃へのチップなど、少額の現金があると安心です。",
+        "travelerCard": "",
+        "tip": "必要です。目安は次のとおりです。\n・レストラン（席で注文）：15〜20%\n・タクシー・配車アプリ：15〜20%\n・ホテルの荷物運び：1個1〜2ドル\nカード端末に％の選択肢が出るので、そこで選べます。カウンターで注文する店では不要です。"
+      },
+      "paymentSourceLinks": [
+        "https://dailyhive.com/canada/tipping-in-canada-gratuity-guide",
+        "https://pvtistes.net/en/canadian-sales-tax/"
+      ],
+      "apps": [
+        {
+          "labelTag": "配車",
+          "name": "Uber",
+          "usage": "車を呼ぶ。行き先を入れると乗る前に料金がわかり、支払いは登録したカードで自動です。\nチップは降りたあとアプリで払えます。",
+          "beforeTrip": "日本でアプリを入れ、アカウントを作ってクレジットカードを登録しておく。\n日本で使っているアカウントがそのまま使えます。",
+          "appStoreUrl": "https://apps.apple.com/jp/app/uber/id368677368"
+        }
+      ],
+      "appsSourceLinks": [
+        "https://www.uber.com/global/en/cities/",
+        "https://www.uber.com/en-NL/blog/travel-safe-uber-abroad/",
+        "https://apps.apple.com/jp/app/uber/id368677368"
+      ],
+      "timezoneNote": "トロント・オタワは日本より14時間遅い（日本の正午は前日の午後10時）。\nサマータイム（3月第2日曜〜11月第1日曜）は13時間遅い。\nバンクーバーは一年中16時間遅い（前日の午後8時）",
+      "timezoneSourceLinks": [
+        "https://www2.gov.bc.ca/gov/content/governments/celebrating-british-columbia/daylight-saving-time",
+        "https://dailyhive.com/canada/daylight-saving-time-canada-explained"
+      ],
+      "toiletInfo": "ショッピングモールやデパート、ホテルのロビーなどのトイレを使います。\nカフェやファストフード店は、利用客向けのことが多いです。",
+      "toiletSourceLinks": [
+        "https://www.fastcompany.com/91265564/starbucks-new-bathroom-policy-debate-public-restroom-access"
+      ],
+      "lastConfirmedOn": "2026年10月"
+    },
+    "AU": {
+      "label": "オーストラリア",
+      "currency": {
+        "code": "AUD",
+        "unit": "オーストラリアドル"
+      },
+      "emergency": {
+        "footNote": "番号はオーストラリア国内からかける形です。",
+        "contacts": [
+          {
+            "group": "urgent",
+            "name": "警察・消防・救急",
+            "numbers": [
+              {
+                "local": "000"
+              }
+            ],
+            "note": "英語が難しいときは「Japanese」と伝えると、通訳を手配してもらえます。"
+          },
+          {
+            "group": "consult",
+            "name": "警察（緊急でない相談）",
+            "numbers": [
+              {
+                "local": "131-444"
+              }
+            ],
+            "note": "盗難の届け出など、急がない用件に使えます。"
+          },
+          {
+            "group": "embassy",
+            "name": "在オーストラリア日本国大使館",
+            "sub": "キャンベラ",
+            "numbers": [
+              {
+                "local": "02-6273-3244",
+                "intl": "+61-2-6273-3244"
+              }
+            ]
+          },
+          {
+            "group": "embassy",
+            "name": "大使館（閉館時の緊急連絡）",
+            "numbers": [
+              {
+                "local": "02-5104-3352",
+                "intl": "+61-2-5104-3352"
+              }
+            ],
+            "note": "事件・事故などで、代表番号がつながらないときに使います。"
+          },
+          {
+            "group": "embassy",
+            "address": "キャンベラ ヤラルムラ\nエンパイア・サーキット112",
+            "addressLocal": "112 Empire Circuit,\nYarralumla ACT 2600",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          },
+          {
+            "group": "embassy",
+            "name": "在シドニー日本国総領事館",
+            "numbers": [
+              {
+                "local": "02-9250-1000",
+                "intl": "+61-2-9250-1000"
+              }
+            ],
+            "note": "命に関わる緊急時は24時間対応です。"
+          },
+          {
+            "group": "embassy",
+            "address": "シドニー オコンネル・ストリート1\n12階",
+            "addressLocal": "Level 12, 1 O'Connell Street,\nSydney NSW 2000",
+            "addressLocalNote": "タクシーではこの住所を見せてください（長押しでコピー）"
+          }
+        ],
+        "links": [
+          {
+            "label": "外務省 海外安全ホームページ",
+            "url": "https://www.anzen.mofa.go.jp/"
+          },
+          {
+            "label": "在オーストラリア日本国大使館",
+            "url": "https://www.au.emb-japan.go.jp/itprtop_ja/index.html"
+          },
+          {
+            "label": "在シドニー日本国総領事館",
+            "url": "https://www.sydney.au.emb-japan.go.jp/itprtop_ja/index.html"
+          }
+        ]
+      },
+      "power": {
+        "specs": [
+          {
+            "label": "電圧",
+            "value": "230V",
+            "sub": "（日本は100V）"
+          },
+          {
+            "label": "周波数",
+            "value": "50Hz"
+          },
+          {
+            "label": "プラグ形状",
+            "value": "Oタイプ",
+            "sub": "（平たいピンがハの字に2本）"
+          }
+        ],
+        "warn": "充電器に「100-240V」と書かれていれば、変換プラグだけで使えます。\n「100V」専用と書かれた機器（ドライヤー、ヘアアイロンなど）は変圧器が必要です。\n電圧が2倍以上あるため、確認せずに挿すと故障や発火の危険があります。"
+      },
+      "greetings": [
+        {
+          "ja": "こんにちは",
+          "local": "Hello",
+          "kana": "ハロー"
+        },
+        {
+          "ja": "ありがとう",
+          "local": "Thank you",
+          "kana": "サンキュー"
+        },
+        {
+          "ja": "すみません（呼びかけ）",
+          "local": "Excuse me",
+          "kana": "エクスキューズ ミー"
+        },
+        {
+          "ja": "これください",
+          "local": "This one, please",
+          "kana": "ディス ワン プリーズ"
+        },
+        {
+          "ja": "いくらですか",
+          "local": "How much is it?",
+          "kana": "ハウ マッチ イズ イット"
+        },
+        {
+          "ja": "大丈夫です/いりません",
+          "local": "No, thank you",
+          "kana": "ノー サンキュー"
+        },
+        {
+          "ja": "トイレはどこですか",
+          "local": "Where is the toilet?",
+          "kana": "ウェア イズ ザ トイレット"
+        }
+      ],
+      "greetingsSourceLinks": [],
+      "payment": {
+        "card": "ほぼどこでも使えます。タッチ決済が一般的で、少額でも問題ありません。",
+        "cash": "現金が必要な場面はあまりありません。",
+        "travelerCard": "",
+        "tip": "基本的に不要です。都市部のレストランで、良いサービスへのお礼に10%ほど置く人もいます。\n週末や祝日は、会計にサーチャージ（追加料金）が加わる店があります。"
+      },
+      "paymentSourceLinks": [
+        "https://www-lonelyplanet-com-57e2.imagizer.com/articles/tipping-customs-oceania"
+      ],
+      "apps": [
+        {
+          "labelTag": "配車",
+          "name": "Uber",
+          "usage": "車を呼ぶ。行き先を入れると乗る前に料金がわかり、支払いは登録したカードで自動です。",
+          "beforeTrip": "日本でアプリを入れ、アカウントを作ってクレジットカードを登録しておく。\n日本で使っているアカウントがそのまま使えます。",
+          "appStoreUrl": "https://apps.apple.com/jp/app/uber/id368677368"
+        }
+      ],
+      "appsSourceLinks": [
+        "https://www.uber.com/global/en/cities/",
+        "https://www.uber.com/en-NL/blog/travel-safe-uber-abroad/",
+        "https://apps.apple.com/jp/app/uber/id368677368"
+      ],
+      "timezoneNote": "シドニー・キャンベラ・メルボルンは日本より1時間進んでいる（日本の正午は現地の午後1時）。\nサマータイム（10月第1日曜〜4月第1日曜）は2時間進む。\nブリスベンはサマータイムなし、パースは日本より1時間遅い",
+      "timezoneSourceLinks": [
+        "https://www.timeanddate.com/time/change/australia/sydney"
+      ],
+      "toiletInfo": "公園や駅、ショッピングセンターなどに無料の公衆トイレが多くあります。",
+      "toiletSourceLinks": [
+        "https://toiletmap.gov.au/about"
+      ],
+      "lastConfirmedOn": "2026年10月"
+    }
+  }
+}
