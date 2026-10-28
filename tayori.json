@@ -237,7 +237,12 @@
         "https://www.ide.go.jp/Japanese/IDEsquare/Column/ISQ000019/ISQ000019_004.html",
         "https://news.allabout.co.jp/articles/o/55948/"
       ],
-      "lastConfirmedOn": "2026年9月"
+      "lastConfirmedOn": "2026年9月",
+      "home": {
+        "timeDiff": "なし",
+        "plug": "変換プラグが必要",
+        "tip": "不要"
+      }
     },
     "TW": {
       "label": "台湾",
@@ -402,7 +407,12 @@
         "https://www.mapple.net/global/article/1188/",
         "https://www.taipeitimes.com/News/lang/archives/2017/08/23/2003676985"
       ],
-      "lastConfirmedOn": "2026年10月"
+      "lastConfirmedOn": "2026年10月",
+      "home": {
+        "timeDiff": "日本より1時間遅い",
+        "plug": "日本のプラグのまま",
+        "tip": "不要"
+      }
     },
     "CN": {
       "label": "中国",
@@ -607,7 +617,12 @@
       "toiletSourceLinks": [
         "https://www.chinaxiantour.com/travel-guide/how-to-use-public-toilets-in-china.html"
       ],
-      "lastConfirmedOn": "2026年10月"
+      "lastConfirmedOn": "2026年10月",
+      "home": {
+        "timeDiff": "日本より1時間遅い",
+        "plug": "形が合わなければ変換プラグ",
+        "tip": "不要"
+      }
     },
     "HK": {
       "label": "香港",
@@ -754,7 +769,12 @@
       "toiletSourceLinks": [
         "https://www.wanderinchina.com/ja/destinations/hongkong/transport/metro/"
       ],
-      "lastConfirmedOn": "2026年10月"
+      "lastConfirmedOn": "2026年10月",
+      "home": {
+        "timeDiff": "日本より1時間遅い",
+        "plug": "変換プラグが必要",
+        "tip": "不要"
+      }
     },
     "MO": {
       "label": "マカオ",
@@ -891,7 +911,12 @@
       "toiletSourceLinks": [
         "https://www.his-j.com/kaigai/asia/macau/"
       ],
-      "lastConfirmedOn": "2026年10月"
+      "lastConfirmedOn": "2026年10月",
+      "home": {
+        "timeDiff": "日本より1時間遅い",
+        "plug": "変換プラグが必要",
+        "tip": "基本的に不要"
+      }
     },
     "TH": {
       "label": "タイ",
@@ -1102,7 +1127,12 @@
         "https://www.jal.co.jp/tabi/info/toshi/asi/th/bkk.html",
         "https://allabout.co.jp/gm/gc/506063/"
       ],
-      "lastConfirmedOn": "2026年10月"
+      "lastConfirmedOn": "2026年10月",
+      "home": {
+        "timeDiff": "日本より2時間遅い",
+        "plug": "形が合わなければ変換プラグ",
+        "tip": "サービス料がなければ1割ほど"
+      }
     },
     "VN": {
       "label": "ベトナム",
@@ -1293,7 +1323,12 @@
         "https://www.jal.co.jp/jp/ja/tabi/info/toshi/asi/vn/sgn.html",
         "https://allabout.co.jp/gm/gc/506063/"
       ],
-      "lastConfirmedOn": "2026年10月"
+      "lastConfirmedOn": "2026年10月",
+      "home": {
+        "timeDiff": "日本より2時間遅い",
+        "plug": "形が合わなければ変換プラグ",
+        "tip": "基本的に不要"
+      }
     },
     "SG": {
       "label": "シンガポール",
@@ -1450,7 +1485,12 @@
       "toiletSourceLinks": [
         "https://www.jal.co.jp/tabi/info/toshi/asi/sg/sin.html"
       ],
-      "lastConfirmedOn": "2026年10月"
+      "lastConfirmedOn": "2026年10月",
+      "home": {
+        "timeDiff": "日本より1時間遅い",
+        "plug": "変換プラグが必要",
+        "tip": "不要"
+      }
     },
     "MY": {
       "label": "マレーシア",
@@ -1623,7 +1663,12 @@
         "https://www.jal.co.jp/jp/ja/tabi/info/toshi/asi/my/kul.html",
         "https://allabout.co.jp/gm/gc/464652/"
       ],
-      "lastConfirmedOn": "2026年10月"
+      "lastConfirmedOn": "2026年10月",
+      "home": {
+        "timeDiff": "日本より1時間遅い",
+        "plug": "変換プラグが必要",
+        "tip": "基本的に不要"
+      }
     },
     "PH": {
       "label": "フィリピン",
@@ -1812,7 +1857,12 @@
       "toiletSourceLinks": [
         "https://www.jal.co.jp/jp/ja/tabi/info/toshi/asi/ph/mnl.html"
       ],
-      "lastConfirmedOn": "2026年10月"
+      "lastConfirmedOn": "2026年10月",
+      "home": {
+        "timeDiff": "日本より1時間遅い",
+        "plug": "形が合わなければ変換プラグ",
+        "tip": "都市・リゾートでは10%ほど"
+      }
     },
     "ID": {
       "label": "インドネシア",
@@ -2009,7 +2059,12 @@
         "https://www.ana.co.jp/ja/jp/guide/plan/int-info/area-basic-info/cgk.html",
         "https://www.jal.co.jp/jp/ja/tabi/info/toshi/asi/id/dps.html"
       ],
-      "lastConfirmedOn": "2026年10月"
+      "lastConfirmedOn": "2026年10月",
+      "home": {
+        "timeDiff": "日本より2時間遅い(バリ島は1時間)",
+        "plug": "変換プラグが必要",
+        "tip": "基本的に不要"
+      }
     },
     "US-HI": {
       "label": "ハワイ",
@@ -2148,7 +2203,12 @@
       "toiletSourceLinks": [
         "https://allabout.co.jp/gm/gc/464356/"
       ],
-      "lastConfirmedOn": "2026年10月"
+      "lastConfirmedOn": "2026年10月",
+      "home": {
+        "timeDiff": "日本より19時間遅い",
+        "plug": "日本のプラグのまま",
+        "tip": "必要(15〜20%)"
+      }
     },
     "GU": {
       "label": "グアム",
@@ -2290,7 +2350,12 @@
       "toiletSourceLinks": [
         "https://rurubu.jp/andmore/article/17955?page=2"
       ],
-      "lastConfirmedOn": "2026年10月"
+      "lastConfirmedOn": "2026年10月",
+      "home": {
+        "timeDiff": "日本より1時間早い",
+        "plug": "日本のプラグのまま",
+        "tip": "必要(10〜15%)"
+      }
     },
     "FR": {
       "label": "フランス",
@@ -2463,7 +2528,12 @@
         "https://www.paris.fr/pages/les-toilettes-publiques-a-paris-27216",
         "https://www.sortiraparis.com/en/news/in-paris/articles/313849-navigo-free-toilets-for-subscribers-at-eight-paris-stations"
       ],
-      "lastConfirmedOn": "2026年10月"
+      "lastConfirmedOn": "2026年10月",
+      "home": {
+        "timeDiff": "日本より8時間遅い(サマータイムは7時間)",
+        "plug": "変換プラグが必要",
+        "tip": "必須ではない"
+      }
     },
     "IT": {
       "label": "イタリア",
@@ -2646,7 +2716,12 @@
         "https://www.tourist-in-rom.com/en/public-toilets-in-rome/",
         "https://www.finestresullarte.info/en/tourism/where-to-go-to-the-bathroom-in-art-cities-answers-to-the-most-frequently-asked-questions-of-tourists"
       ],
-      "lastConfirmedOn": "2026年10月"
+      "lastConfirmedOn": "2026年10月",
+      "home": {
+        "timeDiff": "日本より8時間遅い(サマータイムは7時間)",
+        "plug": "変換プラグが必要",
+        "tip": "必須ではない"
+      }
     },
     "ES": {
       "label": "スペイン",
@@ -2839,7 +2914,12 @@
         "https://www.thelocal.es/20251128/can-you-use-a-bar-or-restaurants-toilet-in-spain-if-youre-not-a-customer",
         "https://www.thelocal.es/20130924/madrids-atocha-station-to-charge-for-toilet-use"
       ],
-      "lastConfirmedOn": "2026年10月"
+      "lastConfirmedOn": "2026年10月",
+      "home": {
+        "timeDiff": "日本より8時間遅い(サマータイムは7時間)",
+        "plug": "変換プラグが必要",
+        "tip": "必須ではない"
+      }
     },
     "DE": {
       "label": "ドイツ",
@@ -3013,7 +3093,12 @@
         "https://www.t-online.de/finanzen/aktuelles/wirtschaft/id_100547004/toilettenbetreiber-an-bahnhoefen-erhoeht-die-preise.html",
         "https://www.stadt-muenster.de/ordnungsamt/allgemeines-ordnungswesen/oeffentliche-toiletten"
       ],
-      "lastConfirmedOn": "2026年10月"
+      "lastConfirmedOn": "2026年10月",
+      "home": {
+        "timeDiff": "日本より8時間遅い(サマータイムは7時間)",
+        "plug": "変換プラグが必要",
+        "tip": "渡すのが一般的(5〜10%)"
+      }
     },
     "GB": {
       "label": "イギリス",
@@ -3183,7 +3268,12 @@
       "toiletSourceLinks": [
         "https://www.visitlondon.com/traveller-information/essential-information/toilets-in-london"
       ],
-      "lastConfirmedOn": "2026年10月"
+      "lastConfirmedOn": "2026年10月",
+      "home": {
+        "timeDiff": "日本より9時間遅い(サマータイムは8時間)",
+        "plug": "変換プラグが必要",
+        "tip": "サービス料がなければ10〜15%"
+      }
     },
     "US": {
       "label": "アメリカ",
@@ -3369,7 +3459,12 @@
       "toiletSourceLinks": [
         "https://www.fastcompany.com/91265564/starbucks-new-bathroom-policy-debate-public-restroom-access"
       ],
-      "lastConfirmedOn": "2026年10月"
+      "lastConfirmedOn": "2026年10月",
+      "home": {
+        "timeDiff": "日本より13〜17時間遅い(地域・時期による)",
+        "plug": "日本のプラグのまま",
+        "tip": "必要(15〜20%)"
+      }
     },
     "CA": {
       "label": "カナダ",
@@ -3541,7 +3636,12 @@
       "toiletSourceLinks": [
         "https://www.fastcompany.com/91265564/starbucks-new-bathroom-policy-debate-public-restroom-access"
       ],
-      "lastConfirmedOn": "2026年10月"
+      "lastConfirmedOn": "2026年10月",
+      "home": {
+        "timeDiff": "日本より13〜16時間遅い(地域・時期による)",
+        "plug": "日本のプラグのまま",
+        "tip": "必要(15〜20%)"
+      }
     },
     "AU": {
       "label": "オーストラリア",
@@ -3721,7 +3821,12 @@
       "toiletSourceLinks": [
         "https://toiletmap.gov.au/about"
       ],
-      "lastConfirmedOn": "2026年10月"
+      "lastConfirmedOn": "2026年10月",
+      "home": {
+        "timeDiff": "シドニーは日本より1時間早い(サマータイムは2時間)",
+        "plug": "変換プラグが必要",
+        "tip": "基本的に不要"
+      }
     }
   }
 }
