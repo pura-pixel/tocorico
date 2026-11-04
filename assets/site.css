@@ -7,6 +7,7 @@
 @font-face{font-family:"Mochiy Pop One";font-weight:400;font-style:normal;font-display:swap;src:url("fonts/mochiy-logo.woff2") format("woff2")}
 
 :root,:root[data-theme="light"]{
+  --pn-green:#E3EED9;--pn-yellow:#FFF1C2;--pn-beige:#F1EBDF;--move-card-bg:#FAF8F3; /* トップの続きの色の面(TB-338) */
   --hero-blob:#E7F0DF;--hero-grad-top:#DCEBD2;--hero-grad-bottom:#F3F0E3;--hero-phone-shadow:0 24px 50px rgba(30,50,20,.18);--hero-card-shadow:0 14px 34px rgba(30,50,20,.16); /* 一番上(TB-337):A の丸・C のグラデーション・影 */
   --bg:#FAF8F3;--card:#FFFFFF;--ink:#1F1F1F;--sub:#6B6B6B;--green:#3F7F32;--fill:#3F7F32;--on-fill:#FFFFFF;--tint:#EFF7EA;
   --accent-soft:#FFF4CC;--marker:#FFE27A;--border:#E4E1D8;--card-shadow:0 3px 0 rgba(40,60,30,.10);--btn-shadow:0 3px 0 rgba(40,60,30,.18);
@@ -22,6 +23,7 @@
   color-scheme:light;
 }
 :root[data-theme="dark"]{
+  --pn-green:#1F2B1C;--pn-yellow:#2F2914;--pn-beige:#2A261F;--move-card-bg:#FAF8F3; /* トップの続きの色の面(TB-338):同じ色みの暗い色。移動の行のカードは共有のページの地の色(昼夜とも) */
   --hero-blob:#1E2A1B;--hero-grad-top:#1F2C1C;--hero-grad-bottom:#161814;--hero-phone-shadow:0 0 0 1px rgba(255,255,255,.12),0 24px 50px rgba(0,0,0,.5); /* 夜はスマホの枠が地に溶けるので、細い明るいふちを足す */--hero-card-shadow:0 14px 34px rgba(0,0,0,.45);
   --bg:#161814;--card:#22261F;--ink:#F1F1EC;--sub:#A8ADA2;--green:#6DBB5A;--fill:#5AA548;--on-fill:#161814;--tint:#1D2719;
   --accent-soft:#3A3216;--marker:#5C4A12;--border:#33382F;--card-shadow:0 3px 0 rgba(0,0,0,.35);--btn-shadow:0 3px 0 rgba(0,0,0,.45);
@@ -137,6 +139,38 @@ img,video{display:block}
 .vfloat--right{right:-48px;--fx:12px}
 .vfloat--green{color:var(--green)}
 
+/* ---- トップの続き(TB-338):所ごとに角の丸い色の面。面の中で見出し・説明と画面を隣り合わせにする ---- */
+.tf-list{max-width:1120px;margin:0 auto;display:flex;flex-direction:column;gap:24px}
+.tf{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr auto auto 1fr;grid-template-areas:". media" "head media" "desc media" ". media";column-gap:56px;border-radius:40px;padding:64px 80px}
+.tf--rev{grid-template-areas:"media ." "media head" "media desc" "media ."}
+.tf--g{background:var(--pn-green)}
+.tf--y{background:var(--pn-yellow)}
+.tf--c{background:var(--pn-beige)}
+.tf--plain{background:transparent}
+.tf-head{grid-area:head;display:flex;flex-direction:column;gap:12px}
+.tf-head h2{margin:0;font-size:40px;line-height:1.35;font-weight:900}
+.tf-desc{grid-area:desc;display:flex;flex-direction:column;align-items:flex-start;padding-top:16px}
+.tf-desc p{margin:0;font-size:17px;line-height:1.8;color:var(--sub);font-weight:500}
+.tf-media{grid-area:media;display:flex;justify-content:center;align-items:center;min-width:0}
+.tf .phone-wrap{--pw:250px;--k:.73529}
+.tf .media-pair .phone-wrap{--pw:210px;--k:.61765}
+/* 予約:説明の下の札(動画3の浮かべる部品を止まった形で) */
+.ai-chip{margin-top:24px;padding:10px 18px;border-radius:999px;background:var(--card);color:var(--green);font-size:14px;font-weight:700;box-shadow:var(--hero-card-shadow);white-space:nowrap}
+/* 地図(パソコンだけ):アプリの本物の移動の行2行のカード。行の画像は共有のページの地の色なので、カードも同じ色(昼夜とも) */
+.move-card{margin-top:28px;width:360px;padding:16px 18px;border-radius:20px;background:var(--move-card-bg);box-shadow:var(--hero-card-shadow);display:flex;flex-direction:column;gap:10px}
+.move-card img{display:block;height:auto}
+.move-card img:first-child{width:62%}
+.move-card img:last-child{width:95%}
+/* 宿:動きの絵をスマホの黒い枠なしの角の丸いカード(影つき)で */
+.tf .phone-wrap--card{--pw:300px;--k:.88235}
+.ill--card .ill-phone > div{border-color:transparent!important;background:transparent!important;box-shadow:none!important}
+.ill--card .ill-phone > div > div{border-radius:30px!important;box-shadow:var(--hero-card-shadow)}
+/* 記録:動画4のスマホ(右)に、とっておきの写真のカードを左から少し傾けて重ねる */
+.tf-mem{position:relative;width:440px;height:520px;max-width:100%}
+.tf-mem .phone-wrap{position:absolute;right:10px;top:0;--pw:230px;--k:.67647}
+.tf-mem-photos{position:absolute;left:0;top:70px;width:300px;z-index:3;transform:rotate(-4deg);border-radius:22px;overflow:hidden;background:var(--card);box-shadow:var(--hero-card-shadow)}
+.tf-mem-photos img{display:block;width:100%;height:auto}
+
 /* ---- プレミアム(案D:濃い緑の面) ---- */
 .premium{max-width:1200px;margin:0 auto;padding:136px 24px 0}
 .premium-box{border-radius:40px;background:var(--pr-bg);color:#FFFFFF;padding:56px clamp(22px,4vw,56px);display:flex;flex-direction:column;gap:36px}
@@ -243,6 +277,25 @@ img,video{display:block}
   .hero h1{font-size:38px;line-height:1.28}
   .hero-lead{font-size:16px}
   .features{padding:0 20px}
+  .tf-list{gap:14px;margin:0 -8px}
+  .tf{grid-template-columns:1fr;grid-template-rows:none;grid-template-areas:"head" "desc" "media";border-radius:28px;padding:28px 20px;row-gap:0}
+  .tf--rev{grid-template-areas:"head" "desc" "media"}
+  .tf--side{grid-template-columns:1fr 172px;grid-template-areas:"head head" "desc media";column-gap:16px}
+  .tf--side.tf--rev{grid-template-columns:172px 1fr;grid-template-areas:"head head" "media desc"}
+  .tf-head{gap:8px}
+  .tf-head h2{font-size:26px;line-height:1.35}
+  .tf-desc{padding-top:8px}
+  .tf-desc p{font-size:14px;line-height:1.75}
+  .tf--side .tf-desc{padding-top:18px}
+  .tf-media{padding-top:20px}
+  .tf .phone-wrap{--pw:172px;--k:.50588}
+  .tf .media-pair .phone-wrap{--pw:min(150px,calc((100vw - 74px) / 2))}
+  .tf .phone-wrap--card{--pw:240px;--k:.70588}
+  .ai-chip{margin-top:14px;margin-left:-4px;padding:7px 12px;font-size:12px}
+  .move-card{display:none}
+  .tf-mem{width:100%;height:330px}
+  .tf-mem .phone-wrap{right:0;top:30px;--pw:160px;--k:.47059}
+  .tf-mem-photos{left:-4px;top:10px;width:230px;border-radius:16px}
   .features-lead{margin-bottom:48px;font-size:20px}
   .feature-list{gap:88px}
   .feature,.feature.is-rev{flex-direction:column;align-items:stretch;gap:24px}
