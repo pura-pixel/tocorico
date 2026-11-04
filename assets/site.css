@@ -1,0 +1,269 @@
+/* トコリコのホームページ(tocorico.jp。TB-335)の見た目。見本は AI秘書/10_たびしるべ/resources/ホームページ_見本_2026-11-04/(Claude Design の書き出し)。
+   色は Plari Design System の値(見本の色)を :root の変数だけで持つ。夜の色は [data-theme="dark"] だけが持つ(アプリの tokens.css と同じ考え方)。
+   字は Zen Maru Gothic(500・700・900)、ロゴの「トコリコ」だけ Mochiy Pop One。どちらも組み立てで使う文字だけに切り出したもの(build.mjs)。12px より小さい字は作らない */
+@font-face{font-family:"Zen Maru Gothic";font-weight:500;font-style:normal;font-display:swap;src:url("fonts/zmg-500.woff2") format("woff2")}
+@font-face{font-family:"Zen Maru Gothic";font-weight:700;font-style:normal;font-display:swap;src:url("fonts/zmg-700.woff2") format("woff2")}
+@font-face{font-family:"Zen Maru Gothic";font-weight:900;font-style:normal;font-display:swap;src:url("fonts/zmg-900.woff2") format("woff2")}
+@font-face{font-family:"Mochiy Pop One";font-weight:400;font-style:normal;font-display:swap;src:url("fonts/mochiy-logo.woff2") format("woff2")}
+
+:root,:root[data-theme="light"]{
+  --bg:#FAF8F3;--card:#FFFFFF;--ink:#1F1F1F;--sub:#6B6B6B;--green:#3F7F32;--fill:#3F7F32;--on-fill:#FFFFFF;--tint:#EFF7EA;
+  --accent-soft:#FFF4CC;--marker:#FFE27A;--border:#E4E1D8;--card-shadow:0 3px 0 rgba(40,60,30,.10);--btn-shadow:0 3px 0 rgba(40,60,30,.18);
+  --store:#1F1F1F;--store-ink:#FFFFFF;--map:#E9EEDF;--road:#FFFFFF;--park:#D3E6C6;--water:#D9E4E3;--pin:#FFFFFF;--tap:rgba(255,255,255,.55);
+  --pr-bg:#336628;--pr-sub:#D9E8D2;--yellow:#F2B705;--on-yellow:#1F1F1F;--badge:#3D3D3D;--on-badge:#FFFFFF;--bezel:#23261F;
+  --float-shadow:0 8px 24px rgba(31,31,31,.14);--phone-shadow:0 18px 40px rgba(31,31,31,.16);--header-bg:rgba(250,248,243,.88);
+  --white-08:rgba(255,255,255,.08);--white-18:rgba(255,255,255,.18);--white-20:rgba(255,255,255,.2);--white-50:rgba(255,255,255,.5);--white-60:rgba(255,255,255,.6);
+  --tap-ring:rgba(63,127,50,.35);--pin-shadow:0 3px 0 rgba(0,0,0,.12);--yellow-pin-shadow:0 3px 0 rgba(0,0,0,.15);--pr-card-shadow:0 6px 0 rgba(0,0,0,.18);--pr-btn-shadow:0 3px 0 rgba(0,0,0,.25);
+  /* 動画1・2の絵(illust-*.html)の色。アプリの昼の色(tokens.css)に合わせる */
+  --i-bg:#FAF8F3;--i-bg2:#F5F3EE;--i-card:#FFFFFF;--i-text:#1F1F1F;--i-sub:#6B6B6B;--i-accent:#3F7F32;--i-face:#3F7F32;--i-soft:#E3EEDB;--i-ysoft:#FFF4CC;
+  --i-map:#EEF0E8;--i-block:#E4E6DC;--i-park:#CFE5C3;--i-water:#D5E4EA;--i-road:#FFFFFF;--i-road2:#F7E7A8;--i-rail:#9BC48A;--i-label:#8F938A;--i-plabel:#5E8F4E;
+  --i-line:#EFECE5;--i-grab:#D6D3CB;--i-input:#F3F1EB;--i-badge:#3D3D3D;--i-tl:#CFE0C5;--i-dim:#9A9A9A;--i-ph:#A7A7A7;--i-veil:rgba(250,248,243,.92);--i-sh:31,31,31;--i-sh2:40,60,30;
+  color-scheme:light;
+}
+:root[data-theme="dark"]{
+  --bg:#161814;--card:#22261F;--ink:#F1F1EC;--sub:#A8ADA2;--green:#6DBB5A;--fill:#5AA548;--on-fill:#161814;--tint:#1D2719;
+  --accent-soft:#3A3216;--marker:#5C4A12;--border:#33382F;--card-shadow:0 3px 0 rgba(0,0,0,.35);--btn-shadow:0 3px 0 rgba(0,0,0,.45);
+  --store:#F1F1EC;--store-ink:#161814;--map:#232A20;--road:#33392F;--park:#2B3A26;--water:#25302F;--pin:#3A4135;--tap:rgba(255,255,255,.25);
+  --pr-bg:#253322;--pr-sub:#BFD3B6;--bezel:#0B0C0A;--float-shadow:0 8px 24px rgba(0,0,0,.45);--phone-shadow:0 18px 40px rgba(0,0,0,.5);--header-bg:rgba(22,24,20,.88);
+  --tap-ring:rgba(109,187,90,.35);--pin-shadow:0 3px 0 rgba(0,0,0,.35);
+  /* 動画1・2の絵:アプリの夜の色(tokens.css の [data-theme="dark"])に合わせる */
+  --i-bg:#161814;--i-bg2:#1B1E19;--i-card:#22261F;--i-text:#F1F1EC;--i-sub:#A8ADA2;--i-accent:#6DBB5A;--i-face:#3F7F32;--i-soft:#253322;--i-ysoft:#3A3216;
+  --i-map:#1E231C;--i-block:#2A3027;--i-park:#2B3A26;--i-water:#24302F;--i-road:#353B31;--i-road2:#4A4426;--i-rail:#4E6B45;--i-label:#80867A;--i-plabel:#7FA86F;
+  --i-line:#33382F;--i-grab:#4A4F45;--i-input:#2C3128;--i-badge:#55594F;--i-tl:#3A4535;--i-dim:#7A7F74;--i-ph:#6F7469;--i-veil:rgba(22,24,20,.92);--i-sh:0,0,0;--i-sh2:0,0,0;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:88px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;font-weight:500;letter-spacing:.02em;line-height:1.6;overflow-x:hidden}
+a{color:var(--green)}
+img,video{display:block}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* ---- 上の帯(上に固定) ---- */
+.site-header{position:sticky;top:0;z-index:50;background:var(--header-bg);-webkit-backdrop-filter:saturate(1.4) blur(12px);backdrop-filter:saturate(1.4) blur(12px)}
+.site-header-in{max-width:1200px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);min-height:44px}
+.logo img{width:40px;height:40px;border-radius:10px}
+.logo span{font-family:"Mochiy Pop One",sans-serif;font-size:22px;color:var(--green);letter-spacing:.04em}
+.site-nav{display:flex;align-items:center;gap:24px}
+.site-nav .nav-link{color:var(--ink);text-decoration:none;font-weight:700;font-size:15px;padding:12px 0}
+.theme-btn{flex:none;width:44px;height:44px;padding:0;border-radius:999px;border:1px solid var(--border);background:var(--card);color:var(--ink);display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
+.theme-btn svg{width:20px;height:20px}
+.theme-btn .ic-sun{display:none}
+:root[data-theme="dark"] .theme-btn .ic-moon{display:none}
+:root[data-theme="dark"] .theme-btn .ic-sun{display:block}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:44px;padding:0 20px;border-radius:999px;background:var(--fill);color:var(--on-fill);text-decoration:none;font-weight:700;font-size:15px;box-shadow:var(--btn-shadow);white-space:nowrap}
+.btn--big{height:56px;padding:0 28px;font-size:16px}
+.btn--store{background:var(--store);color:var(--store-ink);box-shadow:none}
+.btn--yellow{background:var(--yellow);color:var(--on-yellow);height:56px;padding:0 32px;font-size:17px;font-weight:900;box-shadow:var(--pr-btn-shadow)}
+
+/* ---- いちばん上 ---- */
+.hero{max-width:1200px;margin:0 auto;padding:56px 24px 120px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:48px}
+.hero-text{flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:24px}
+.eyebrow{margin:0;display:flex;align-items:center;gap:8px;font-size:15px;font-weight:700;color:var(--green)}
+.eyebrow svg{width:16px;height:20px}
+.hero h1{margin:0;font-size:clamp(38px,5.2vw,64px);line-height:1.25;font-weight:900;letter-spacing:.01em}
+.marker{background:linear-gradient(transparent 62%,var(--marker) 62%)}
+.hero h1 .ln{display:block;white-space:nowrap} /* 見出しは1行ずつ(途中で折り返さない) */
+.hero-lead{margin:0;font-size:20px;color:var(--sub);font-weight:500}
+.hero-art{flex:1 1 520px;min-width:0;display:flex;justify-content:center}
+
+/* 1番上の絵「案2 指で置くだけ」:地図に指でピンを置くと、京都の1日の予定に錦市場が加わる */
+.place-art{position:relative;width:100%;max-width:600px;aspect-ratio:560/480;border-radius:40px;overflow:hidden;background:var(--map)}
+.place-art .pa{position:absolute}
+.pa-water{left:56%;top:-10%;width:8%;height:120%;background:var(--water);transform:rotate(10deg)}
+.pa-park{left:66%;top:52%;width:28%;height:26%;border-radius:40px;background:var(--park)}
+.pa-road{background:var(--road)}
+.pa-route{inset:0;width:100%;height:100%}
+.pa-pin{width:7%;aspect-ratio:1;border-radius:28% 28% 28% 0;transform:rotate(-45deg);background:var(--pin);box-shadow:var(--pin-shadow)}
+.pa-tap{left:76%;top:8%;width:15%;aspect-ratio:1;border-radius:50%;background:var(--tap);border:2px solid var(--tap-ring);animation:paTap 6s ease-out infinite}
+.pa-newpin{left:80%;top:12%;width:8%;aspect-ratio:1;border-radius:28% 28% 28% 0;transform:rotate(-45deg);background:var(--yellow);box-shadow:var(--yellow-pin-shadow);animation:paDrop 6s ease-out infinite}
+.pa-hand{left:81%;top:17%;width:16%;height:auto;animation:paHand 6s ease-in-out infinite}
+.pa-list{left:4%;bottom:5%;width:50%;display:flex;flex-direction:column;gap:8px}
+.pa-row{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:16px;background:var(--card);box-shadow:var(--card-shadow);font-size:15px}
+.pa-row .t{font-weight:700;color:var(--sub)}
+.pa-row--new{background:var(--accent-soft);animation:paRow 6s ease-out infinite}
+.num{flex:none;display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--badge);color:var(--on-badge);font-size:12px;font-weight:700}
+@keyframes paTap{0%,18%{opacity:0;transform:scale(.6)}24%{opacity:1;transform:scale(1)}36%,100%{opacity:0;transform:scale(1.2)}}
+@keyframes paDrop{0%,22%{opacity:0;transform:translateY(-30%) rotate(-45deg)}30%,92%{opacity:1;transform:translateY(0) rotate(-45deg)}100%{opacity:0;transform:translateY(0) rotate(-45deg)}}
+@keyframes paHand{0%,8%{transform:translate(10%,14%)}22%,30%{transform:translate(0,0)}44%,100%{transform:translate(14%,22%)}}
+@keyframes paRow{0%,34%{opacity:0;transform:translateY(10px)}44%,92%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(0)}}
+
+/* ---- できること(見出しと説明の横に、スマホの枠の画面を左右交互) ---- */
+.features{max-width:1200px;margin:0 auto;padding:0 24px}
+.features-lead{margin:0 0 64px;font-size:clamp(20px,2.4vw,28px);font-weight:900;line-height:1.5}
+.feature-list{display:flex;flex-direction:column;gap:136px}
+.feature{display:flex;flex-wrap:wrap;align-items:center;gap:48px}
+.feature.is-rev{flex-direction:row-reverse}
+.feature-text{flex:1 1 360px;min-width:0;display:flex;flex-direction:column;gap:14px}
+.kicker-row{display:flex;align-items:center;gap:10px}
+.kicker{font-size:14px;font-weight:700;color:var(--green)}
+.tag-premium{padding:3px 12px;border-radius:999px;background:var(--yellow);color:var(--on-yellow);font-size:13px;font-weight:700}
+.feature h2{margin:0;font-size:clamp(26px,3.2vw,40px);line-height:1.35;font-weight:900}
+.feature p{margin:0;font-size:17px;color:var(--sub);font-weight:500}
+.feature-media{flex:1 1 440px;min-width:0;display:flex;justify-content:center;gap:24px;flex-wrap:wrap}
+.media-pair{display:flex;justify-content:center;gap:24px}
+.media-pair > :nth-child(2){margin-top:56px}
+
+/* スマホの枠(本物の動画・画面写真・絵の版で同じ形)。--pw が枠の幅 */
+.phone-wrap{position:relative;--pw:270px;--k:.79412} /* --k = 枠の幅 ÷ 340(絵の版を縮める倍率。calc で長さ÷長さはできないので一緒に持つ) */
+.media-pair .phone-wrap{--pw:220px;--k:.64706}
+.phone{position:relative;width:var(--pw);border-radius:calc(var(--pw) * .16);border:calc(var(--pw) * .03) solid var(--bezel);background:var(--bezel);box-shadow:var(--phone-shadow);overflow:hidden}
+.phone > video,.phone > img{width:100%;height:auto;aspect-ratio:1206/2622;border-radius:calc(var(--pw) * .13);background:var(--card)}
+.phone--shot > img{aspect-ratio:auto}
+/* 絵の版:340×740 の見本の寸法のまま描き、枠の幅に縮める */
+.ill{position:relative}
+.ill-box{position:relative;width:calc(340px * var(--k));height:calc(740px * var(--k))}
+.ill-scale{position:absolute;left:0;top:0;width:340px;height:740px;transform:scale(var(--k));transform-origin:0 0}
+.ill-phone{position:absolute;inset:0}
+.ill-phone > div{box-shadow:var(--phone-shadow)!important}
+/* 止めている間(見えている中で真ん中に一番近い1本だけ動かす):動きを止めて、決めた時刻のコマを見せる */
+.ill.is-still *,.ill.is-still *::before,.ill.is-still *::after{animation-play-state:paused!important;animation-delay:var(--still-at,-.5s)!important}
+.ill .ill-floats{position:absolute;inset:0;pointer-events:none;z-index:2}
+.ill-float{position:absolute;display:flex;align-items:center;gap:8px;padding:10px 14px;border-radius:18px;background:var(--card);color:var(--ink);box-shadow:var(--float-shadow);font-size:14px;font-weight:700;white-space:nowrap}
+.ill-1 .ill-float{left:-110px;top:63%}
+.ill-2 .ill-float{right:-120px;top:40%}
+.ill.is-still .ill-float{opacity:0!important}
+.ill-float span{background:var(--badge)!important;color:var(--on-badge)!important}
+
+/* 共有のページ(地図より下の旅程の一覧)の画面写真は、スマホの枠ではなくカードで出す(枠に入れると、相手のスマホの画面のふりになるため) */
+.shot-card{width:var(--pw);border-radius:24px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--card-shadow);background:var(--card)}
+.shot-card img{width:100%;height:auto}
+
+/* 動画の横に浮かべる部品(出す秒数は tools/demo-videos/videos/*.json の homepage.floats) */
+.vfloat{position:absolute;z-index:2;display:flex;align-items:center;gap:8px;padding:10px 14px;border-radius:18px;background:var(--card);box-shadow:var(--float-shadow);font-size:14px;font-weight:700;white-space:nowrap;opacity:0;transform:translateX(var(--fx,-12px));transition:opacity .35s ease,transform .35s ease;pointer-events:none}
+.vfloat.is-on{opacity:1;transform:translateX(0)}
+.vfloat--left{left:-48px}
+.vfloat--right{right:-48px;--fx:12px}
+.vfloat--green{color:var(--green)}
+
+/* ---- プレミアム(案D:濃い緑の面) ---- */
+.premium{max-width:1200px;margin:0 auto;padding:136px 24px 0}
+.premium-box{border-radius:40px;background:var(--pr-bg);color:#FFFFFF;padding:56px clamp(22px,4vw,56px);display:flex;flex-direction:column;gap:36px}
+.premium-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px}
+.premium-head-l{display:flex;flex-direction:column;gap:12px}
+.chip-yellow{align-self:flex-start;padding:6px 14px;border-radius:999px;background:var(--yellow);color:var(--on-yellow);font-size:14px;font-weight:700}
+.premium h2{margin:0;font-size:clamp(26px,3.4vw,44px);line-height:1.3;font-weight:900}
+.price{display:flex;flex-direction:column;gap:6px}
+.price-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.price-row .plan{font-size:15px;font-weight:700}
+.chip-deal{padding:3px 10px;border-radius:999px;background:var(--yellow);color:var(--on-yellow);font-size:13px;font-weight:900}
+.price-year{margin:0;font-size:17px;font-weight:500}
+.price-year b{font-size:44px;font-weight:900;line-height:1.1}
+.price-year small{font-size:14px;color:var(--pr-sub)}
+.price-month{margin:6px 0 0;padding-top:8px;border-top:1px solid var(--white-20);font-size:15px;font-weight:700}
+.price-month b{font-size:24px;font-weight:900}
+.compare{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:20px}
+.plan-card{flex:1 1 300px;max-width:400px;border-radius:28px;background:var(--white-08);border:1px solid var(--white-18);padding:26px;display:flex;flex-direction:column;gap:14px;margin-top:16px}
+.plan-card--pr{position:relative;flex:1 1 320px;max-width:440px;background:var(--card);border:3px solid var(--yellow);box-shadow:var(--pr-card-shadow);margin-top:0}
+.plan-card h3{margin:0;font-size:18px;font-weight:900;color:#FFFFFF}
+.plan-card--pr h3{color:var(--green)}
+.recommend{position:absolute;top:-16px;right:24px;display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:999px;background:var(--yellow);color:var(--on-yellow);font-size:13px;font-weight:700}
+.recommend svg{width:12px;height:16px}
+.plan-card ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px}
+.plan-card .grp{font-size:13px;font-weight:900;color:#FFFFFF;padding-top:6px}
+.plan-card--pr .grp{color:var(--green)}
+.plan-card .it{display:flex;align-items:flex-start;gap:10px;font-size:14px;font-weight:500;color:var(--pr-sub)}
+.plan-card--pr .it{font-weight:700;color:var(--ink)}
+.it .ic{flex:none;margin-top:1px;width:18px;height:18px;fill:none;stroke:var(--white-60);stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.plan-card--pr .it .ic{width:20px;height:20px;stroke:var(--green)}
+.it .nm{flex:1;min-width:0}
+.it .nm small{display:block;font-size:12px;font-weight:500;color:var(--sub)}
+.it .val{font-size:13px;font-weight:700;color:#FFFFFF;white-space:nowrap}
+.plan-card--pr .it .val{font-weight:900;color:var(--green)}
+.it .no{flex:none;width:18px;height:18px;fill:none;stroke:var(--white-50);stroke-width:2.2;stroke-linecap:round}
+.it .yes{flex:none;width:20px;height:20px}
+.it .yes circle{fill:var(--green)}
+.it .yes path{fill:none;stroke:var(--card);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.premium-cta{display:flex;flex-direction:column;align-items:center;gap:8px}
+.premium-cta p{margin:0;font-size:14px;font-weight:500;color:var(--pr-sub);text-align:center}
+
+/* ---- よくある質問・予約の入口 ---- */
+.faq{max-width:880px;margin:0 auto;padding:136px 24px 0;display:flex;flex-direction:column;gap:20px}
+.faq h2{margin:0;font-size:30px;font-weight:900}
+.faq-box{background:var(--card);border-radius:24px;box-shadow:var(--card-shadow);padding:6px 26px}
+.faq-item{padding:18px 0;border-bottom:1px solid var(--border)}
+.faq-item:last-child{border-bottom:none}
+.faq-item h3{margin:0 0 4px;font-size:17px;font-weight:700}
+.faq-item p{margin:0;font-size:15px;color:var(--sub);font-weight:500}
+.booking-entry{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 26px;border-radius:24px;background:var(--tint);border:1px solid var(--border);text-decoration:none;color:var(--ink);min-height:44px}
+.booking-entry b{display:block;font-size:17px;font-weight:900}
+.booking-entry span.d{display:block;font-size:14px;color:var(--sub);font-weight:500}
+.booking-entry .go{flex:none;font-size:15px;font-weight:700;color:var(--green);white-space:nowrap}
+
+/* ---- 下のダウンロード・フッター ---- */
+.download{max-width:1200px;margin:0 auto;padding:136px 24px 104px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+.download img{width:88px;height:88px;border-radius:20px}
+.download .name{margin:0;font-family:"Mochiy Pop One",sans-serif;font-size:30px;color:var(--green);letter-spacing:.04em}
+.download .tagline{margin:0;font-size:16px;color:var(--sub);font-weight:500}
+.site-footer{border-top:1px solid var(--border)}
+.site-footer-in{max-width:1200px;margin:0 auto;padding:24px 24px 40px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:14px;font-weight:500}
+.site-footer nav{display:flex;flex-wrap:wrap;gap:0 22px}
+.site-footer a{color:var(--sub);padding:12px 0;display:inline-block}
+.site-footer .copy{margin:0;padding:12px 0;color:var(--sub)}
+.site-footer .note{flex-basis:100%;margin:0;font-size:12px;color:var(--sub)}
+
+/* ---- 予約の紹介ページ・/app ---- */
+.page-head{max-width:1200px;margin:0 auto;padding:56px 24px 96px;display:flex;flex-direction:column;gap:20px}
+.page-head h1{margin:0;font-size:clamp(34px,4.6vw,56px);line-height:1.3;font-weight:900}
+.page-head p{margin:0;max-width:720px;font-size:18px;color:var(--sub);font-weight:500}
+.step-no{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--fill);color:var(--on-fill);font-size:14px;font-weight:900}
+.page-end{max-width:1200px;margin:0 auto;padding:120px 24px 72px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+.page-end .back{font-weight:700;color:var(--green);padding:12px 0}
+.app-page{min-height:60vh;max-width:720px;margin:0 auto;padding:96px 24px;display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center}
+.app-page img{width:96px;height:96px;border-radius:22px}
+.app-page h1{margin:0;font-size:28px;font-weight:900}
+.app-page p{margin:0;font-size:16px;color:var(--sub)}
+
+/* ---- スマホの幅 ---- */
+@media (max-width:700px){
+  html{scroll-padding-top:72px}
+  .site-header-in{padding:8px 16px}
+  .logo img{width:32px;height:32px;border-radius:8px}
+  .logo span{font-size:18px}
+  .site-nav{gap:8px}
+  .site-nav .nav-link{display:none}
+  .btn{padding:0 16px;font-size:14px}
+  .hero{padding:28px 20px 72px;gap:24px}
+  .hero-text{gap:16px}
+  .eyebrow{font-size:13px}
+  .hero h1{font-size:38px;line-height:1.28}
+  .hero-lead{font-size:16px}
+  .place-art{border-radius:32px;aspect-ratio:350/330}
+  .pa-row{padding:7px 10px;font-size:13px;gap:8px;border-radius:13px}
+  .pa-list{width:56%;gap:6px;left:12px;bottom:14px}
+  .num{width:18px;height:18px;font-size:12px}
+  .features{padding:0 20px}
+  .features-lead{margin-bottom:48px;font-size:20px}
+  .feature-list{gap:88px}
+  .feature,.feature.is-rev{flex-direction:column;align-items:stretch;gap:24px}
+  .feature-text{flex:none;gap:8px}
+  .feature h2{font-size:26px;line-height:1.4}
+  .feature p{font-size:15px}
+  .feature-media{flex:none}
+  .phone-wrap{--pw:220px;--k:.64706}
+  .media-pair{gap:14px}
+  .media-pair .phone-wrap{--pw:min(160px,calc((100vw - 54px) / 2))}
+  .media-pair > :nth-child(2){margin-top:36px}
+  .ill-1 .ill-float{left:-40px;top:70%}
+  .ill-2 .ill-float{right:-40px;top:44%}
+  .vfloat--left{left:-36px}
+  .vfloat--right{right:-36px}
+  .vfloat,.ill-float{padding:8px 12px;font-size:13px}
+  .premium{padding:88px 16px 0}
+  .premium-box{border-radius:32px;padding:36px 18px;gap:28px}
+  .plan-card{padding:20px 18px}
+  .faq{padding:88px 20px 0}
+  .faq h2{font-size:24px}
+  .faq-box{padding:4px 20px}
+  .booking-entry{padding:18px 20px;flex-wrap:wrap}
+  .download{padding:88px 20px 72px}
+  .page-head{padding:28px 20px 64px}
+  .page-head h1{font-size:32px}
+  .page-head p{font-size:16px}
+  .page-end{padding:88px 20px 56px}
+}
+@media (prefers-reduced-motion:reduce){
+  .place-art *,.ill *{animation:none!important}
+}
