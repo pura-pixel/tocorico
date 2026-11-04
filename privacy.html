@@ -26,6 +26,8 @@ th,td{border:1px solid var(--line);padding:8px 12px;text-align:left;vertical-ali
 th{background:#F1EDE2}
 th:first-child,td:first-child{white-space:nowrap}
 .back{margin:0 0 20px;font-size:14px}
+/* 特定商取引法に基づく表記(TB-342):項目の列が長い(「商品代金以外に必要な料金」)ので、狭い画面では項目の列も折り返して中身の列を広く */
+@media (max-width:560px){.page-tokushoho th:first-child,.page-tokushoho td:first-child{white-space:normal;width:32%}}
 </style>
 </head>
 <body>
