@@ -7,7 +7,7 @@
 @font-face{font-family:"Mochiy Pop One";font-weight:400;font-style:normal;font-display:swap;src:url("fonts/mochiy-logo.woff2") format("woff2")}
 
 :root,:root[data-theme="light"]{
-  --pn-green:#E3EED9;--pn-yellow:#FFF1C2;--pn-beige:#F1EBDF;--move-card-bg:#FAF8F3; /* トップの続きの色の面(TB-338) */
+  --pn-green:#E3EED9;--pn-yellow:#FFF1C2;--pn-beige:#F1EBDF;--move-card-bg:#F7F5F2; /* トップの続きの色の面(TB-338)。移動の行のカードの地はアプリの予定の一覧の地(TB-339) */
   --hero-blob:#E7F0DF;--hero-grad-top:#DCEBD2;--hero-grad-bottom:#F3F0E3;--hero-phone-shadow:0 24px 50px rgba(30,50,20,.18);--hero-card-shadow:0 14px 34px rgba(30,50,20,.16); /* 一番上(TB-337):A の丸・C のグラデーション・影 */
   --bg:#FAF8F3;--card:#FFFFFF;--ink:#1F1F1F;--sub:#6B6B6B;--green:#3F7F32;--fill:#3F7F32;--on-fill:#FFFFFF;--tint:#EFF7EA;
   --accent-soft:#FFF4CC;--marker:#FFE27A;--border:#E4E1D8;--card-shadow:0 3px 0 rgba(40,60,30,.10);--btn-shadow:0 3px 0 rgba(40,60,30,.18);
@@ -23,7 +23,7 @@
   color-scheme:light;
 }
 :root[data-theme="dark"]{
-  --pn-green:#1F2B1C;--pn-yellow:#2F2914;--pn-beige:#2A261F;--move-card-bg:#FAF8F3; /* トップの続きの色の面(TB-338):同じ色みの暗い色。移動の行のカードは共有のページの地の色(昼夜とも) */
+  --pn-green:#1F2B1C;--pn-yellow:#2F2914;--pn-beige:#2A261F;--move-card-bg:#131613; /* トップの続きの色の面(TB-338):同じ色みの暗い色。移動の行のカードはアプリの夜の予定の一覧の地(TB-339) */
   --hero-blob:#1E2A1B;--hero-grad-top:#1F2C1C;--hero-grad-bottom:#161814;--hero-phone-shadow:0 0 0 1px rgba(255,255,255,.12),0 24px 50px rgba(0,0,0,.5); /* 夜はスマホの枠が地に溶けるので、細い明るいふちを足す */--hero-card-shadow:0 14px 34px rgba(0,0,0,.45);
   --bg:#161814;--card:#22261F;--ink:#F1F1EC;--sub:#A8ADA2;--green:#6DBB5A;--fill:#5AA548;--on-fill:#161814;--tint:#1D2719;
   --accent-soft:#3A3216;--marker:#5C4A12;--border:#33382F;--card-shadow:0 3px 0 rgba(0,0,0,.35);--btn-shadow:0 3px 0 rgba(0,0,0,.45);
@@ -121,6 +121,8 @@ img,video{display:block}
 .ill-phone > div{box-shadow:var(--phone-shadow)!important}
 /* 止めている間(見えている中で真ん中に一番近い1本だけ動かす):動きを止めて、決めた時刻のコマを見せる */
 .ill.is-still *,.ill.is-still *::before,.ill.is-still *::after{animation-play-state:paused!important;animation-delay:var(--still-at,-.5s)!important}
+/* 1回見終わった絵の版は、最後のコマ(--end-at)で止める(TB-339) */
+.ill.is-ended *,.ill.is-ended *::before,.ill.is-ended *::after{animation-play-state:paused!important;animation-delay:var(--end-at)!important}
 .ill .ill-floats{position:absolute;inset:0;pointer-events:none;z-index:2}
 .ill-float{position:absolute;display:flex;align-items:center;gap:8px;padding:10px 14px;border-radius:18px;background:var(--card);color:var(--ink);box-shadow:var(--float-shadow);font-size:14px;font-weight:700;white-space:nowrap}
 .ill-1 .ill-float{left:-110px;top:63%}
@@ -139,6 +141,16 @@ img,video{display:block}
 .vfloat--right{right:-48px;--fx:12px}
 .vfloat--green{color:var(--green)}
 
+/* ---- 動くものの下の操作の場所(TB-339):再生中は細い進み具合の線(見るだけ)、終わったら「↻ もう一度見る」。場所は先に取っておく ---- */
+.play-ctl{height:44px;margin-top:16px;display:flex;justify-content:center;align-items:flex-start}
+.play-bar{display:block;visibility:hidden;width:80%;height:4px;margin-top:4px;border-radius:2px;background:var(--border);overflow:hidden}
+.play-ctl.is-playing .play-bar{visibility:visible}
+.play-bar i{display:block;height:100%;background:var(--green);transform-origin:0 50%;transform:scaleX(0)}
+.replay{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 20px;border:0;border-radius:999px;background:var(--card);color:var(--green);font:inherit;font-size:15px;font-weight:700;letter-spacing:.04em;box-shadow:var(--hero-card-shadow);cursor:pointer;white-space:nowrap}
+.replay[hidden]{display:none}
+.play-ctl.is-playing .replay{display:none}
+.replay:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+
 /* ---- トップの続き(TB-338):所ごとに角の丸い色の面。面の中で見出し・説明と画面を隣り合わせにする ---- */
 .tf-list{max-width:1120px;margin:0 auto;display:flex;flex-direction:column;gap:24px}
 .tf{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr auto auto 1fr;grid-template-areas:". media" "head media" "desc media" ". media";column-gap:56px;border-radius:40px;padding:64px 80px}
@@ -156,17 +168,11 @@ img,video{display:block}
 .tf .media-pair .phone-wrap{--pw:210px;--k:.61765}
 /* 予約:説明の下の札(動画3の浮かべる部品を止まった形で) */
 .ai-chip{margin-top:24px;padding:10px 18px;border-radius:999px;background:var(--card);color:var(--green);font-size:14px;font-weight:700;box-shadow:var(--hero-card-shadow);white-space:nowrap}
-/* 地図(パソコンだけ):アプリの本物の移動の行2行のカード。行の画像は共有のページの地の色なので、カードも同じ色(昼夜とも) */
-.move-card{margin-top:28px;width:360px;padding:16px 18px;border-radius:20px;background:var(--move-card-bg);box-shadow:var(--hero-card-shadow);display:flex;flex-direction:column;gap:10px}
-.move-card img{display:block;height:auto}
-.move-card img:first-child{width:62%}
-.move-card img:last-child{width:95%}
-/* 宿:動きの絵をスマホの黒い枠なしの角の丸いカード(影つき)で */
-.tf .phone-wrap--card{--pw:300px;--k:.88235}
-.ill--card .ill-phone > div{border-color:transparent!important;background:transparent!important;box-shadow:none!important}
-.ill--card .ill-phone > div > div{border-radius:30px!important;box-shadow:var(--hero-card-shadow)}
+/* 地図(パソコンだけ):アプリの本物の移動の行2行のカード(動画3の最後の予定タブから切り出し。TB-339)。カードの地は予定の一覧の地の色(昼・夜) */
+.move-card{margin-top:28px;width:360px;padding:14px 16px;border-radius:20px;background:var(--move-card-bg);box-shadow:var(--hero-card-shadow);display:flex;flex-direction:column;gap:6px}
+.move-card img{display:block;width:100%;height:auto}
 /* 記録:動画4のスマホ(右)に、とっておきの写真のカードを左から少し傾けて重ねる */
-.tf-mem{position:relative;width:440px;height:520px;max-width:100%}
+.tf-mem{position:relative;width:440px;height:548px;max-width:100%} /* スマホの枠と下の操作の場所(線・もう一度見る)が収まる高さ */
 .tf-mem .phone-wrap{position:absolute;right:10px;top:0;--pw:230px;--k:.67647}
 .tf-mem-photos{position:absolute;left:0;top:70px;width:300px;z-index:3;transform:rotate(-4deg);border-radius:22px;overflow:hidden;background:var(--card);box-shadow:var(--hero-card-shadow)}
 .tf-mem-photos img{display:block;width:100%;height:auto}
@@ -281,7 +287,7 @@ img,video{display:block}
   .tf{grid-template-columns:1fr;grid-template-rows:none;grid-template-areas:"head" "desc" "media";border-radius:28px;padding:28px 20px;row-gap:0}
   .tf--rev{grid-template-areas:"head" "desc" "media"}
   .tf--side{grid-template-columns:1fr 172px;grid-template-areas:"head head" "desc media";column-gap:16px}
-  .tf--side.tf--rev{grid-template-columns:172px 1fr;grid-template-areas:"head head" "media desc"}
+  .tf--side.tf--mrev{grid-template-columns:172px 1fr;grid-template-areas:"head head" "media desc"}
   .tf-head{gap:8px}
   .tf-head h2{font-size:26px;line-height:1.35}
   .tf-desc{padding-top:8px}
@@ -290,10 +296,12 @@ img,video{display:block}
   .tf-media{padding-top:20px}
   .tf .phone-wrap{--pw:172px;--k:.50588}
   .tf .media-pair .phone-wrap{--pw:min(150px,calc((100vw - 74px) / 2))}
-  .tf .phone-wrap--card{--pw:240px;--k:.70588}
   .ai-chip{margin-top:14px;margin-left:-4px;padding:7px 12px;font-size:12px}
   .move-card{display:none}
-  .tf-mem{width:100%;height:330px}
+  .play-ctl{margin-top:12px}
+  .replay{font-size:14px;padding:0 14px;gap:4px}
+  .play-bar{margin-top:2px}
+  .tf-mem{width:100%;height:426px} /* スマホの枠(上から30px・高さ約340px)と下の操作の場所が面の中に収まる高さ(TB-339) */
   .tf-mem .phone-wrap{right:0;top:30px;--pw:160px;--k:.47059}
   .tf-mem-photos{left:-4px;top:10px;width:230px;border-radius:16px}
   .features-lead{margin-bottom:48px;font-size:20px}
