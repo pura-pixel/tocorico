@@ -7,13 +7,14 @@
 @font-face{font-family:"Mochiy Pop One";font-weight:400;font-style:normal;font-display:swap;src:url("fonts/mochiy-logo.woff2") format("woff2")}
 
 :root,:root[data-theme="light"]{
+  --hero-blob:#E7F0DF;--hero-grad-top:#DCEBD2;--hero-grad-bottom:#F3F0E3;--hero-phone-shadow:0 24px 50px rgba(30,50,20,.18);--hero-card-shadow:0 14px 34px rgba(30,50,20,.16); /* 一番上(TB-337):A の丸・C のグラデーション・影 */
   --bg:#FAF8F3;--card:#FFFFFF;--ink:#1F1F1F;--sub:#6B6B6B;--green:#3F7F32;--fill:#3F7F32;--on-fill:#FFFFFF;--tint:#EFF7EA;
   --accent-soft:#FFF4CC;--marker:#FFE27A;--border:#E4E1D8;--card-shadow:0 3px 0 rgba(40,60,30,.10);--btn-shadow:0 3px 0 rgba(40,60,30,.18);
-  --store:#1F1F1F;--store-ink:#FFFFFF;--map:#E9EEDF;--road:#FFFFFF;--park:#D3E6C6;--water:#D9E4E3;--pin:#FFFFFF;--tap:rgba(255,255,255,.55);
+  --store:#1F1F1F;--store-ink:#FFFFFF;
   --pr-bg:#336628;--pr-sub:#D9E8D2;--yellow:#F2B705;--on-yellow:#1F1F1F;--badge:#3D3D3D;--on-badge:#FFFFFF;--bezel:#23261F;
   --float-shadow:0 8px 24px rgba(31,31,31,.14);--phone-shadow:0 18px 40px rgba(31,31,31,.16);--header-bg:rgba(250,248,243,.88);
   --white-08:rgba(255,255,255,.08);--white-18:rgba(255,255,255,.18);--white-20:rgba(255,255,255,.2);--white-50:rgba(255,255,255,.5);--white-60:rgba(255,255,255,.6);
-  --tap-ring:rgba(63,127,50,.35);--pin-shadow:0 3px 0 rgba(0,0,0,.12);--yellow-pin-shadow:0 3px 0 rgba(0,0,0,.15);--pr-card-shadow:0 6px 0 rgba(0,0,0,.18);--pr-btn-shadow:0 3px 0 rgba(0,0,0,.25);
+  --pr-card-shadow:0 6px 0 rgba(0,0,0,.18);--pr-btn-shadow:0 3px 0 rgba(0,0,0,.25);
   /* 動画1・2の絵(illust-*.html)の色。アプリの昼の色(tokens.css)に合わせる */
   --i-bg:#FAF8F3;--i-bg2:#F5F3EE;--i-card:#FFFFFF;--i-text:#1F1F1F;--i-sub:#6B6B6B;--i-accent:#3F7F32;--i-face:#3F7F32;--i-soft:#E3EEDB;--i-ysoft:#FFF4CC;
   --i-map:#EEF0E8;--i-block:#E4E6DC;--i-park:#CFE5C3;--i-water:#D5E4EA;--i-road:#FFFFFF;--i-road2:#F7E7A8;--i-rail:#9BC48A;--i-label:#8F938A;--i-plabel:#5E8F4E;
@@ -21,11 +22,12 @@
   color-scheme:light;
 }
 :root[data-theme="dark"]{
+  --hero-blob:#1E2A1B;--hero-grad-top:#1F2C1C;--hero-grad-bottom:#161814;--hero-phone-shadow:0 0 0 1px rgba(255,255,255,.12),0 24px 50px rgba(0,0,0,.5); /* 夜はスマホの枠が地に溶けるので、細い明るいふちを足す */--hero-card-shadow:0 14px 34px rgba(0,0,0,.45);
   --bg:#161814;--card:#22261F;--ink:#F1F1EC;--sub:#A8ADA2;--green:#6DBB5A;--fill:#5AA548;--on-fill:#161814;--tint:#1D2719;
   --accent-soft:#3A3216;--marker:#5C4A12;--border:#33382F;--card-shadow:0 3px 0 rgba(0,0,0,.35);--btn-shadow:0 3px 0 rgba(0,0,0,.45);
-  --store:#F1F1EC;--store-ink:#161814;--map:#232A20;--road:#33392F;--park:#2B3A26;--water:#25302F;--pin:#3A4135;--tap:rgba(255,255,255,.25);
+  --store:#F1F1EC;--store-ink:#161814;
   --pr-bg:#253322;--pr-sub:#BFD3B6;--bezel:#0B0C0A;--float-shadow:0 8px 24px rgba(0,0,0,.45);--phone-shadow:0 18px 40px rgba(0,0,0,.5);--header-bg:rgba(22,24,20,.88);
-  --tap-ring:rgba(109,187,90,.35);--pin-shadow:0 3px 0 rgba(0,0,0,.35);
+  
   /* 動画1・2の絵:アプリの夜の色(tokens.css の [data-theme="dark"])に合わせる */
   --i-bg:#161814;--i-bg2:#1B1E19;--i-card:#22261F;--i-text:#F1F1EC;--i-sub:#A8ADA2;--i-accent:#6DBB5A;--i-face:#3F7F32;--i-soft:#253322;--i-ysoft:#3A3216;
   --i-map:#1E231C;--i-block:#2A3027;--i-park:#2B3A26;--i-water:#24302F;--i-road:#353B31;--i-road2:#4A4426;--i-rail:#4E6B45;--i-label:#80867A;--i-plabel:#7FA86F;
@@ -69,26 +71,23 @@ img,video{display:block}
 .hero-lead{margin:0;font-size:20px;color:var(--sub);font-weight:500}
 .hero-art{flex:1 1 520px;min-width:0;display:flex;justify-content:center}
 
-/* 1番上の絵「案2 指で置くだけ」:地図に指でピンを置くと、京都の1日の予定に錦市場が加わる */
-.place-art{position:relative;width:100%;max-width:600px;aspect-ratio:560/480;border-radius:40px;overflow:hidden;background:var(--map)}
-.place-art .pa{position:absolute}
-.pa-water{left:56%;top:-10%;width:8%;height:120%;background:var(--water);transform:rotate(10deg)}
-.pa-park{left:66%;top:52%;width:28%;height:26%;border-radius:40px;background:var(--park)}
-.pa-road{background:var(--road)}
-.pa-route{inset:0;width:100%;height:100%}
-.pa-pin{width:7%;aspect-ratio:1;border-radius:28% 28% 28% 0;transform:rotate(-45deg);background:var(--pin);box-shadow:var(--pin-shadow)}
-.pa-tap{left:76%;top:8%;width:15%;aspect-ratio:1;border-radius:50%;background:var(--tap);border:2px solid var(--tap-ring);animation:paTap 6s ease-out infinite}
-.pa-newpin{left:80%;top:12%;width:8%;aspect-ratio:1;border-radius:28% 28% 28% 0;transform:rotate(-45deg);background:var(--yellow);box-shadow:var(--yellow-pin-shadow);animation:paDrop 6s ease-out infinite}
-.pa-hand{left:81%;top:17%;width:16%;height:auto;animation:paHand 6s ease-in-out infinite}
-.pa-list{left:4%;bottom:5%;width:50%;display:flex;flex-direction:column;gap:8px}
-.pa-row{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:16px;background:var(--card);box-shadow:var(--card-shadow);font-size:15px}
-.pa-row .t{font-weight:700;color:var(--sub)}
-.pa-row--new{background:var(--accent-soft);animation:paRow 6s ease-out infinite}
-.num{flex:none;display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--badge);color:var(--on-badge);font-size:12px;font-weight:700}
-@keyframes paTap{0%,18%{opacity:0;transform:scale(.6)}24%{opacity:1;transform:scale(1)}36%,100%{opacity:0;transform:scale(1.2)}}
-@keyframes paDrop{0%,22%{opacity:0;transform:translateY(-30%) rotate(-45deg)}30%,92%{opacity:1;transform:translateY(0) rotate(-45deg)}100%{opacity:0;transform:translateY(0) rotate(-45deg)}}
-@keyframes paHand{0%,8%{transform:translate(10%,14%)}22%,30%{transform:translate(0,0)}44%,100%{transform:translate(14%,22%)}}
-@keyframes paRow{0%,34%{opacity:0;transform:translateY(10px)}44%,92%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(0)}}
+/* 一番上(TB-337):アプリの本物の画面を並べた止まった絵。部品は .hero-stage の中に全部あり、A(幅 701px 以上)と C(700px 以下)で出す物と位置を変える。
+   置く位置・大きさは舞台の幅に対する割合(%)なので、幅が狭くなるとスマホとカードがまとめて縮む */
+.hero-stage{position:relative;width:100%;max-width:620px;aspect-ratio:620/640}
+.hs-blob{position:absolute;left:6%;top:3%;width:94%;height:94%;border-radius:48% 52% 44% 56% / 52% 44% 56% 48%;background:var(--hero-blob)}
+.hs-phone{position:absolute;overflow:hidden;background:var(--bezel);border:solid var(--bezel);box-shadow:var(--hero-phone-shadow)}
+.hs-phone img{width:100%;height:auto}
+.hs-card{position:absolute;overflow:hidden;background:var(--card);box-shadow:var(--hero-card-shadow)}
+.hs-card img{width:100%;height:auto}
+/* A:真ん中にスマホ(旅行一覧)・右上にとっておきの写真・左下に予定の一覧・右下にライブアクティビティ */
+.hs-m{left:33%;top:2%;width:44%;border-width:1.4cqi;border-radius:7cqi}
+.hs-l,.hs-r{display:none}
+.hs-photos{left:63%;top:12%;width:37%;border-radius:3cqi}
+.hs-plan{left:0;top:51%;width:47%;border-radius:3cqi}
+.hs-la{left:56%;top:69%;width:44%;border-radius:3.6cqi;background:transparent}
+.hero-stage{container-type:inline-size}
+
+
 
 /* ---- できること(見出しと説明の横に、スマホの枠の画面を左右交互) ---- */
 .features{max-width:1200px;margin:0 auto;padding:0 24px}
@@ -225,15 +224,24 @@ img,video{display:block}
   .site-nav{gap:8px}
   .site-nav .nav-link{display:none}
   .btn{padding:0 16px;font-size:14px}
-  .hero{padding:28px 20px 72px;gap:24px}
+  /* 一番上は C:上に見出し(真ん中ぞろえ)・下にスマホ3つ+カード2つ・緑のグラデーション(TB-337) */
+  .hero-wrap{background:linear-gradient(var(--hero-grad-top),var(--hero-grad-bottom))}
+  .hero{padding:28px 0 36px;gap:28px;flex-direction:column;align-items:stretch;overflow:hidden}
+  .hero-text{flex:none;align-items:center;text-align:center;padding:0 20px}
+  .eyebrow{justify-content:center}
+  .hero-art{flex:none;width:100%}
+  .hero-stage{max-width:430px;margin:0 auto;aspect-ratio:390/470}
+  .hs-blob,.hs-photos{display:none}
+  .hs-m{left:24.4%;top:0;width:51.2%;border-width:1.8cqi;border-radius:8.4cqi;z-index:3}
+  .hs-l,.hs-r{display:block;top:7%;width:41%;border-width:1.5cqi;border-radius:6.8cqi;z-index:2}
+  .hs-l{left:1.5%;transform:rotate(-6deg)}
+  .hs-r{right:1.5%;transform:rotate(6deg)}
+  .hs-la{left:2%;top:58%;width:47%;border-radius:4cqi;z-index:4}
+  .hs-plan{left:49%;top:64%;width:49%;border-radius:3.6cqi;z-index:4}
   .hero-text{gap:16px}
   .eyebrow{font-size:13px}
   .hero h1{font-size:38px;line-height:1.28}
   .hero-lead{font-size:16px}
-  .place-art{border-radius:32px;aspect-ratio:350/330}
-  .pa-row{padding:7px 10px;font-size:13px;gap:8px;border-radius:13px}
-  .pa-list{width:56%;gap:6px;left:12px;bottom:14px}
-  .num{width:18px;height:18px;font-size:12px}
   .features{padding:0 20px}
   .features-lead{margin-bottom:48px;font-size:20px}
   .feature-list{gap:88px}
@@ -265,5 +273,5 @@ img,video{display:block}
   .page-end{padding:88px 20px 56px}
 }
 @media (prefers-reduced-motion:reduce){
-  .place-art *,.ill *{animation:none!important}
+  .ill *{animation:none!important}
 }
