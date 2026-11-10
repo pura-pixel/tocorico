@@ -367,6 +367,19 @@ img,video{display:block}
   .page-head p{font-size:16px}
   .page-end{padding:88px 20px 56px}
 }
+/* 幅320 の直し(TB-378。TB-360 の報告で測った所)。幅340px 以下だけ(それより広い幅の見た目は変えない) */
+@media (max-width:340px){
+  .logo span{white-space:nowrap}
+  /* ロゴを1行にした分、ヘッダーの左右の余白と間を詰めて「無料で始める」を画面の中(右の余白 12px)に収める */
+  .site-header-in{padding:8px 12px;gap:8px}
+  .hero h1{font-size:34px}
+  .hero-lead{font-size:15px}
+  /* 「予約の画面から、旅程へ」の電話の絵をカードの幅の中に収める(大きさ・縦横の比はそのまま)。横に並べると「✦ AIで読み取りました」の札が
+     説明の欄の幅を押し広げ、電話がカードの右へはみ出す(札の幅に合わせて電話を縮めると幅 90px ほどになる)ので、札のある面だけ縦に並べる */
+  .tf-media{max-width:100%}
+  .tf--side:has(.ai-chip){grid-template-columns:minmax(0,1fr);grid-template-areas:"head" "desc" "media"}
+  .tf--side:has(.ai-chip) .tf-desc{padding-top:8px}
+}
 @media (prefers-reduced-motion:reduce){
   .ill *{animation:none!important}
 }
