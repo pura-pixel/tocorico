@@ -1,33 +1,34 @@
 /* トコリコのホームページ(tocorico.jp。TB-335)の見た目。見本は AI秘書/10_たびしるべ/resources/ホームページ_見本_2026-11-04/(Claude Design の書き出し)。
    色は Plari Design System の値(見本の色)を :root の変数だけで持つ。夜の色は [data-theme="dark"] だけが持つ(アプリの tokens.css と同じ考え方)。
-   字は Zen Maru Gothic(500・700・900)、ロゴの「トコリコ」だけ Mochiy Pop One。どちらも組み立てで使う文字だけに切り出したもの(build.mjs)。12px より小さい字は作らない(例外はスマホの比べる表だけ=アプリの購入画面の表と同じ 補足 11px・量の文字 10px。TB-359) */
-@font-face{font-family:"Zen Maru Gothic";font-weight:500;font-style:normal;font-display:swap;src:url("fonts/zmg-500.woff2") format("woff2")}
-@font-face{font-family:"Zen Maru Gothic";font-weight:700;font-style:normal;font-display:swap;src:url("fonts/zmg-700.woff2") format("woff2")}
-@font-face{font-family:"Zen Maru Gothic";font-weight:900;font-style:normal;font-display:swap;src:url("fonts/zmg-900.woff2") format("woff2")}
+   字は Zen Kaku Gothic New(500・700・900。アプリと同じ書体。TB-441 で Zen Maru Gothic から)、ロゴの「トコリコ」だけ Mochiy Pop One。どちらも組み立てで使う文字だけに切り出したもの(build.mjs)。12px より小さい字は作らない(例外はスマホの比べる表だけ=アプリの購入画面の表と同じ 補足 11px・量の文字 10px。TB-359) */
+@font-face{font-family:"Zen Kaku Gothic New";font-weight:500;font-style:normal;font-display:swap;src:url("fonts/zkg-500.woff2") format("woff2")}
+@font-face{font-family:"Zen Kaku Gothic New";font-weight:700;font-style:normal;font-display:swap;src:url("fonts/zkg-700.woff2") format("woff2")}
+@font-face{font-family:"Zen Kaku Gothic New";font-weight:900;font-style:normal;font-display:swap;src:url("fonts/zkg-900.woff2") format("woff2")}
 @font-face{font-family:"Mochiy Pop One";font-weight:400;font-style:normal;font-display:swap;src:url("fonts/mochiy-logo.woff2") format("woff2")}
 
 :root,:root[data-theme="light"]{
-  --pn-green:#E3EED9;--pn-yellow:#FFF1C2;--pn-beige:#F1EBDF;--move-card-bg:#F7F5F2; /* トップの続きの色の面(TB-338)。移動の行のカードの地はアプリの予定の一覧の地(TB-339) */
-  --hero-blob:#E7F0DF;--hero-grad-top:#DCEBD2;--hero-grad-bottom:#F3F0E3;--hero-phone-shadow:0 24px 50px rgba(30,50,20,.18);--hero-card-shadow:0 14px 34px rgba(30,50,20,.16); /* 一番上(TB-337):A の丸・C のグラデーション・影 */
-  --bg:#FAF8F3;--card:#FFFFFF;--ink:#1F1F1F;--sub:#6B6B6B;--green:#3F7F32;--fill:#3F7F32;--on-fill:#FFFFFF;--tint:#EFF7EA;
-  --accent-soft:#FFF4CC;--marker:#FFE27A;--border:#E4E1D8;--card-shadow:0 3px 0 rgba(40,60,30,.10);--btn-shadow:0 3px 0 rgba(40,60,30,.18);
+  --pn-green:#E3F1DC;--pn-yellow:#FFF4CC;--pn-beige:#F3F4F1;--move-card-bg:#F3F4F1; /* トップの続きの色の面(TB-338)。移動の行のカードの地はアプリの予定の一覧の地(TB-339)。昼の色は TB-441 で白の地に合わせた */
+  --hero-blob:#E7F0DF;--hero-grad-top:#DCEBD2;--hero-grad-bottom:#FFFFFF;--hero-phone-shadow:0 24px 50px rgba(30,50,20,.18);--hero-card-shadow:0 14px 34px rgba(30,50,20,.16); /* 一番上(TB-337):A の丸・C のグラデーション・影 */
+  --bg:#FFFFFF;--card:#FFFFFF;--inner-bg:#F3F4F1; /* --inner-bg:白い箱の中の面(比べる表のまとまりの帯。アプリの tokens.css の --inner-bg と同じ値。TB-441 で地が白になり、帯が --bg では見えなくなったため) */
+  --ink:#1F1F1F;--sub:#6B6B6B;--green:#3F7F32;--fill:#3F7F32;--on-fill:#FFFFFF;--tint:#EFF7EA;
+  --accent-soft:#FFF4CC;--border:#E4E4DF;--card-shadow:0 3px 0 rgba(40,60,30,.10);--btn-shadow:0 3px 0 rgba(40,60,30,.18);
   --store:#1F1F1F;--store-ink:#FFFFFF;
   --pr-bg:#336628;--pr-sub:#D9E8D2;--yellow:#F2B705;--on-yellow:#1F1F1F;--badge:#3D3D3D;--on-badge:#FFFFFF;--bezel:#23261F;
-  --float-shadow:0 8px 24px rgba(31,31,31,.14);--phone-shadow:0 18px 40px rgba(31,31,31,.16);--header-bg:rgba(250,248,243,.88);
+  --float-shadow:0 8px 24px rgba(31,31,31,.14);--phone-shadow:0 18px 40px rgba(31,31,31,.16);--header-bg:rgba(255,255,255,.88);
   --premium-col:rgba(242,183,5,.14); /* 比べる表のプレミアムの列の淡い黄色(アプリの tokens.css と同じ。昼夜で変えない) */
   --white-08:rgba(255,255,255,.08);--white-18:rgba(255,255,255,.18);--white-20:rgba(255,255,255,.2);--white-50:rgba(255,255,255,.5);--white-60:rgba(255,255,255,.6);
   --pr-card-shadow:0 6px 0 rgba(0,0,0,.18);--pr-btn-shadow:0 3px 0 rgba(0,0,0,.25);
   /* 動画1・2の絵(illust-*.html)の色。アプリの昼の色(tokens.css)に合わせる */
-  --i-bg:#FAF8F3;--i-bg2:#F5F3EE;--i-card:#FFFFFF;--i-text:#1F1F1F;--i-sub:#6B6B6B;--i-accent:#3F7F32;--i-face:#3F7F32;--i-soft:#E3EEDB;--i-ysoft:#FFF4CC;
+  --i-bg:#FFFFFF;--i-bg2:#F7F7F5;--i-card:#FFFFFF;--i-text:#1F1F1F;--i-sub:#6B6B6B;--i-accent:#3F7F32;--i-face:#3F7F32;--i-soft:#E3EEDB;--i-ysoft:#FFF4CC;
   --i-map:#EEF0E8;--i-block:#E4E6DC;--i-park:#CFE5C3;--i-water:#D5E4EA;--i-road:#FFFFFF;--i-road2:#F7E7A8;--i-rail:#9BC48A;--i-label:#8F938A;--i-plabel:#5E8F4E;
-  --i-line:#EFECE5;--i-grab:#D6D3CB;--i-input:#F3F1EB;--i-badge:#3D3D3D;--i-tl:#CFE0C5;--i-dim:#9A9A9A;--i-ph:#A7A7A7;--i-veil:rgba(250,248,243,.92);--i-sh:31,31,31;--i-sh2:40,60,30;
+  --i-line:#EFECE5;--i-grab:#D6D3CB;--i-input:#F3F1EB;--i-badge:#3D3D3D;--i-tl:#CFE0C5;--i-dim:#9A9A9A;--i-ph:#A7A7A7;--i-veil:rgba(255,255,255,.92);--i-sh:31,31,31;--i-sh2:40,60,30;
   color-scheme:light;
 }
 :root[data-theme="dark"]{
   --pn-green:#1F2B1C;--pn-yellow:#2F2914;--pn-beige:#2A261F;--move-card-bg:#131613; /* トップの続きの色の面(TB-338):同じ色みの暗い色。移動の行のカードはアプリの夜の予定の一覧の地(TB-339) */
   --hero-blob:#1E2A1B;--hero-grad-top:#1F2C1C;--hero-grad-bottom:#161814;--hero-phone-shadow:0 0 0 1px rgba(255,255,255,.12),0 24px 50px rgba(0,0,0,.5); /* 夜はスマホの枠が地に溶けるので、細い明るいふちを足す */--hero-card-shadow:0 14px 34px rgba(0,0,0,.45);
-  --bg:#161814;--card:#22261F;--ink:#F1F1EC;--sub:#A8ADA2;--green:#6DBB5A;--fill:#5AA548;--on-fill:#161814;--tint:#1D2719;
-  --accent-soft:#3A3216;--marker:#5C4A12;--border:#33382F;--card-shadow:0 3px 0 rgba(0,0,0,.35);--btn-shadow:0 3px 0 rgba(0,0,0,.45);
+  --bg:#161814;--inner-bg:#161814;--card:#22261F;--ink:#F1F1EC;--sub:#A8ADA2;--green:#6DBB5A;--fill:#5AA548;--on-fill:#161814;--tint:#1D2719;
+  --accent-soft:#3A3216;--border:#33382F;--card-shadow:0 3px 0 rgba(0,0,0,.35);--btn-shadow:0 3px 0 rgba(0,0,0,.45);
   --store:#F1F1EC;--store-ink:#161814;
   --pr-bg:#253322;--pr-sub:#BFD3B6;--bezel:#0B0C0A;--float-shadow:0 8px 24px rgba(0,0,0,.45);--phone-shadow:0 18px 40px rgba(0,0,0,.5);--header-bg:rgba(22,24,20,.88);
   
@@ -40,7 +41,7 @@
 
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-padding-top:88px}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;font-weight:500;letter-spacing:.02em;line-height:1.6;overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Zen Kaku Gothic New","Hiragino Sans",sans-serif;font-weight:500;letter-spacing:0;line-height:1.6;overflow-x:hidden}
 a{color:var(--green)}
 img,video{display:block}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
@@ -62,14 +63,19 @@ img,video{display:block}
 .btn--big{height:56px;padding:0 28px;font-size:16px}
 .btn--store{background:var(--store);color:var(--store-ink);box-shadow:none}
 .btn--yellow{background:var(--yellow);color:var(--on-yellow);height:56px;padding:0 32px;font-size:17px;font-weight:900;box-shadow:var(--pr-btn-shadow)}
+/* 一番上の App Store の公式バッジ(TB-441):Apple の画像を色・形・文字を変えずに出す。高さ 56px(40px 以上)・まわりの余白はバッジの高さの4分の1(14px)以上
+   (上は .hero-text の間 24px・スマホ 16px、横と下は何も置かない) */
+.store-badge-row{display:flex}
+.store-badge{display:inline-block;line-height:0;border-radius:10px}
+.store-badge img{display:block;height:56px;width:auto}
+.store-badge:focus-visible{outline:2px solid var(--green);outline-offset:4px}
 
 /* ---- いちばん上 ---- */
 .hero{max-width:1200px;margin:0 auto;padding:56px 24px 120px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:48px}
 .hero-text{flex:1 1 420px;min-width:0;display:flex;flex-direction:column;gap:24px}
 .eyebrow{margin:0;display:flex;align-items:center;gap:8px;font-size:15px;font-weight:700;color:var(--green)}
 .eyebrow svg{width:16px;height:20px}
-.hero h1{margin:0;font-size:clamp(38px,5.2vw,64px);line-height:1.25;font-weight:900;letter-spacing:.01em}
-.marker{background:linear-gradient(transparent 62%,var(--marker) 62%)}
+.hero h1{margin:0;font-size:clamp(38px,5.2vw,64px);line-height:1.25;font-weight:900;letter-spacing:0}
 .hero h1 .ln{display:block;white-space:nowrap} /* 見出しは1行ずつ(途中で折り返さない) */
 .hero-lead{margin:0;font-size:20px;color:var(--sub);font-weight:500}
 .hero-art{flex:1 1 520px;min-width:0;display:flex;justify-content:center}
@@ -204,7 +210,7 @@ img,video{display:block}
 .recommend svg{width:12px;height:16px}
 .plan-card ul{margin:0;padding:0;list-style:none}
 .plan-card .grp{padding:6px 20px;font-size:13px;font-weight:900;color:#FFFFFF;background:var(--white-08)}
-.plan-card--pr .grp{color:var(--ink);background:var(--bg)}
+.plan-card--pr .grp{color:var(--ink);background:var(--inner-bg)}
 .plan-card .it{display:grid;grid-template-columns:20px minmax(0,1fr) auto;column-gap:10px;align-items:start;padding:9px 20px;border-top:1px solid var(--white-18);font-size:14px;font-weight:500;color:var(--pr-sub)}
 .plan-card--pr .it{border-top-color:var(--border);font-weight:700;color:var(--ink)}
 .plan-card .it:last-child{padding-bottom:16px}
@@ -225,7 +231,7 @@ img,video{display:block}
 }
 /* スマホ:アプリの購入画面の表(src/styles/premium.css の .premium-compare・.pc-group・.pc-row)と同じ作りの1枚の表(decisions.md 2026-11-06「(ホームページ)比べる表の形」)。列は アイコン 28px/項目/無料 50px/プレミアム 72px */
 .premium-compare{display:none;background:var(--card);border:3px solid var(--yellow);border-radius:24px;overflow:hidden;letter-spacing:0}
-.pc-group{display:grid;grid-template-columns:minmax(0,1fr) 50px 72px;align-items:stretch;background:var(--bg)}
+.pc-group{display:grid;grid-template-columns:minmax(0,1fr) 50px 72px;align-items:stretch;background:var(--inner-bg)}
 .pc-group-name{padding:6px 12px;font-size:12px;font-weight:900;color:var(--ink);align-self:center}
 .pc-group:first-child .pc-group-name{padding:8px 12px}
 .pc-group .pc-free{display:flex;align-items:center;justify-content:center;padding:8px 4px;font-size:12px;font-weight:700;color:var(--sub)}
@@ -261,6 +267,20 @@ img,video{display:block}
 .booking-entry span.d{display:block;font-size:14px;color:var(--sub);font-weight:500}
 .booking-entry .go{flex:none;font-size:15px;font-weight:700;color:var(--green);white-space:nowrap}
 
+/* ---- 旅のガイド(TB-443):よくある質問と同じ幅・見出し。記事は site.js の ⑤ が入れる。読めないときは見出しと「旅のガイドを見る ›」だけ ----
+   スマホは よくある質問の箱と同じ白い箱に縦3行(左に写真 96×64・行の間に線)・パソコンは同じ白い箱のカードを横に3枚(写真が上)。写真は 3:2 の枠に切らずに入れる */
+.guide{max-width:880px;margin:0 auto;padding:136px 24px 0;display:flex;flex-direction:column;gap:20px}
+.guide h2{margin:0;font-size:30px;font-weight:900}
+.guide-list{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.guide-list[aria-busy="true"]{visibility:hidden} /* 読んでいる間は場所だけ取っておく(届いても下の段がずれない) */
+.guide-item{display:flex;flex-direction:column;height:100%;border-radius:24px;background:var(--card);box-shadow:var(--card-shadow);overflow:hidden;text-decoration:none;color:var(--ink)}
+.guide-photo{display:block;width:100%;aspect-ratio:3/2;height:auto;object-fit:contain;background:var(--inner-bg)}
+.guide-text{display:flex;flex-direction:column;gap:4px;padding:14px 18px 18px}
+.guide-title{font-size:16px;font-weight:700;line-height:1.5;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;line-clamp:3;overflow:hidden}
+.guide-country{font-size:14px;font-weight:500;color:var(--sub)}
+.guide-item:focus-visible,.guide-more:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+.guide-more{align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;font-size:15px;font-weight:700;color:var(--green);text-decoration:none}
+
 /* ---- 下のダウンロード・フッター ---- */
 .download{max-width:1200px;margin:0 auto;padding:136px 24px 104px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
 .download img{width:88px;height:88px;border-radius:20px}
@@ -279,6 +299,7 @@ img,video{display:block}
 /* ---- 予約の紹介ページ・/app ---- */
 .page-head{max-width:1200px;margin:0 auto;padding:56px 24px 96px;display:flex;flex-direction:column;gap:20px}
 .page-head h1{margin:0;font-size:clamp(34px,4.6vw,56px);line-height:1.3;font-weight:900}
+.page-head .nobr{display:inline-block;white-space:nowrap} /* 「旅程といっしょに」は途中で折り返さない(幅393 で「に」1字だけが落ちていた。TB-443) */
 .page-head p{margin:0;max-width:720px;font-size:18px;color:var(--sub);font-weight:500}
 .step-no{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--fill);color:var(--on-fill);font-size:14px;font-weight:900}
 .page-end{max-width:1200px;margin:0 auto;padding:120px 24px 72px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
@@ -358,6 +379,16 @@ img,video{display:block}
   .compare{display:none}
   .premium-compare{display:block}
   .faq{padding:88px 20px 0}
+  .guide{padding:88px 20px 0}
+  .guide h2{font-size:24px}
+  .guide-list{display:block;background:var(--card);border-radius:24px;box-shadow:var(--card-shadow);padding:4px 20px}
+  .guide-list > li{border-bottom:1px solid var(--border)}
+  .guide-list > li:last-child{border-bottom:none}
+  .guide-item{flex-direction:row;align-items:center;gap:14px;height:auto;padding:14px 0;border-radius:0;background:transparent;box-shadow:none}
+  .guide-photo{flex:none;width:96px;height:64px;border-radius:12px}
+  .guide-text{padding:0;min-width:0}
+  .guide-title{font-size:15px}
+  .guide-country{font-size:13px}
   .faq h2{font-size:24px}
   .faq-box{padding:4px 20px}
   .booking-entry{padding:18px 20px;flex-wrap:wrap}

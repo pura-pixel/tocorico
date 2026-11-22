@@ -6,6 +6,9 @@
 //    (TB-339。decisions.md 2026-11-04「動画・絵の再生のしかた」)。再生中はスマホの下に進み具合の線(見るだけ)、終わったら同じ場所に「↻ もう一度見る」。
 //    最後まで見たものは、真ん中に戻ってきても自動では動かさない(最後の画面とボタンのまま)。途中で真ん中から外れたものは最初のコマに戻し、次は最初から。
 //    状態は枠(.phone-wrap)の data-play に持つ(idle=まだ・途中で外れた/playing/ended)。絵の版は作り直すたびに要素が替わるため
+// ⑤ 旅のガイドの段(TB-443):旅のガイドの新しい記事の一覧(section の data-guide-src。tocorico.jp からだけ読める)を読み、先頭の3本を出す(下の別の関数)。
+//    読んでいる間は同じ形の見えない3本で場所を取っておく。読めない(止まっている・通信が切れた・10秒たった・0本・形が違う)ときは、見出しと「旅のガイドを見る ›」だけ。
+//    題名・国の名前は文字として入れ(HTML にしない)、住所と写真は data-guide-base(https://guide.tocorico.jp/)で始まる物だけ使う
 // ③ 動画の横に浮かべる部品(.vfloat data-light-at・data-dark-at=「から,まで」の秒。昼と夜で動画の長さが違う):動画の再生位置に合わせて出す。止めている間は出さない。
 (function(){
   var root = document.documentElement;
@@ -200,4 +203,81 @@
   applyMedia();
   players.forEach(function(el){ if (el.tagName !== 'VIDEO') el.classList.add('is-still'); });
   pick();
+})();
+
+// ⑤ 旅のガイドの段(TB-443)
+(function(){
+  var sec = document.querySelector('.guide[data-guide-src]');
+  if (!sec) return;
+  var src = sec.getAttribute('data-guide-src'), base = sec.getAttribute('data-guide-base');
+  var more = sec.querySelector('.guide-more');
+  var SHOW = 3, WAIT_MS = 10000;
+  // 住所は base で始まる https の物だけ(ほかの住所・壊れた住所は null)
+  function guideUrl(v){
+    if (typeof v !== 'string') return null;
+    try { var u = new URL(v); return (u.protocol === 'https:' && u.href.indexOf(base) === 0) ? u.href : null; } catch (e) { return null; }
+  }
+  function text(v){ return typeof v === 'string' ? v.replace(/\s+/g, ' ').trim() : ''; }
+  function item(a){
+    var li = document.createElement('li');
+    var link = document.createElement('a');
+    link.className = 'guide-item';
+    link.href = a.url;
+    var img = document.createElement('img');
+    img.className = 'guide-photo';
+    img.alt = '';
+    img.width = 600; img.height = 400; // 3:2 の枠を先に決める(読み込みで下がずれない)
+    img.loading = 'lazy'; img.decoding = 'async';
+    img.src = a.image;
+    var box = document.createElement('span');
+    box.className = 'guide-text';
+    var t = document.createElement('span');
+    t.className = 'guide-title';
+    t.textContent = a.title;
+    var c = document.createElement('span');
+    c.className = 'guide-country';
+    c.textContent = a.country;
+    box.appendChild(t); box.appendChild(c);
+    link.appendChild(img); link.appendChild(box);
+    li.appendChild(link);
+    return li;
+  }
+  // 読んでいる間:同じ形の見えない3本(題名は3行の長さ)で場所を取る
+  var list = document.createElement('ul');
+  list.className = 'guide-list';
+  list.setAttribute('aria-busy', 'true');
+  list.setAttribute('aria-hidden', 'true');
+  for (var i = 0; i < SHOW; i++){
+    var ph = item({ url: base, image: 'data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=', title: new Array(81).join('あ'), country: 'あ' });
+    ph.querySelector('a').tabIndex = -1;
+    list.appendChild(ph);
+  }
+  sec.insertBefore(list, more);
+  function fail(){ if (list.parentNode) list.parentNode.removeChild(list); sec.setAttribute('data-guide', 'none'); }
+  function done(articles){
+    var picked = [];
+    for (var k = 0; k < articles.length && picked.length < SHOW; k++){
+      var a = articles[k] || {};
+      var one = { url: guideUrl(a.url), image: guideUrl(a.image), title: text(a.title), country: text(a.country) };
+      if (one.url && one.image && one.title) picked.push(one);
+    }
+    if (!picked.length){ fail(); return; }
+    list.innerHTML = '';
+    picked.forEach(function(a){ list.appendChild(item(a)); });
+    list.removeAttribute('aria-busy');
+    list.removeAttribute('aria-hidden');
+    sec.setAttribute('data-guide', 'shown');
+  }
+  if (!window.fetch){ fail(); return; }
+  var ctl = window.AbortController ? new AbortController() : null;
+  var timer = setTimeout(function(){ if (ctl) ctl.abort(); fail(); }, WAIT_MS);
+  fetch(src, { credentials: 'omit', signal: ctl ? ctl.signal : undefined })
+    .then(function(r){ if (!r.ok) throw new Error('status ' + r.status); return r.json(); })
+    .then(function(j){
+      clearTimeout(timer);
+      if (!list.parentNode) return; // もう諦めた(10秒たった)
+      if (!j || !Array.isArray(j.articles)) throw new Error('形が違う');
+      done(j.articles);
+    })
+    .catch(function(){ clearTimeout(timer); fail(); });
 })();
