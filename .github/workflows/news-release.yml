@@ -1,0 +1,31 @@
+# 配信と同時にアプリのお知らせを出す(TB-479)。公開用リポジトリ pura-pixel/tocorico の .github/workflows/news-release.yml に置く。
+# 元はアプリのリポジトリ travel-marker-app の docs/news-release/(動きの説明は news-release.mjs の頭・置き方は NEWS.md)。
+# 5分ごと(毎時ちょうどは混むので2分ずらす)。GitHub が混むと遅れることがある・60日動きの無い公開リポジトリでは止まる(GitHub からメールが来る。Actions の画面で Enable workflow)
+name: お知らせを配信に合わせて出す
+on:
+  schedule:
+    - cron: '2-59/5 * * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'check=確かめるだけ(書かない)/ run=ふだんの動き / pages=Pages の組み立てを頼めるかだけ'
+        type: choice
+        default: check
+        options: [check, run, pages]
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: news-release
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: 待っているお知らせを見る
+        run: node .github/news-release.mjs
+        env:
+          MODE: ${{ github.event.inputs.mode || 'run' }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

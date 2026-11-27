@@ -2,9 +2,7 @@
 
 アプリ「トコリコ」の設定の「お知らせ」に出す一覧です。アプリは次のアドレスを、アプリを開いたとき・前面に戻ったときに読みます。
 
-https://pura-pixel.github.io/tocorico/news.json
-
-(のちに tocorico.jp へ移すときは、アプリ側の読む先を1か所だけ直します。このファイルの形は変わりません。)
+https://tocorico.jp/news.json
 
 ## 形
 
@@ -56,14 +54,51 @@ https://pura-pixel.github.io/tocorico/news.json
 ### 古い版だけに「アップデートする」を出す(updateOlderThan)
 - "update" と一緒に "updateOlderThan": "1.3" を付けると、「アップデートする」ボタンは 1.3 より古いアプリにだけ出ます。
 
-## 足し方(AI秘書から Claude Code に頼むとき)
+## 足し方
 
-1. AI秘書が文面を作る(`id`・`date`・`title`・`body`、必要なら `important`・`update`・`olderThan`)
-2. このリポジトリの `news.json` の配列に、1件を足す(`[]` のときは `[ { ... } ]` にする。カンマ・引用符の閉じ忘れに注意)
-3. 書いたあと、JSON として正しいか確かめる(例: `python3 -m json.tool news.json`)
-4. コミットして `main` に push する
-5. 1〜2分ほどで反映されます。https://pura-pixel.github.io/tocorico/news.json を開いて、足した文が載っていることを確かめる(古いままのときは少し待つ)
-6. 実機のアプリを開き直す(または別のアプリから戻る)と、歯車と「お知らせ」の行に点が付く
+お知らせの文はパラ(AI秘書)が作り、古田さんが OK してから、古田さんが iPhone の GitHub アプリでこのリポジトリにコミットします(パラはコミットしません)。出し方は2つです。
+
+### A. 新しい版の配信と同時に出す(「バージョン 〇〇 の最新情報」など)
+
+審査に出すときに、OK した1件を **`_news-waiting.json`(待たせる置き場)** に置いておきます。
+GitHub Actions(`.github/workflows/news-release.yml`)が5分ごとに App Store(日本)の今の版を見て、置いた版が2回続けて見えたら(60秒あけて読む)、
+その1件を `news.json` の終わりに移してコミットします(置き場からは消えるので、二度出ません)。審査は今までどおり「承認後に自動でリリース」のままです。
+
+1. パラが文を作る(`id`・`title`・`body`、必要なら `push`・`update`・`updateOlderThan` など。`date` は書かない=出した日〔日本時間〕が入る)
+2. 古田さんが OK して、審査に出すときに `_news-waiting.json` を次の形にしてコミットする(`version` は審査に出す版):
+   ```json
+   {
+     "items": [
+       {
+         "version": "1.5",
+         "news": {
+           "id": "2026-12-01-1.5",
+           "title": "バージョン 1.5 の最新情報",
+           "body": "・〇〇を直しました。\n・〇〇ができるようになりました。",
+           "push": true,
+           "update": true,
+           "updateOlderThan": "1.5"
+         }
+       }
+     ]
+   }
+   ```
+   - 何も待たせていないときは `{ "items": [] }`。2件以上は `items` に並べる
+   - `news` に書けるのは上の「項目」の表と `push`・`pushForce` だけ。`id` は news.json とも置き場の中とも重ねない
+   - 置いて5分ほどで、Actions が形を確かめます。形が違うと Actions が失敗し、GitHub から失敗のメールが届きます(news.json は書きません)
+3. 配信になると、5〜10分ほどで news.json に入り、tocorico.jp/news.json に出ます(Actions が出たのを確かめます。`push: true` なら、中継役がそのあと30分待ってから通知を送ります=日本時間 10〜20時)
+4. 出たかは、Actions の画面か https://tocorico.jp/news.json で見られます
+
+- 頭が `_` のファイルは GitHub Pages が出さないので、tocorico.jp からは読めません。ただし、このリポジトリは公開なので GitHub では誰でも見られます
+- App Store の版を読めない・Pages の組み立てを頼めない・15分たっても出ないときも、Actions が失敗してメールが届きます
+- 手で確かめるときは、Actions の画面の「お知らせを配信に合わせて出す」→ Run workflow → `check`(書かずに、出す物だけを出す)
+
+### B. すぐ出す(版と関係ないお知らせ)
+
+1. パラが文を作る(`id`・`date`・`title`・`body`、必要なら `important`・`update`・`olderThan` など)
+2. 古田さんが iPhone の GitHub アプリで、このリポジトリの `news.json` の配列に1件を足してコミットする(カンマ・引用符の閉じ忘れに注意。`[]` のときは `[ { ... } ]` にする)
+3. 1〜2分ほどで反映されます。https://tocorico.jp/news.json を開いて、足した文が載っていることを確かめる(パラが確かめる。古いままのときは少し待つ)
+4. 実機のアプリを開き直す(または別のアプリから戻る)と、歯車と「お知らせ」の行に点が付く
 
 ## 消す・直す
 
