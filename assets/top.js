@@ -69,7 +69,9 @@
       var picked = [];
       ((j && Array.isArray(j.articles)) ? j.articles : []).forEach(function(a){
         a = a || {};
-        var one = { url: ok(a.url), image: ok(a.image), title: txt(a.title), country: txt(a.country) };
+        // 写真は縮めた表紙(imageSmall。旅のガイドの latest.json に TB-478 で足した)があればそれ、無ければ元の表紙(image)。元の表紙が使えない記事は出さない(前と同じ)
+        var big = ok(a.image);
+        var one = { url: ok(a.url), image: big && (ok(a.imageSmall) || big), title: txt(a.title), country: txt(a.country) };
         if (picked.length < 3 && one.url && one.image && one.title) picked.push(one);
       });
       if (!picked.length) return;
